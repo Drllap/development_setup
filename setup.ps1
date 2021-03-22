@@ -9,3 +9,5 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
 New-Item -Path $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\ -Name settings.json `
     -Value .\WindowsTerminal\settings.json -ItemType SymbolicLink -Force
 
+# Use NeoVim as git editor
+git config --global core.editor "nvim"
