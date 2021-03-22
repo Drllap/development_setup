@@ -26,6 +26,7 @@
   "profiles": {
     "defaults": {
       // Put settings here that you want to apply to all profiles.
+	"colorScheme": "Dracula"
     },
     "list": [
       {
@@ -33,8 +34,8 @@
         "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
         "name": "Windows PowerShell",
         "commandline": "powershell.exe",
-        "hidden": false
-//        "colorScheme": "Dracula"
+        "hidden": false,
+        "colorScheme": "Dracula"
       },
       {
         // Make changes here to the cmd.exe profile.
@@ -118,10 +119,10 @@
     // - "split": "auto" makes this pane open in the direction that provides the most surface area.
     // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
     // To learn more about panes, visit https://aka.ms/terminal-panes
-    // {
-    //   "command": { "action": "newTab", "index": 0 },
-    //   "keys": "ctrl+t"
-    // },
+     {
+       "command": { "action": "newTab", "index": 0 },
+       "keys": "ctrl+t"
+     },
      {
        "command": { "action": "splitPane", "split": "vertical" },
        "keys": "ctrl+d"
