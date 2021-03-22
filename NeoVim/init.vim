@@ -31,6 +31,8 @@ set termguicolors
 set colorcolumn=120
 
 call plug#begin(stdpath('data') . '/plugged')
-
+Plug 'pprovost/vim-ps1' " PowerShell scrip support
+Plug 'gruvbox-community/gruvbox'
 call plug#end()
 
+colorscheme gruvbox
