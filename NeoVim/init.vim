@@ -16,7 +16,7 @@ set hidden " can jump between buffers without saving
 
 set nowrap
 
-set ignorecase " enable smarcase while searching
+set ignorecase " enable smartcase while searching
 set smartcase  " smartcase only workes if ignorecase is enabled
 
 set noswapfile
