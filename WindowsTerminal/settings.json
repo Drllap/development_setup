@@ -44,7 +44,7 @@
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "name": "Command Prompt",
                 "commandline": "cmd.exe",
-                "hidden": false
+                "hidden": true,
             },
             {
                 "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
@@ -54,7 +54,7 @@
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": false,
+                "hidden": true,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
             }
