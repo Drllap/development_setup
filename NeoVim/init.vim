@@ -34,7 +34,7 @@ set colorcolumn=120
 
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'pprovost/vim-ps1' " PowerShell scrip support
-Plug 'gruvbox-community/gruvbox'
+Plug 'gruvbox-community/gruvbox' " Gruvbox theam
 Plug 'tpope/vim-fugitive' " Git wrapper plugin
 call plug#end()
 
