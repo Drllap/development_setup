@@ -24,16 +24,16 @@ function so {
 #       Instead of executing "$prevprompt" explicitly execute the prompt from posh-git
 #       This is done because posh-git doesn't overwrite the prompt function if it
 #       already exists.
-$esc = [char]27
 if($env:WT_SESSION){
-	# $prevprompt = $Function:prompt
-	function prompt {
-		if ($pwd.provider.name -eq "FileSystem") {
-			$p = $pwd.ProviderPath
-			Write-host "$esc]9;9;`"$p`"$esc\" -NoNewline
-		}
-		# return $prevprompt.invoke()
-                return $GitPromptScriptBlock.Invoke()
-	}
+    # $prevprompt = $Function:prompt
+    function prompt {
+        if ($pwd.provider.name -eq "FileSystem") {
+	    $p = $pwd.providerpath
+            $esc = [char]27
+	    write-host "$esc]9;9;`"$p`"$esc\" -NoNewline
+        }
+        # return $prevprompt.invoke()
+        return $GitPromptScriptBlock.Invoke()
+    }
 }
 
