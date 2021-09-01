@@ -41,3 +41,5 @@ Plug 'neovim/nvim-lspconfig' " LSP configuration plugin
 call plug#end()
 
 colorscheme gruvbox
+
+let g:netrw_liststyle = 3 " NetRW opens with the listings in tree style by default
