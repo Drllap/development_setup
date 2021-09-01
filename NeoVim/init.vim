@@ -7,7 +7,7 @@ set expandtab
  	
 set exrc " local .vimrc files are sorced when doing nvim . 
 
-set guicursor= " always uses block curser instead of thin line
+" set guicursor= " always uses block curser instead of thin line
 
 set relativenumber
 set number
