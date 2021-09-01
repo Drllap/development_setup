@@ -39,3 +39,5 @@ if($env:WT_SESSION){
 
 $dockerCompletionModule = (Get-Item $PSCommandPath).Target | Split-Path | Join-Path -ChildPath "\DockerCompletion\DockerCompletion"
 Import-Module $dockerCompletionModule # Add tab Autocompletion for docker
+
+Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1 # Add tab Autocompletion for Chocolatey
