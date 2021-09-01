@@ -1,0 +1,3 @@
+[submodule "WindowsTerminal/DockerCompletion"]
+	path = WindowsTerminal/DockerCompletion
+	url = git@github.com:matt9ucci/DockerCompletion.git
