@@ -9,6 +9,8 @@ set exrc " local .vimrc files are sorced when doing nvim .
 
 " set guicursor= " always uses block curser instead of thin line
 
+set splitright " makes new buffer opened in vertical split open on the right side
+
 set relativenumber
 set number
 
