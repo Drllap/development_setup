@@ -43,3 +43,10 @@ call plug#end()
 colorscheme gruvbox
 
 let g:netrw_liststyle = 3 " NetRW opens with the listings in tree style by default
+
+" Highlights the text that is yanked when in normal mode
+augroup LuaHighlight
+    au!
+    au TextYankPost * silent! lua return (not vim.v.event.visual) and require'vim.highlight'.on_yank()
+augroup END
+
