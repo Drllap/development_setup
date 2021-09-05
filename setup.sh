@@ -7,7 +7,7 @@ sudo apt install neovim
 curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
            https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-ln -s `pwd`/NeoVim/ ~/.config/nvim/
+ln -sv $PWD/NeoVim/ ~/.config/nvim # depends on ~/.config/nvim not existing
 
 # setup git
 git config --global user.email "drllap@gmail.com"
