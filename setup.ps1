@@ -14,3 +14,5 @@ New-Item -Path $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbw
 
 # Use NeoVim as git editor
 git config --global core.editor "nvim"
+
+Install-Module npm-completion -Scope CurrentUser
