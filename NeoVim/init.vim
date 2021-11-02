@@ -50,4 +50,8 @@ augroup LuaHighlight
     au TextYankPost * silent! lua return (not vim.v.event.visual) and require'vim.highlight'.on_yank()
 augroup END
 
+" Remap Y to yank to the end of the file. Not Vi-compatible but more logical.
+" See :h Y
+:map Y y$
+
 lua require('init')
