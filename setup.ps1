@@ -25,3 +25,16 @@ Invoke-WebRequest `
 Expand-Archive PowerShellEditorServices.zip -DestinationPath "../LSP-Servers/PowerShellEditorServices"
 Remove-Item PowerShellEditorServices.zip
 
+# Download and Install lua-language-server (sumneko_lua) into ../LSP-Servers
+choco install ninja
+git clone https://github.com/sumneko/lua-language-server ../LSP-Servers/lua-language-server
+$dev_repo = $PWD
+Set-Location ../LSP-Servers/lua-language-server/
+git submodule update --init --recursive
+Set-Location 3rd/luamake
+compile/install.bat
+Set-Location ../..
+3rd/luamake/luamake.exe rebuild
+
+Set-Location $dev_repo
+
