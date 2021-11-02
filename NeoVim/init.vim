@@ -38,6 +38,9 @@ Plug 'gruvbox-community/gruvbox' " Gruvbox theam
 Plug 'tpope/vim-fugitive' " Git wrapper plugin
 
 Plug 'neovim/nvim-lspconfig' " LSP configuration plugin
+
+Plug 'preservim/nerdtree'
+
 call plug#end()
 
 colorscheme gruvbox
@@ -57,6 +60,8 @@ augroup Mkdir
     autocmd!
     autocmd BufWritePre * call mkdir(expand("<afile>:p:h"), "p")
 augroup END
+
+nnoremap <C-k><C-b> :NERDTreeToggle<CR>
 
 " Remap Y to yank to the end of the file. Not Vi-compatible but more logical.
 " See :h Y
