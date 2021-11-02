@@ -50,6 +50,14 @@ augroup LuaHighlight
     au TextYankPost * silent! lua return (not vim.v.event.visual) and require'vim.highlight'.on_yank()
 augroup END
 
+
+" Create an autocommand that creates the missing folder when writing a file
+" that doesn't exist
+augroup Mkdir
+    autocmd!
+    autocmd BufWritePre * call mkdir(expand("<afile>:p:h"), "p")
+augroup END
+
 " Remap Y to yank to the end of the file. Not Vi-compatible but more logical.
 " See :h Y
 :map Y y$
