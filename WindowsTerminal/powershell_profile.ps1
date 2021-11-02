@@ -1,24 +1,26 @@
-function j {
-    python $Env:APPDATA\..\Local\autojump\bin\autojump $args
-}
+$ExecStart = Get-Date
 
 $private:setup_dir = (Get-Item (Get-Item $PSCommandPath).Target).Directory.Parent.Parent
 $env:LSP_Servers = $setup_dir.FullName + "\LSP-Servers\"
+
+# function j {
+#     python $Env:APPDATA\..\Local\autojump\bin\autojump $args
+# }
 
 function autojump {
     python $Env:APPDATA\..\Local\autojump\bin\autojump $args
 }
 
 function test {
-    echo "STFU"
-    echo "STFU2"
+    Write-Output "STFU"
+    Write-Output "STFU2"
 }
 
 # re-source the profile
 # refresh profile: . so
 function so {
     . $PROFILE.CurrentUserAllHosts
-    echo "re-sourcing profile: " $PROFILE.CurrentUserAllHosts
+    Write-Host "re-sourcing profile: " $PROFILE.CurrentUserAllHosts
 }
 
 # Code taken from https://github.com/microsoft/terminal/issues/3158#issuecomment-789198188
@@ -47,3 +49,5 @@ Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1 # Add tab Au
 
 Import-Module npm-completion    # Add tab Autocompletion for npm
 
+$ExecEnd = Get-Date
+Write-Host "Profile Load Time: $(($ExecEnd - $ExecStart).Milliseconds) Milliseconds"
