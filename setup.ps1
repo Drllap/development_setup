@@ -16,3 +16,12 @@ New-Item -Path $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbw
 git config --global core.editor "nvim"
 
 Install-Module npm-completion -Scope CurrentUser
+
+# Download and install PowerShell LSP Server into ../LSP-Servers
+mkdir ../LSP-Servers
+Invoke-WebRequest `
+    https://github.com/PowerShell/PowerShellEditorServices/releases/download/v2.5.2/PowerShellEditorServices.zip `
+    -OutFile PowerShellEditorServices.zip
+Expand-Archive PowerShellEditorServices.zip -DestinationPath "../LSP-Servers/PowerShellEditorServices"
+Remove-Item PowerShellEditorServices.zip
+

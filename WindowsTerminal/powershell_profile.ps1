@@ -2,6 +2,9 @@ function j {
     python $Env:APPDATA\..\Local\autojump\bin\autojump $args
 }
 
+$private:setup_dir = (Get-Item (Get-Item $PSCommandPath).Target).Directory.Parent.Parent
+$env:LSP_Servers = $setup_dir.FullName + "\LSP-Servers\"
+
 function autojump {
     python $Env:APPDATA\..\Local\autojump\bin\autojump $args
 }

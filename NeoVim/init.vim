@@ -50,3 +50,4 @@ augroup LuaHighlight
     au TextYankPost * silent! lua return (not vim.v.event.visual) and require'vim.highlight'.on_yank()
 augroup END
 
+lua require('init')
