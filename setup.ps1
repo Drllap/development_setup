@@ -19,6 +19,11 @@ git config --global core.editor "nvim"
 Install-Module npm-completion -Scope CurrentUser
 
 # Download and install PowerShell LSP Server into ../LSP-Servers
+
+Install-Module -Name posh-git
+Install-Module -Name PowerColorLS
+Install-Module -Name Terminal-Icons
+
 mkdir ../LSP-Servers
 Invoke-WebRequest `
     https://github.com/PowerShell/PowerShellEditorServices/releases/download/v2.5.2/PowerShellEditorServices.zip `

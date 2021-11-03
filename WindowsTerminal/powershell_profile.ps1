@@ -46,6 +46,7 @@ $dockerCompletionModule = (Get-Item $PSCommandPath).Target | Split-Path | Join-P
 Import-Module $dockerCompletionModule # Add tab Autocompletion for docker
 
 Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1 # Add tab Autocompletion for Chocolatey
+Set-Alias -Name ls -Value PowerColorLS -Option AllScope # Use PowerColorLS as default ls command
 
 Import-Module npm-completion    # Add tab Autocompletion for npm
 

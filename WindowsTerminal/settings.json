@@ -29,6 +29,10 @@
         {
             // Put settings here that you want to apply to all profiles.
             "colorScheme": "Dracula",
+            "font": 
+            {
+                "face": "CaskaydiaCove NF",
+            }
         },
         "list":
         [
