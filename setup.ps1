@@ -21,6 +21,7 @@ Install-Module npm-completion -Scope CurrentUser
 # Download and install PowerShell LSP Server into ../LSP-Servers
 
 Install-Module -Name posh-git
+Install-Module -Name oh-my-posh
 Install-Module -Name PowerColorLS
 Install-Module -Name Terminal-Icons
 

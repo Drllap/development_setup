@@ -23,6 +23,8 @@ function so {
     Write-Host "re-sourcing profile: " $PROFILE.CurrentUserAllHosts
 }
 
+Import-Module posh-git  # posh-git, git info in prompt and auto tab completion
+
 # Code taken from https://github.com/microsoft/terminal/issues/3158#issuecomment-789198188
 # Makes make new split panes open in current directory
 # My changes:
@@ -49,6 +51,7 @@ Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1 # Add tab Au
 Set-Alias -Name ls -Value PowerColorLS -Option AllScope # Use PowerColorLS as default ls command
 
 Import-Module npm-completion    # Add tab Autocompletion for npm
+Set-PoshPrompt -Theme honukai
 
 $ExecEnd = Get-Date
 Write-Host "Profile Load Time: $(($ExecEnd - $ExecStart).Milliseconds) Milliseconds"
