@@ -18,6 +18,9 @@ git config --global core.editor "nvim"
 
 Install-Module npm-completion -Scope CurrentUser
 
+# Update PSReadLine, -Force needed because older version is built in
+Install-Module PSReadLine -Force    
+
 
 Install-Module -Name posh-git
 Install-Module -Name oh-my-posh
