@@ -21,6 +21,8 @@ Install-Module npm-completion -Scope CurrentUser
 # Update PSReadLine, -Force needed because older version is built in
 Install-Module PSReadLine -Force    
 
+# Wrapper for fzf
+# Install-Module -Name PSFzf
 
 Install-Module -Name posh-git
 Install-Module -Name oh-my-posh
