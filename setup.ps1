@@ -5,7 +5,7 @@ New-Item -Path $env:LOCALAPPDATA\ -Name nvim -ItemType SymbolicLink -Value .\Neo
 New-Item -Path (Split-Path $PROFILE.CurrentUserAllHosts) -Name (Split-Path $PROFILE.CurrentUserAllHosts -Leaf) `
     -ItemType SymbolicLink -Value ${PWD}\WindowsTerminal\powershell_profile.ps1 -Force
 
-# install vim-plug
+# Install vim-plug
 Invoke-WebRequest -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     New-Item "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
 
@@ -20,7 +20,6 @@ Install-Module npm-completion -Scope CurrentUser
 
 # Update PSReadLine, -Force needed because older version is built in
 Install-Module PSReadLine -Force    
-
 
 Install-Module -Name posh-git
 Install-Module -Name oh-my-posh
