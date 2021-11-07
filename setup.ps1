@@ -24,10 +24,13 @@ Install-Module PSReadLine -Force
 # Wrapper for fzf
 # Install-Module -Name PSFzf
 
-Install-Module -Name posh-git
-Install-Module -Name oh-my-posh
-Install-Module -Name PowerColorLS
-Install-Module -Name Terminal-Icons
+Install-Module -Name oh-my-posh     # PowerShell promt moduel with theam support
+                                    # Depends on Neard-Fonts, see Neard-Fonst folder for
+                                    # fonts and readme for how to install
+Install-Module -Name posh-git       # Dependency of oh-my-posh
+
+Install-Module -Name PowerColorLS   # Better (colorfull) ls/dir command
+Install-Module -Name Terminal-Icons # Dependency of PowerColorLS
 
 # Download and install PowerShell LSP Server into ../LSP-Servers
 mkdir ../LSP-Servers
