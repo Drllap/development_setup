@@ -37,8 +37,8 @@ Plug 'pprovost/vim-ps1' " PowerShell scrip support
 Plug 'gruvbox-community/gruvbox' " Gruvbox theam
 Plug 'tpope/vim-fugitive' " Git wrapper plugin
 
-" Plug 'neovim/nvim-lspconfig' " LSP configuration plugin
-Plug 'DrLlap/nvim-lspconfig', { 'branch': 'powershell_es-configurable-execution-shell'}
+Plug 'neovim/nvim-lspconfig' " LSP configuration plugin
+
 
 
 Plug 'preservim/nerdtree'
