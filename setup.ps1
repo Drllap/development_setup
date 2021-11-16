@@ -51,3 +51,5 @@ Set-Location ../..
 3rd/luamake/luamake.exe rebuild
 Pop-Location
 
+# Install pyright, python LSP server, requires NodeJS
+npm install -g pyright
