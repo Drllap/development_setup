@@ -1,4 +1,4 @@
-if(vim.env.LSP_Servers == nil) then
+if not vim.env.LSP_Servers then
     error("The environmental variable with the LSP server path doesn't exist")
 end
 
