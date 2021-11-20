@@ -1,5 +1,34 @@
 $ExecStart = Get-Date
 
+if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
+    $private:Paths = @(
+        "C:\tools\Anaconda3;",
+        # "C:\tools\Anaconda3\Library\bin;",
+        # "C:\tools\Anaconda3\Scripts;",
+        "C:\Windows\System32\WindowsPowerShell\v1.0\;",
+        "C:\Windows\System32\OpenSSH\;"
+        "C:\ProgramData\chocolatey\bin;",
+        # "C:\Program Files\PostgreSQL\12\bin;",
+        "C:\Program Files\Cmake\bin;"
+        "C:\Program Files\LLVM\bin;",
+        "C:\Program Files\Docker\Docker\resources\bin;",
+        "C:\ProgramData\DockerDesktop\version-bin;",
+        # "C:\Program Files\dotnet\;",
+        "C:\Program Files\Git\cmd;",
+        "C:\Program Files\nodejs\;",
+        "C:\Users\noob-destroyer\AppData\Local\Microsoft\WindowsApps;",
+        "C:\tools\neovim\Neovim\bin;"
+        "C:\Program Files (x86)\GitHub CLI\;",
+        "C:\Users\noob-destroyer\AppData\Roaming\npm;"
+    );
+}
+
+if($null -ne $Paths) {
+    $env:Path = $Paths -join '';
+} else {
+    Write-Warning "Path for current COMPUTERNAME not set: $env:COMPUTERNAME ,keeping the system path"
+}
+
 $private:setup_dir = (Get-Item (Get-Item $PSCommandPath).Target).Directory.Parent
 $env:LSP_Servers = $setup_dir.Parent.FullName + "\LSP-Servers\"
 
