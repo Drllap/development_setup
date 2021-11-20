@@ -22,15 +22,16 @@ Install-Module npm-completion -Scope CurrentUser
 Install-Module PSReadLine -Force
 
 # Wrapper for fzf
-# Install-Module -Name PSFzf
+# Install-Module -Name PSFzf -Scope CurrentUser
 
-Install-Module -Name oh-my-posh     # PowerShell promt moduel with theam support
-                                    # Depends on Neard-Fonts, see Neard-Fonst folder for
-                                    # fonts and readme for how to install
-Install-Module -Name posh-git       # Dependency of oh-my-posh
+Install-Module -Name oh-my-posh -Scope CurrentUser  # PowerShell promt moduel with theam support
+                                                    # Depends on Neard-Fonts, see Neard-Fonst folder for
+                                                    # fonts and readme for how to install
 
-Install-Module -Name PowerColorLS   # Better (colorfull) ls/dir command
-Install-Module -Name Terminal-Icons # Dependency of PowerColorLS
+Install-Module -Name posh-git -Scope CurrentUser    # Git tab autocompleation
+
+Install-Module -Name PowerColorLS -Scope CurrentUser    # Better (colorfull) ls/dir command
+Install-Module -Name Terminal-Icons -Scope CurrentUser  # Dependency of PowerColorLS
 
 # Download and install PowerShell LSP Server into ../LSP-Servers
 mkdir ../LSP-Servers
