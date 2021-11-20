@@ -57,6 +57,14 @@ if($env:WT_SESSION){
             $esc = [char]27
 	    write-host "$esc]9;9;`"$p`"$esc\" -NoNewline
         }
+
+        # Add Nix property to $PWD, returns the path in UNIX style
+        Add-Member                                          `
+            -InputObject $PWD                               `
+            -Name Nix                                       `
+            -Value { return $this.Path.Replace('\','/'); }  `
+            -MemberType ScriptProperty
+
         return $prevprompt.invoke()
     }
 }
