@@ -76,6 +76,9 @@ augroup Mkdir
     autocmd BufWritePre * call mkdir(expand("<afile>:p:h"), "p")
 augroup END
 
+" Exit insert mode with jj
+inoremap jk <esc>
+
 nnoremap <C-k><C-b> :NERDTreeToggle<CR>
 
 " Remap Y to yank to the end of the file. Not Vi-compatible but more logical.
