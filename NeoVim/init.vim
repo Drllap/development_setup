@@ -50,6 +50,10 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'onsails/lspkind-nvim'
+
+" Debug integration plugin
+Plug 'mfussenegger/nvim-dap'
+
 call plug#end()
 
 colorscheme gruvbox
