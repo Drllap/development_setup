@@ -32,6 +32,8 @@ set termguicolors
 
 set colorcolumn=120
 
+let mapleader=" "
+
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'pprovost/vim-ps1' " PowerShell scrip support
 Plug 'gruvbox-community/gruvbox' " Gruvbox theam
