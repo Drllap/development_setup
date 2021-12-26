@@ -3,8 +3,8 @@ $ExecStart = Get-Date
 if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
     $private:Paths = @(
         "C:\tools\Anaconda3;",
-        # "C:\tools\Anaconda3\Library\bin;",
-        # "C:\tools\Anaconda3\Scripts;",
+        "C:\tools\Anaconda3\Library\bin;",
+        "C:\tools\Anaconda3\Scripts;",
         "C:\Windows\System32\WindowsPowerShell\v1.0\;",
         "C:\Windows\System32\OpenSSH\;"
         "C:\ProgramData\chocolatey\bin;",
