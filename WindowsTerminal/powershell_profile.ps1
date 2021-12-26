@@ -21,6 +21,52 @@ if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
         "C:\Program Files (x86)\GitHub CLI\;",
         "C:\Users\noob-destroyer\AppData\Roaming\npm;"
     );
+} elseif($env:COMPUTERNAME -eq "K-WIN10-29") {
+    $private:Paths = @(
+        "C:\tools\Anaconda3;",
+        # "C:\tools\Anaconda3\Library\mingw-w64\bin;",
+        # "C:\tools\Anaconda3\Library\usr\bin;",
+        # "C:\tools\Anaconda3\Library\bin;",
+        # "C:\tools\Anaconda3\Scripts;",
+        "C:\WINDOWS\system32;",
+        "C:\WINDOWS;",
+        # "C:\WINDOWS\System32\Wbem;",
+        # "C:\WINDOWS\System32\WindowsPowerShell\v1.0\;",
+        "C:\ProgramData\chocolatey\bin;",
+        "C:\Program Files\CMake\bin;",
+        # "C:\Program Files\Maven\apache-maven-3.5.0\bin;",
+        # "C:\Program Files\dotnet\;",
+        "C:\WINDOWS\System32\OpenSSH\;",
+        # "C:\Program Files\doxygen\bin;",
+        # "C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;",
+        "C:\Program Files\nodejs\;",
+        "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin;",
+        # "C:\Program Files (x86)\dotnet\;",
+        # "C:\Program Files\TortoiseGit\bin;",
+        # "C:\Program Files (x86)\Common Files\Oracle\Java\javapath;",
+        # "C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;",
+        # "C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;",
+        # "C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;",
+        # "C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;",
+        # "C:\Program Files\IVI Foundation\VISA\Win64\Bin\;",
+        # "C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;",
+        # "C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin\;",
+        "C:\Program Files\Go\bin;",
+        "C:\Program Files\LLVM\bin;",
+        "C:\Program Files\Git\cmd;",
+        "C:\Program Files\Docker\Docker\resources\bin;",
+        "C:\ProgramData\DockerDesktop\version-bin;",
+        # "C:\Development\LSP-Servers\lua-language-server\3rd\luamake;",
+        # "C:\tools\cmder;",
+        # "C:\Program Files\Microsoft VS Code\bin;",
+        "C:\Users\palli\AppData\Roaming\npm;",
+        "C:\tools\neovim\Neovim\bin;",
+        "C:\Program Files (x86)\GitHub CLI\;",
+        "C:\Users\palli\AppData\Local\Microsoft\WindowsApps;",
+        "C:\Users\palli\.dotnet\tools;",
+        "C:\Users\palli\go\bin;"
+        # "C:\tools\neovim\Neovim\bin;"
+    );
 }
 
 if($null -ne $Paths) {
