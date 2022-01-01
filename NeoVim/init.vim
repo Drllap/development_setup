@@ -46,6 +46,11 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate'}
 
 Plug 'preservim/nerdtree'
 
+" Telescope stuff
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make'}
+
 " Autocompleation plugins
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-path'
