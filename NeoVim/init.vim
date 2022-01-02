@@ -82,7 +82,7 @@ augroup Mkdir
     autocmd BufWritePre * call mkdir(expand("<afile>:p:h"), "p")
 augroup END
 
-" Exit insert mode with jj
+" Exit insert mode with jk
 inoremap jk <esc>
 
 map <silent> <leader>h <C-w>h
