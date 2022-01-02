@@ -94,6 +94,7 @@ nnoremap <silent> <C-k><C-b> :NERDTreeToggle<CR>
 
 " Remap Y to yank to the end of the file. Not Vi-compatible but more logical.
 " See :h Y
-:map Y y$
+" :map Y y$ " Comment this out because after Nevim v0.6 this is the
+" default
 
 lua require('init')
