@@ -1,7 +1,11 @@
 $ExecStart = Get-Date
 
+$private:setup_dir = (Get-Item (Get-Item $PSCommandPath).Target).Directory.Parent
+$env:LSP_Servers = $setup_dir.Parent.FullName + "\LSP-Servers\"
+
 if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
     $private:Paths = @(
+        $setup_dir.FullName + "\WindowsTerminal\Shortcuts;",
         "C:\tools\Anaconda3;",
         "C:\tools\Anaconda3\Library\bin;",
         "C:\tools\Anaconda3\Scripts;",
@@ -23,6 +27,7 @@ if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
     );
 } elseif($env:COMPUTERNAME -eq "K-WIN10-29") {
     $private:Paths = @(
+        $setup_dir.FullName + "\WindowsTerminal\Shortcuts;",
         "C:\tools\Anaconda3;",
         # "C:\tools\Anaconda3\Library\mingw-w64\bin;",
         # "C:\tools\Anaconda3\Library\usr\bin;",
@@ -74,9 +79,6 @@ if($null -ne $Paths) {
 } else {
     Write-Warning "Path for current COMPUTERNAME not set: $env:COMPUTERNAME ,keeping the system path"
 }
-
-$private:setup_dir = (Get-Item (Get-Item $PSCommandPath).Target).Directory.Parent
-$env:LSP_Servers = $setup_dir.Parent.FullName + "\LSP-Servers\"
 
 # function j {
 #     python $Env:APPDATA\..\Local\autojump\bin\autojump $args
