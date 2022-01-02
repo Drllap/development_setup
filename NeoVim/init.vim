@@ -85,7 +85,7 @@ augroup END
 " Exit insert mode with jj
 inoremap jk <esc>
 
-nnoremap <C-k><C-b> :NERDTreeToggle<CR>
+nnoremap <silent> <C-k><C-b> :NERDTreeToggle<CR>
 
 " Remap Y to yank to the end of the file. Not Vi-compatible but more logical.
 " See :h Y
