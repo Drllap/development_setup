@@ -85,6 +85,11 @@ augroup END
 " Exit insert mode with jj
 inoremap jk <esc>
 
+map <silent> <leader>h <C-w>h
+map <silent> <leader>j <C-w>j
+map <silent> <leader>k <C-w>k
+map <silent> <leader>l <C-w>l
+
 nnoremap <silent> <C-k><C-b> :NERDTreeToggle<CR>
 
 " Remap Y to yank to the end of the file. Not Vi-compatible but more logical.
