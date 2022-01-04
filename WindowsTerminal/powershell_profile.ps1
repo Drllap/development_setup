@@ -144,7 +144,8 @@ if($env:WT_SESSION){
     }
 }
 
-Set-Alias -Name cmd -Value C:\Windows\System32\cmd.exe
+Set-Alias -Name cmd     -Value C:\Windows\System32\cmd.exe
+Set-Alias -Name cmd.exe -Value C:\Windows\System32\cmd.exe
 
 $ExecEnd = Get-Date
 Write-Host "Profile Load Time: $(($ExecEnd - $ExecStart).Milliseconds) Milliseconds"
