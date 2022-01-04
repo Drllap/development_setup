@@ -11,7 +11,3 @@ curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --c
 
 ln -sv $PWD/NeoVim/ ~/.config/nvim # depends on ~/.config/nvim not existing
 
-# setup git
-git config --global user.email "drllap@gmail.com"
-git config --global user.name "Pall Palsson"
-git config --global core.editor "nvim"  

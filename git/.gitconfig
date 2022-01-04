@@ -1,0 +1,6 @@
+[user]
+	email = drllap@gmail.com
+	name = Pall Palsson
+[core]
+	editor = nvim
+	symlink = true
