@@ -1,7 +1,9 @@
 # install daily build for neovim
 sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt-get update
-sudo apt install neovim
+sudo apt install    \
+  neovim            \
+  stow
 
 # install vim-plug
 curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
