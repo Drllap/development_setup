@@ -5,7 +5,6 @@ $env:LSP_Servers = $setup_dir.Parent.FullName + "\LSP-Servers\"
 
 if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
     $private:Paths = @(
-        $setup_dir.FullName + "\WindowsTerminal\Shortcuts;",
         "C:\tools\Anaconda3;",
         "C:\tools\Anaconda3\Library\bin;",
         "C:\tools\Anaconda3\Scripts;",
@@ -27,7 +26,6 @@ if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
     );
 } elseif($env:COMPUTERNAME -eq "K-WIN10-29") {
     $private:Paths = @(
-        $setup_dir.FullName + "\WindowsTerminal\Shortcuts;",
         "C:\tools\Anaconda3;",
         # "C:\tools\Anaconda3\Library\mingw-w64\bin;",
         # "C:\tools\Anaconda3\Library\usr\bin;",
@@ -145,6 +143,8 @@ if($env:WT_SESSION){
         return $prevprompt.invoke()
     }
 }
+
+Set-Alias -Name cmd -Value C:\Windows\System32\cmd.exe
 
 $ExecEnd = Get-Date
 Write-Host "Profile Load Time: $(($ExecEnd - $ExecStart).Milliseconds) Milliseconds"
