@@ -1,3 +1,9 @@
+if not vim.env.LSP_Servers then
+  print("The environmental variable with the LSP server path doesn't exist")
+  print(debug.traceback())
+  return
+end
+
 local sumneko_root_path = vim.env.LSP_Servers .. "/lua-language-server"
 local sumneko_binary    = sumneko_root_path..'/bin/windows/lua-language-server'
 
