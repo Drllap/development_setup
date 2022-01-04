@@ -19,7 +19,7 @@ if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
         # "C:\Program Files\dotnet\;",
         "C:\Program Files\Git\cmd;",
         "C:\Program Files\nodejs\;",
-        "C:\Users\noob-destroyer\AppData\Local\Microsoft\WindowsApps;",
+        # "C:\Users\noob-destroyer\AppData\Local\Microsoft\WindowsApps;",
         "C:\tools\neovim\Neovim\bin;"
         "C:\Program Files (x86)\GitHub CLI\;",
         "C:\Users\noob-destroyer\AppData\Roaming\npm;"
@@ -146,6 +146,7 @@ if($env:WT_SESSION){
 
 Set-Alias -Name cmd     -Value C:\Windows\System32\cmd.exe
 Set-Alias -Name cmd.exe -Value C:\Windows\System32\cmd.exe
+Set-Alias -Name ub      -Value ($env:LOCALAPPDATA | Join-Path -ChildPath "Microsoft\WindowsApps\ubuntu2004.exe")
 
 $ExecEnd = Get-Date
 Write-Host "Profile Load Time: $(($ExecEnd - $ExecStart).Milliseconds) Milliseconds"
