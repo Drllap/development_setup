@@ -25,3 +25,6 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+export LSP_Servers=$(realpath $(dirname $(readlink -f $BASH_SOURCE))/../../LSP-Servers)
+
