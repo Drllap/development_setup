@@ -28,3 +28,7 @@ fi
 
 export LSP_Servers=$(realpath $(dirname $(readlink -f $BASH_SOURCE))/../../LSP-Servers)
 
+if [ -n "$WSL_DISTRO_NAME" ]; then
+    PATH="/mnt/c/ProgramData/chocolatey/bin:$PATH"  # For win32yank
+fi
+
