@@ -11,6 +11,7 @@ sudo apt-get update
 sudo apt install    \
   git               \
   gh                \
+  npm               \
   neovim            \
   python3           \
   python3-pip       \
@@ -21,6 +22,8 @@ pip3 install            \
   pyright               `# Python LSP (Language Server Protocoal) server` \
   cmake-language-server `# CMake LSP server`                              \
   debugpy                # Python DAP (Debug Adapter Protocoal) server
+
+sudo npm install -g vim-language-server
 
 # install vim-plug
 curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
