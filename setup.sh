@@ -1,3 +1,6 @@
+#!/bin/bash
+set -e
+
 # install daily build for neovim
 sudo add-apt-repository ppa:neovim-ppa/unstable
 
