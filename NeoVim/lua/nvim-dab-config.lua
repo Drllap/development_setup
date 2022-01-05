@@ -1,8 +1,16 @@
 local dap = require('dap')
 
+local function dap_python_command()
+  if 'Linux' == vim.loop.os_uname().sysname then
+    return 'python3'
+  else
+    return 'C:/tools/Anaconda3/python.exe'
+  end
+end
+
 dap.adapters.python = {
     type = 'executable';
-    command = 'C:/tools/Anaconda3/python.exe';
+    command = dap_python_command();
     args = { '-m', 'debugpy.adapter' };
 }
 

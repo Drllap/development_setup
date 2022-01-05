@@ -14,7 +14,7 @@ sudo apt install    \
   ninja-build       \
   stow
 
-pip3 install pyright
+pip3 install pyright debugpy
 
 # install vim-plug
 curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
