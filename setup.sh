@@ -14,7 +14,10 @@ sudo apt install    \
   ninja-build       \
   stow
 
-pip3 install pyright debugpy
+pip3 install            \
+  pyright               # Python LSP (Language Server Protocoal) server \
+  cmake-language-server # CMake LSP server                              \
+  debugpy               # Python DAP (Debug Adapter Protocoal) server
 
 # install vim-plug
 curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
