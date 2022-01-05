@@ -13,8 +13,11 @@ Invoke-WebRequest -useb https://raw.githubusercontent.com/junegunn/vim-plug/mast
 New-Item -Path $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\ -Name settings.json `
     -Value .\WindowsTerminal\settings.json -ItemType SymbolicLink -Force
 
-# Use NeoVim as git editor
-git config --global core.editor "nvim"
+
+# setup git
+git config --global user.email "drllap@gmail.com"
+git config --global user.name "Pall Palsson"
+git config --global core.editor "nvim"  # Use NeoVim as git editor
 git config --global core.symlink true
 
 Install-Module npm-completion -Scope CurrentUser
