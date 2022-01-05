@@ -9,8 +9,12 @@ sudo apt install    \
   git               \
   gh                \
   neovim            \
+  python3           \
+  python3-pip       \
   ninja-build       \
   stow
+
+pip3 install pyright
 
 # install vim-plug
 curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
