@@ -36,6 +36,7 @@ Install-Module -Name posh-git -Scope CurrentUser    # Git tab autocompleation
 
 Install-Module -Name PowerColorLS -Scope CurrentUser    # Better (colorfull) ls/dir command
 Install-Module -Name Terminal-Icons -Scope CurrentUser  # Dependency of PowerColorLS
+Install-Module -Name z -Scope CurrentUser -AllowClobber # Navigation module for PowerShell, similar to autojump
 
 # Download and install PowerShell LSP Server into ../LSP-Servers
 mkdir ../LSP-Servers

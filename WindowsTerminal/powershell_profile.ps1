@@ -107,6 +107,8 @@ Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1 # Add tab Au
  
 Import-Module npm-completion    # Add tab Autocompletion for npm
 
+Import-Module z # Autojump like module
+
 # Configure PowerColorLS
 Set-Alias -Name ls -Value PowerColorLS -Option AllScope # Use PowerColorLS as default ls command
 
