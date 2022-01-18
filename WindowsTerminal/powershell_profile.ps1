@@ -98,6 +98,8 @@ function so {
     Write-Host "re-sourcing profile: " $PROFILE.CurrentUserAllHosts
 }
 
+Import-Module PSReadLine -RequiredVersion "2.2.0"
+
 Import-Module posh-git  # posh-git, git info in prompt and auto tab completion
 
 $dockerCompletionModule = (Get-Item $PSCommandPath).Target | Split-Path | Join-Path -ChildPath "\DockerCompletion\DockerCompletion"
@@ -149,6 +151,49 @@ if($env:WT_SESSION){
 Set-Alias -Name cmd     -Value C:\Windows\System32\cmd.exe
 Set-Alias -Name cmd.exe -Value C:\Windows\System32\cmd.exe
 Set-Alias -Name ub      -Value ($env:LOCALAPPDATA | Join-Path -ChildPath "Microsoft\WindowsApps\ubuntu2004.exe")
+
+
+# Set opstions for PSReadLIne module
+# Change the cursor when goin in and out of Vi mode
+if ($PSVersionTable.PSVersion.Major -eq 5) {
+    # We need to hande PowerShell 5 specially
+    # https://github.com/PowerShell/PSReadLine/issues/3159#issuecomment-1015001655
+    function Script:OnViModeChange {
+        $esc = "$([char]0x1b)"
+        if ($args[0] -eq 'Command') {
+            # Set the cursor to a blinking block.
+            Write-Host -NoNewline "${esc}[1 q"
+            # Write-Host "$esc e[1 q" -NoNewLine
+        } else {
+            # Set the cursor to a blinking line.
+            Write-Host -NoNewline "${esc}[5 q"
+        }
+    }
+} else {
+    # https://docs.microsoft.com/en-us/powershell/module/psreadline/set-psreadlineoption?
+    # view=powershell-7.2#example-6--use-vimodechangehandler-to-display-vi-mode-changes
+    function Script:OnViModeChange {
+        if ($args[0] -eq 'Command') {
+            # Set the cursor to a blinking block.
+            Write-Host -NoNewLine "`e[1 q"
+        } else {
+            # Set the cursor to a blinking line.
+            Write-Host -NoNewLine "`e[5 q"
+        }
+    }
+}
+
+$Script:PSReadLineOptions = @{
+    EditMode = "Vi"
+    BellStyle = "Visual"
+    PredictionSource = "History"
+    PredictionViewStyle = "ListView"
+    ViModeIndicator = "Script"
+    ViModeChangeHandler = $Function:OnViModeChange
+}
+Set-PSReadLineOption @PSReadLineOptions
+    
+
 
 $ExecEnd = Get-Date
 Write-Host "Profile Load Time: $(($ExecEnd - $ExecStart).Milliseconds) Milliseconds"
