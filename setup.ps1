@@ -20,10 +20,16 @@ git config --global user.name "Pall Palsson"
 git config --global core.editor "nvim"  # Use NeoVim as git editor
 git config --global core.symlink true
 
+# Update PowerShellGet and Dependences (PackageManagement)
+# Needed for -AllowPrerelease flag
+Install-Module -Name PowerShellGet -Scope CurrentUser -Force -AllowClobber
+
 Install-Module npm-completion -Scope CurrentUser
 
-# Update PSReadLine, -Force needed because older version is built in
-Install-Module PSReadLine -Force
+# Update PSReadLine,
+#   -Force needed because older version is built in
+#   -AllowPrerelease becasue we want to use the v2.2 that is still in beta
+Install-Module PSReadLine -AllowPrerelease -Force
 
 # Wrapper for fzf
 # Install-Module -Name PSFzf -Scope CurrentUser
@@ -36,6 +42,7 @@ Install-Module -Name posh-git -Scope CurrentUser    # Git tab autocompleation
 
 Install-Module -Name PowerColorLS -Scope CurrentUser    # Better (colorfull) ls/dir command
 Install-Module -Name Terminal-Icons -Scope CurrentUser  # Dependency of PowerColorLS
+Install-Module -Name z -Scope CurrentUser -AllowClobber # Navigation module for PowerShell, similar to autojump
 
 # Download and install PowerShell LSP Server into ../LSP-Servers
 mkdir ../LSP-Servers
