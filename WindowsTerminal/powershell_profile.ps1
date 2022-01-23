@@ -10,6 +10,10 @@ if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
         "C:\tools\Anaconda3\Scripts;",
         "C:\Windows\System32\WindowsPowerShell\v1.0\;",
         "C:\Windows\System32\OpenSSH\;"
+        "C:\tools\neovim\Neovim\bin;" # This needs to be above the chocolatey folder
+                                      # so the the win32yank from that is prefered over the
+                                      # one in chocolatey. The WSL will use the other one.
+                                      # See bash/bash_profile
         "C:\ProgramData\chocolatey\bin;",
         # "C:\Program Files\PostgreSQL\12\bin;",
         "C:\Program Files\Cmake\bin;"
@@ -20,7 +24,6 @@ if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
         "C:\Program Files\Git\cmd;",
         "C:\Program Files\nodejs\;",
         # "C:\Users\noob-destroyer\AppData\Local\Microsoft\WindowsApps;",
-        "C:\tools\neovim\Neovim\bin;"
         "C:\Program Files (x86)\GitHub CLI\;",
         "C:\Users\noob-destroyer\AppData\Roaming\npm;"
     );
