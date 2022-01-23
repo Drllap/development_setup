@@ -183,6 +183,8 @@ if ($PSVersionTable.PSVersion.Major -eq 5) {
     }
 }
 
+$env:VISUAL = "nvim"    # When in Command Mod, <v> will open the current line content in nvim
+
 $Script:PSReadLineOptions = @{
     EditMode = "Vi"
     BellStyle = "Visual"
