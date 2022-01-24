@@ -34,7 +34,7 @@ if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
         "C:\WINDOWS\system32;",
         "C:\WINDOWS;",
         # "C:\WINDOWS\System32\Wbem;",
-        # "C:\WINDOWS\System32\WindowsPowerShell\v1.0\;",
+        "C:\WINDOWS\System32\WindowsPowerShell\v1.0\;",
         "C:\ProgramData\chocolatey\bin;",
         "C:\Program Files\CMake\bin;",
         # "C:\Program Files\Maven\apache-maven-3.5.0\bin;",
