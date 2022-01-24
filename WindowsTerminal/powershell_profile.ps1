@@ -218,8 +218,11 @@ Set-PSReadLineKeyHandler -Key k -ViMode Insert -ScriptBlock {
         [Microsoft.PowerShell.PSConsoleReadLine]::SetCursorPosition($cursor-1)
     }
 }
-    
-
+ 
+Set-PSReadLineKeyHandler -Key Ctrl+n -Function NextHistory
+Set-PSReadLineKeyHandler -Key Ctrl+p -Function PreviousHistory
+Set-PSReadLineKeyHandler -Key Ctrl+K -Function ShowParameterHelp
+Set-PSReadLineKeyHandler -Key Ctrl+k -Function ShowCommandHelp
 
 $ExecEnd = Get-Date
 Write-Host "Profile Load Time: $(($ExecEnd - $ExecStart).Milliseconds) Milliseconds"
