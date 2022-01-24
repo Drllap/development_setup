@@ -10,6 +10,10 @@ if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
         "C:\tools\Anaconda3\Scripts;",
         "C:\Windows\System32\WindowsPowerShell\v1.0\;",
         "C:\Windows\System32\OpenSSH\;"
+        "C:\tools\neovim\Neovim\bin;" # This needs to be above the chocolatey folder
+                                      # so the the win32yank from that is prefered over the
+                                      # one in chocolatey. The WSL will use the other one.
+                                      # See bash/bash_profile
         "C:\ProgramData\chocolatey\bin;",
         # "C:\Program Files\PostgreSQL\12\bin;",
         "C:\Program Files\Cmake\bin;"
@@ -20,7 +24,6 @@ if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
         "C:\Program Files\Git\cmd;",
         "C:\Program Files\nodejs\;",
         # "C:\Users\noob-destroyer\AppData\Local\Microsoft\WindowsApps;",
-        "C:\tools\neovim\Neovim\bin;"
         "C:\Program Files (x86)\GitHub CLI\;",
         "C:\Users\noob-destroyer\AppData\Roaming\npm;"
     );
@@ -183,6 +186,8 @@ if ($PSVersionTable.PSVersion.Major -eq 5) {
     }
 }
 
+$env:VISUAL = "nvim"    # When in Command Mod, <v> will open the current line content in nvim
+
 $Script:PSReadLineOptions = @{
     EditMode = "Vi"
     BellStyle = "Visual"
@@ -192,8 +197,32 @@ $Script:PSReadLineOptions = @{
     ViModeChangeHandler = $Function:OnViModeChange
 }
 Set-PSReadLineOption @PSReadLineOptions
-    
 
+
+$j_timer = New-Object System.Diagnostics.Stopwatch
+
+Set-PSReadLineKeyHandler -Key j -ViMode Insert -ScriptBlock {
+    [Microsoft.PowerShell.PSConsoleReadLine]::Insert("j")
+    $j_timer.Restart()
+}
+
+Set-PSReadLineKeyHandler -Key k -ViMode Insert -ScriptBlock {
+    if (!$j_timer.IsRunning -or $j_timer.ElapsedMilliseconds -gt 1000) {
+        [Microsoft.PowerShell.PSConsoleReadLine]::Insert("k")
+    } else {
+        [Microsoft.PowerShell.PSConsoleReadLine]::ViCommandMode()
+        $line = $null
+        $cursor = $null
+        [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
+        [Microsoft.PowerShell.PSConsoleReadLine]::Delete($cursor, 1)
+        [Microsoft.PowerShell.PSConsoleReadLine]::SetCursorPosition($cursor-1)
+    }
+}
+ 
+Set-PSReadLineKeyHandler -Key Ctrl+n -Function NextHistory
+Set-PSReadLineKeyHandler -Key Ctrl+p -Function PreviousHistory
+Set-PSReadLineKeyHandler -Key Ctrl+K -Function ShowParameterHelp
+Set-PSReadLineKeyHandler -Key Ctrl+k -Function ShowCommandHelp
 
 $ExecEnd = Get-Date
 Write-Host "Profile Load Time: $(($ExecEnd - $ExecStart).Milliseconds) Milliseconds"
