@@ -103,6 +103,8 @@ function so {
 }
 
 Import-Module PSReadLine -RequiredVersion "2.2.0"
+# Remove-Module PSReadLine -Force
+# Import-Module PSReadLine -RequiredVersion "2.1.0"
 
 Import-Module posh-git  # posh-git, git info in prompt and auto tab completion
 
