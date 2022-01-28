@@ -225,6 +225,8 @@ Set-PSReadLineKeyHandler -Key Ctrl+p -Function PreviousHistory
 Set-PSReadLineKeyHandler -Key Ctrl+K -Function ShowParameterHelp
 Set-PSReadLineKeyHandler -Key Ctrl+k -Function ShowCommandHelp
 
+# Set-PSReadLineKeyHandler -Key Ctrl+e -Function ScrollDisplayUpLine
+
 Set-PSReadLineKeyHandler -Key Tab -Function Complete    # Changes compleation to bash-like, only compleate to divergence
 
 $ExecEnd = Get-Date
