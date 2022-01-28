@@ -5,6 +5,7 @@ $env:LSP_Servers = $setup_dir.Parent.FullName + "\LSP-Servers\"
 
 if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
     $private:Paths = @(
+        "C:\WINDOWS\system32;",
         "C:\tools\Anaconda3;",
         "C:\tools\Anaconda3\Library\bin;",
         "C:\tools\Anaconda3\Scripts;",
@@ -151,8 +152,8 @@ if($env:WT_SESSION){
     }
 }
 
-Set-Alias -Name cmd     -Value C:\Windows\System32\cmd.exe
-Set-Alias -Name cmd.exe -Value C:\Windows\System32\cmd.exe
+# Set-Alias -Name cmd     -Value C:\Windows\System32\cmd.exe
+# Set-Alias -Name cmd.exe -Value C:\Windows\System32\cmd.exe
 Set-Alias -Name ub      -Value ($env:LOCALAPPDATA | Join-Path -ChildPath "Microsoft\WindowsApps\ubuntu2004.exe")
 
 
