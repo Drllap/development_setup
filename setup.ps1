@@ -65,5 +65,6 @@ Pop-Location
 
 # Install pyright, python LSP server, requires NodeJS
 # npm install -g pyright    # Install pyrigh with pip instead
+npm install -g vim-language-server
 
 pip3 install pyright
