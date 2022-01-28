@@ -64,4 +64,6 @@ Set-Location ../..
 Pop-Location
 
 # Install pyright, python LSP server, requires NodeJS
-npm install -g pyright
+# npm install -g pyright    # Install pyrigh with pip instead
+
+pip3 install pyright
