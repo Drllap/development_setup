@@ -33,7 +33,7 @@ require('nvim-treesitter.configs').setup {
     enable = true,
 
      -- list of language that will be disabled
-    disable = {},
+    disable = { "python" },
   },
 }
 
