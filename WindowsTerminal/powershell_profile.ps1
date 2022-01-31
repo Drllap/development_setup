@@ -138,9 +138,12 @@ if($env:WT_SESSION){
     $prevprompt = $Function:prompt
     function prompt {
         if ($pwd.provider.name -eq "FileSystem") {
-	    $p = $pwd.providerpath
-            $esc = [char]27
-	    write-host "$esc]9;9;`"$p`"$esc\" -NoNewline
+          $p = $pwd.providerpath
+          $esc = [char]27
+          Write-Host "$esc]9;9;`"$p`"$esc\" -NoNewline
+          
+          $esc = "$([char]0x1b)"
+          Write-Host -NoNewline "${esc}[5 q"
         }
 
         # Add Nix property to $PWD, returns the path in UNIX style
