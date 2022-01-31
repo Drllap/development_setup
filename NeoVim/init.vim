@@ -107,7 +107,8 @@ augroup Mkdir
 augroup END
 
 " Exit insert mode with jk
-inoremap jk <esc>
+noremap! <silent> jk <esc>
+tnoremap <silent> jk <C-\><C-N>
 
 nnoremap <silent> <leader>h <C-w>h
 nnoremap <silent> <leader>j <C-w>j
