@@ -13,6 +13,8 @@ sudo apt install    \
   gh                \
   npm               \
   neovim            \
+  ripgrep           \
+  fd-find           \
   python3           \
   python3-pip       \
   ninja-build       \
