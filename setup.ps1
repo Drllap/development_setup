@@ -19,6 +19,7 @@ git config --global user.email "drllap@gmail.com"
 git config --global user.name "Pall Palsson"
 git config --global core.editor "nvim"  # Use NeoVim as git editor
 git config --global core.symlink true
+git config --global pull.rebase true
 
 # Update PowerShellGet and Dependences (PackageManagement)
 # Needed for -AllowPrerelease flag
