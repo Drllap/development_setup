@@ -25,7 +25,7 @@ if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
         "C:\Program Files\Git\cmd;",
         "C:\Program Files\nodejs\;",
         # "C:\Users\noob-destroyer\AppData\Local\Microsoft\WindowsApps;",
-        "C:\Program Files (x86)\GitHub CLI\;",
+        "C:\Program Files\GitHub CLI\;",
         "C:\Users\noob-destroyer\AppData\Roaming\npm;"
     );
 } elseif($env:COMPUTERNAME -eq "K-WIN10-29") {
