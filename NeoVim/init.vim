@@ -73,7 +73,7 @@ Plug 'preservim/nerdtree'
 " Telescope stuff
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make'}
+Plug 'Drllap/telescope-fzf-native.nvim', { 'do': 'cmake -S . -B build && cmake --build build --config Release && cmake --install build'}
 
 " Autocompleation plugins
 Plug 'hrsh7th/nvim-cmp'

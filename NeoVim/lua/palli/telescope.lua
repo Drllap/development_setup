@@ -1,15 +1,5 @@
-require('telescope').setup {
-  extensions = {
-    fzf = {
-      fuzzy = true,
-      override_generic_sorter = true,
-      override_file_sorter = true,
-      case_mode = "smart_case",
-    }
-  }
-}
-
--- require('telescope').load_extension('fzf')
+require('telescope').setup {}
+require('telescope').load_extension('fzf')
 
 -- Create keymap to browse the files in the current "project" (files under CWD)
 local opts = { noremap = true, silent = true, expr = false };
