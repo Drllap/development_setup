@@ -18,7 +18,8 @@ sudo apt install    \
   python3           \
   python3-pip       \
   ninja-build       \
-  stow
+  stow              \
+  manpages-posix
 
 pip3 install            \
   pyright               `# Python LSP (Language Server Protocoal) server` \
