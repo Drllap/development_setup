@@ -68,4 +68,7 @@ Pop-Location
 # npm install -g pyright    # Install pyrigh with pip instead
 npm install -g vim-language-server
 
-pip3 install pyright
+pip3 install
+    pyright
+    cmake-language-server
+
