@@ -10,7 +10,7 @@ set_keymap('n', '<leader>th', '<cmd>lua require("telescope.builtin").help_tags()
 set_keymap('n', '<leader>tw', '<cmd>lua require("telescope.builtin").live_grep()<cr>', opts);
 
 -- Create keymap to browse the vim config files with Telescope
-local search_root = { cwd = vim.fn.fnamemodify(vim.env.MYVIMRC, ':h'), };
+local search_root = { cwd = vim.fn.fnamemodify(vim.fn.resolve(vim.env.MYVIMRC), ':h:h'), };
 local no_new_line = { newline = ' ' };
 local expression = string.format(
         '<cmd>lua require("telescope.builtin").find_files(%s)<cr>',
