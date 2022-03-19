@@ -74,7 +74,6 @@ augroup LuaHighlight
     au TextYankPost * silent! lua return (not vim.v.event.visual) and require'vim.highlight'.on_yank()
 augroup END
 
-
 " Create an autocommand that creates the missing folder when writing a file
 " that doesn't exist
 augroup Mkdir
