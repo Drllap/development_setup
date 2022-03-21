@@ -5,28 +5,29 @@ $env:LSP_Servers = $setup_dir.Parent.FullName + "\LSP-Servers\"
 
 if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
     $private:Paths = @(
-        "C:\WINDOWS\system32;",
-        "C:\tools\Anaconda3;",
-        "C:\tools\Anaconda3\Library\bin;",
-        "C:\tools\Anaconda3\Scripts;",
-        "C:\Windows\System32\WindowsPowerShell\v1.0\;",
+        "C:\WINDOWS\system32;"
+        "C:\tools\Anaconda3;"
+        "C:\tools\Anaconda3\Library\bin;"
+        "C:\tools\Anaconda3\Scripts;"
+        "C:\Windows\System32\WindowsPowerShell\v1.0\;"
         "C:\Windows\System32\OpenSSH\;"
         "C:\tools\neovim\Neovim\bin;" # This needs to be above the chocolatey folder
                                       # so the the win32yank from that is prefered over the
                                       # one in chocolatey. The WSL will use the other one.
                                       # See bash/bash_profile
-        "C:\ProgramData\chocolatey\bin;",
+        "C:\ProgramData\chocolatey\bin;"
         # "C:\Program Files\PostgreSQL\12\bin;",
         "C:\Program Files\Cmake\bin;"
-        "C:\Program Files\LLVM\bin;",
-        "C:\Program Files\Docker\Docker\resources\bin;",
-        "C:\ProgramData\DockerDesktop\version-bin;",
+        "C:\Program Files\LLVM\bin;"
+        "C:\Program Files\Docker\Docker\resources\bin;"
+        "C:\ProgramData\DockerDesktop\version-bin;"
         # "C:\Program Files\dotnet\;",
         "C:\Program Files\Git\cmd;",
         "C:\Program Files\nodejs\;",
         # "C:\Users\noob-destroyer\AppData\Local\Microsoft\WindowsApps;",
         "C:\Program Files\GitHub CLI\;",
         "C:\Users\noob-destroyer\AppData\Roaming\npm;"
+        "C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin;"
     );
 } elseif($env:COMPUTERNAME -eq "K-WIN10-29") {
     $private:Paths = @(
