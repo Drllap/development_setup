@@ -69,6 +69,8 @@ Pop-Location
 npm install -g vim-language-server
 
 pip3 install
+    neovim
+    pywin32
     pyright
     cmake-language-server
 
