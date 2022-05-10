@@ -1,30 +1,23 @@
+vim.opt.completeopt = { "menu", "menuone", "longest", "noselect" }
+
 local lspkind = require('lspkind')
 lspkind.init()
 
 local cmp = require('cmp')
-
-cmp.setup {
-    mapping = {
+cmp.setup({
+    mapping = cmp.mapping.preset.insert({
         ["<C-d>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-e>"] = cmp.mapping.close(),
-        ["<C-y>"] = cmp.mapping.confirm {
-            behavior = cmp.ConfirmBehavior.Insert,
-            select = true,
-        },
-        ["<C-q>"] = cmp.mapping.confirm {
-            behavior = cmp.ConfirmBehavior.Replace,
-            select = true,
-        },
-
-        ["<c-space>"] = cmp.mapping.complete(),
-    },
+        ["<C-Space>"] = cmp.mapping.complete(),
+        ["<CR>"] = cmp.mapping.confirm({ select = true }),
+    }),
 
     sources = {
         { name = "nvim_lua" },
         { name = "nvim_lsp" },
         { name = "path"     },
-        { name = "buffer" , keyword_length = 5 },
+        { name = "buffer"   },
     },
 
     formatting = {
@@ -38,4 +31,19 @@ cmp.setup {
             },
         },
     },
-}
+})
+
+-- `/` cmdline setup.
+cmp.setup.cmdline('/', {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = {
+    { name = 'buffer' }
+  }
+})
+
+-- `:` cmdline setup.
+cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = cmp.config.sources({{ name = 'path' }}, {{ name = 'cmdline' }})
+})
+
