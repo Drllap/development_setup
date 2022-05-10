@@ -37,7 +37,10 @@ let mapleader=" "
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'pprovost/vim-ps1' " PowerShell scrip support
 Plug 'gruvbox-community/gruvbox' " Gruvbox theam
+
+" TPope plugins
 Plug 'tpope/vim-fugitive' " Git wrapper plugin
+Plug 'tpope/vim-obsession'    " Extends/tweeks the vim built in :mksession
 
 Plug 'neovim/nvim-lspconfig' " LSP configuration plugin
 
