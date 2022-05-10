@@ -5,18 +5,23 @@
 ** Add inspect module to LuaJIT
 * Test/Fix PowerShell $PWD to nix()
 * PowerShell profile optimizzation
-* Markdown previwe
-* Telescop FileExplorer
+* Markdown preview
+* Dictionary/spelling
+* Telescope
+** FileExplorer
+** Planets error on windows
 * Vim FileManager plugin
 * Vim org-mode
-* Toggle Terminal
 * Toggle files
 ** Toggle between *.cpp/*.h
 ** Toggle between autoload/plugin
 * Plugins to look into
-** TPope/Commentator
-** TPope/Surround
-** Other TPope pluggins
-** Toggle Terminal
+** TPope plugins
+*** Commentator
+*** Surround
+*** Maybe some others
+** ToggleTerminal
 * Make vim-plug work with PowerShell (can I run the unit tests?)
-* set g:python3_host_prog (see :checkhealth
+* set g:python3_host_prog (see :checkhealth)
+* My FileManager plugin
+** Handle when buffer isn't open file
