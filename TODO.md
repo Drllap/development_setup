@@ -1,3 +1,4 @@
+* Move the .lua config files in NeoVim to a namesapce, palli
 * Install DockerCompleteion via PowerShellGallery instead of sub-module
 * Jump to Visual Studio
 * C++ code completion
