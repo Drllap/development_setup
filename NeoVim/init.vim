@@ -102,4 +102,8 @@ nnoremap <silent> <C-k><C-b> :NERDTreeToggle<CR>
 " :map Y y$ " Comment this out because after Nevim v0.6 this is the
 " default
 
+if has('win32')
+  map <C-z> <Nop>
+endif
+
 lua require('init')
