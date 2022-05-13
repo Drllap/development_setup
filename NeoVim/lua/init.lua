@@ -4,4 +4,5 @@ require('nvim-dab-config')
 
 require('palli.treesitter')
 require('palli.telescope')
+require('palli.nvim-tree')
 
