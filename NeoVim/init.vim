@@ -68,6 +68,7 @@ Plug 'onsails/lspkind-nvim'
 " Debug integration plugin
 Plug 'mfussenegger/nvim-dap'
 
+" Plug 'ericcurtin/CurtineIncSw.vim'
 call plug#end()
 
 colorscheme gruvbox
