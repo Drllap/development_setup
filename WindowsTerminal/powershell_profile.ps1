@@ -69,7 +69,7 @@ if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
         # "C:\tools\cmder;",
         # "C:\Program Files\Microsoft VS Code\bin;",
         "C:\Users\palli\AppData\Roaming\npm;",
-        "C:\tools\neovim\Neovim\bin;",
+        "C:\tools\neovim\nvim-win64\bin\;",
         "C:\Program Files (x86)\GitHub CLI\;",
         "C:\Users\palli\AppData\Local\Microsoft\WindowsApps;",
         "C:\Users\palli\.dotnet\tools;",
