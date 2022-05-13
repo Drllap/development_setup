@@ -28,6 +28,7 @@ if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
         "C:\Program Files\GitHub CLI\;",
         "C:\Users\noob-destroyer\AppData\Roaming\npm;"
         "C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin;"
+        "C:\tools\vim\vim82"
     );
 } elseif($env:COMPUTERNAME -eq "K-WIN10-29") {
     $private:Paths = @(
