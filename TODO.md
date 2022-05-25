@@ -2,10 +2,17 @@
 * Install DockerCompleteion via PowerShellGallery instead of sub-module
 * Jump to Visual Studio
 * C++ code completion
+* Report or fix bugs
+** Fix Qt conan packet on Linux when using shared lib option or create a bug report
+** vim/neovim :saveas
+** PowerColor throws when ls-ing in $env:APPDATA/../
 * Install LuaJIT with setup.ps1/.sh
 ** Add inspect module to LuaJIT
-* Test/Fix PowerShell $PWD to nix()
-* PowerShell profile optimizzation
+* PowerShell tools
+** Test/Fix PowerShell $PWD to nix()
+** profile execution optimizzation
+*** See Optimizing your $Profile, https://devblogs.microsoft.com/powershell/optimizing-your-profile/ 
+** Scroll buffer with keybindings
 * Markdown preview
 * Dictionary/spelling
 * Telescope
@@ -18,8 +25,13 @@
 ** Toggle between autoload/plugin
 * Plugins to look into
 ** TPope plugins
-*** Commentator
-*** Surround
+*** vim-commentary
+*** vim-surround
+*** vim-repeat
+*** vim-scripteas
+*** vim-dispatch
+*** vim-unimpaired
+*** vim-projectionist
 *** Maybe some others
 ** ToggleTerminal
 * Make vim-plug work with PowerShell (can I run the unit tests?)
