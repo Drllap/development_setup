@@ -49,7 +49,7 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate'}
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 
-Plug 'preservim/nerdtree'
+" Plug 'preservim/nerdtree'
 
 " Telescope stuff
 Plug 'nvim-lua/plenary.nvim'
@@ -98,7 +98,7 @@ nnoremap <silent> <leader>j <C-w>j
 nnoremap <silent> <leader>k <C-w>k
 nnoremap <silent> <leader>l <C-w>l
 
-nnoremap <silent> <C-k><C-b> :NERDTreeToggle<CR>
+" nnoremap <silent> <C-k><C-b> :NERDTreeToggle<CR>
 
 " Remap Y to yank to the end of the file. Not Vi-compatible but more logical.
 " See :h Y
