@@ -50,6 +50,21 @@ cd ../..
 ./3rd/luamake/luamake rebuild
 popd
 
+# install cmake from source
+# Download
+version=3.22
+build=2
+## don't modify from here
+mkdir ~/temp
+pushd ~/temp
+wget https://cmake.org/files/v$version/cmake-$version.$build.tar.gz
+tar -xzvf cmake-$version.$build.tar.gz
+cd cmake-$version.$build/
+# Build and Install
+./bootstrap
+make -j$(nproc)
+sudo make install
+popd
 
 # install neovim from source
 git clone git@github.com:neovim/neovim.git ../neovim
