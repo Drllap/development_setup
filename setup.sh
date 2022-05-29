@@ -31,7 +31,8 @@ sudo apt install    \
 pip3 install            \
   pyright               `# Python LSP (Language Server Protocoal) server` \
   cmake-language-server `# CMake LSP server`                              \
-  debugpy                # Python DAP (Debug Adapter Protocoal) server
+  debugpy               `# Python DAP (Debug Adapter Protocoal) server`   \
+  conan
 
 sudo npm install -g vim-language-server
 
