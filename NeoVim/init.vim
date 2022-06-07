@@ -41,6 +41,7 @@ Plug 'gruvbox-community/gruvbox' " Gruvbox theam
 " TPope plugins
 Plug 'tpope/vim-fugitive' " Git wrapper plugin
 Plug 'tpope/vim-obsession'    " Extends/tweeks the vim built in :mksession
+Plug 'tpope/vim-dispatch'     " Async build
 
 Plug 'neovim/nvim-lspconfig' " LSP configuration plugin
 
