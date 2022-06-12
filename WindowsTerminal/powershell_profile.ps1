@@ -28,7 +28,7 @@ if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
         "C:\Program Files\GitHub CLI\;",
         "C:\Users\noob-destroyer\AppData\Roaming\npm;"
         "C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin;"
-        "C:\tools\vim\vim82"
+        "C:\tools\vim\vim82;"
     );
 } elseif($env:COMPUTERNAME -eq "K-WIN10-29") {
     $private:Paths = @(
@@ -163,6 +163,7 @@ if($env:WT_SESSION){
 # Set-Alias -Name cmd.exe -Value C:\Windows\System32\cmd.exe
 Set-Alias -Name ub      -Value ($env:LOCALAPPDATA | Join-Path -ChildPath "Microsoft\WindowsApps\ubuntu2004.exe")
 Set-Alias -Name MSBuild -Value "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\MSBuild.exe"
+Set-Alias -Name vswhere -Value "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe"
 Set-Alias -Name LuaJIT  -Value "F:\Development\luajit\installation\luajit.exe"
 Set-Alias -Name nn      -Value "nvim-qt"
 
