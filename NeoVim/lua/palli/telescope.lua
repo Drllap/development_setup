@@ -4,31 +4,31 @@ require('telescope').load_extension('fzf')
 -- Create keymap to browse the files in the current "project" (files under CWD)
 local opts = { noremap = true, silent = true, expr = false };
 local set_keymap = vim.api.nvim_set_keymap;
-set_keymap('n', '<leader>tf', '<cmd>lua require("telescope.builtin").find_files()<cr>', opts);
-set_keymap('n', '<leader>tF', '<cmd>lua require("telescope.builtin").find_files({ hidden = true, no_ignore = true })<cr>', opts);
+set_keymap('n', '<leader>f',  '<cmd>lua require("telescope.builtin").find_files()<cr>', opts);
+set_keymap('n', '<leader>F',  '<cmd>lua require("telescope.builtin").find_files({ hidden = true, no_ignore = true })<cr>', opts);
 set_keymap('n', '<leader>tb', '<cmd>lua require("telescope.builtin").buffers({ sort_mru = true })<cr>', opts);
 set_keymap('n', '<leader>th', '<cmd>lua require("telescope.builtin").help_tags()<cr>', opts);
 set_keymap('n', '<leader>tw', '<cmd>lua require("telescope.builtin").live_grep()<cr>', opts);
 set_keymap('n', '<leader>ts', '<cmd>lua require("telescope.builtin").grep_string()<cr>', opts);
 
-vim.keymap.set('n', '<leader>t;', require('telescope.builtin').current_buffer_fuzzy_find, opts);
+vim.keymap.set('n', '<leader>;',  require('telescope.builtin').current_buffer_fuzzy_find, opts);
 vim.keymap.set('n', '<leader>tr', require('telescope.builtin').resume, opts);
 
-vim.keymap.set('n', '<leader>tgc', require('telescope.builtin').git_commits, opts);
+vim.keymap.set('n', '<leader>tgc',  require('telescope.builtin').git_commits, opts);
 vim.keymap.set('n', '<leader>tgbc', require('telescope.builtin').git_bcommits, opts);
 vim.keymap.set('n', '<leader>tgbr', require('telescope.builtin').git_branches, opts);
-vim.keymap.set('n', '<leader>tgs', require('telescope.builtin').git_status, opts);
-vim.keymap.set('n', '<leader>tgt', require('telescope.builtin').git_stash, opts);
+vim.keymap.set('n', '<leader>tgs',  require('telescope.builtin').git_status, opts);
+vim.keymap.set('n', '<leader>tgt',  require('telescope.builtin').git_stash, opts);
 
 vim.keymap.set('n', '<leader>tm', require('telescope.builtin').marks, opts);
 vim.keymap.set('n', '<leader>tr', require('telescope.builtin').registers, opts);
 
-vim.keymap.set('n', '<leader>tlD', require('telescope.builtin').lsp_definitions, opts);
+vim.keymap.set('n', '<leader>tld', require('telescope.builtin').lsp_definitions, opts);
 vim.keymap.set('n', '<leader>tlt', require('telescope.builtin').lsp_type_definitions, opts);
 vim.keymap.set('n', '<leader>tli', require('telescope.builtin').lsp_implementations, opts);
 vim.keymap.set('n', '<leader>tlr', require('telescope.builtin').lsp_references, opts);
-vim.keymap.set('n', '<leader>tls', require('telescope.builtin').lsp_document_symbols, opts);
-vim.keymap.set('n', '<leader>tlS', require('telescope.builtin').lsp_workspace_symbols, opts);
+vim.keymap.set('n', '<leader>s',   require('telescope.builtin').lsp_document_symbols, opts);
+vim.keymap.set('n', '<leader>s',   require('telescope.builtin').lsp_workspace_symbols, opts);
 vim.keymap.set('n', '<leader>tle', require('telescope.builtin').diagnostics, opts);
 
 -- Create keymap to browse the vim config files with Telescope
