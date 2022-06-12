@@ -1,8 +1,6 @@
 syntax on
 set keywordprg=:help " set the Shift+k to use :help, syntax on, above changes it to :Man
 
-set softtabstop=4
-set shiftwidth=4
 set expandtab
  	
 set exrc " local .vimrc files are sorced when doing nvim . 
@@ -45,7 +43,6 @@ Plug 'tpope/vim-dispatch'     " Async build
 " Plug 'tpope/vim-commentary'   " Comment out stuff
 
 Plug 'neovim/nvim-lspconfig' " LSP configuration plugin
-
 
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate'}
 Plug 'kyazdani42/nvim-web-devicons'
