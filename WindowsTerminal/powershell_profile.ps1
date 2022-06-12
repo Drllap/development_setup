@@ -164,7 +164,7 @@ if($env:WT_SESSION){
 Set-Alias -Name ub      -Value ($env:LOCALAPPDATA | Join-Path -ChildPath "Microsoft\WindowsApps\ubuntu2004.exe")
 Set-Alias -Name MSBuild -Value "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\MSBuild.exe"
 Set-Alias -Name LuaJIT  -Value "F:\Development\luajit\installation\luajit.exe"
-
+Set-Alias -Name nn      -Value "nvim-qt"
 
 # Set opstions for PSReadLIne module
 # Change the cursor when goin in and out of Vi mode
