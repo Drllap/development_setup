@@ -39,9 +39,10 @@ Plug 'pprovost/vim-ps1' " PowerShell scrip support
 Plug 'gruvbox-community/gruvbox' " Gruvbox theam
 
 " TPope plugins
-Plug 'tpope/vim-fugitive' " Git wrapper plugin
+Plug 'tpope/vim-fugitive'     " Git wrapper plugin
 Plug 'tpope/vim-obsession'    " Extends/tweeks the vim built in :mksession
 Plug 'tpope/vim-dispatch'     " Async build
+" Plug 'tpope/vim-commentary'   " Comment out stuff
 
 Plug 'neovim/nvim-lspconfig' " LSP configuration plugin
 
@@ -50,7 +51,9 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate'}
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 
+Plug 'preservim/nerdcommenter'
 " Plug 'preservim/nerdtree'
+let g:NERDSpaceDelims = 1
 
 " Telescope stuff
 Plug 'nvim-lua/plenary.nvim'
