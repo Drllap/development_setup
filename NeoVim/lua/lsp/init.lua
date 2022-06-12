@@ -22,3 +22,9 @@ vim.keymap.set('n', '<leader><leader>S', vim.lsp.buf.workspace_symbol)
 vim.keymap.set('n', '<leader><leader>c', vim.lsp.buf.incoming_calls)
 vim.keymap.set('n', '<leader><leader>C', vim.lsp.buf.outgoing_calls)
 
+--   buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
+--   buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
+--   buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
+--   buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
+--   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+
