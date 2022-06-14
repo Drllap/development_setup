@@ -28,7 +28,7 @@ vim.keymap.set('n', '<leader>tlt', require('telescope.builtin').lsp_type_definit
 vim.keymap.set('n', '<leader>tli', require('telescope.builtin').lsp_implementations, opts);
 vim.keymap.set('n', '<leader>tlr', require('telescope.builtin').lsp_references, opts);
 vim.keymap.set('n', '<leader>s',   require('telescope.builtin').lsp_document_symbols, opts);
-vim.keymap.set('n', '<leader>s',   require('telescope.builtin').lsp_workspace_symbols, opts);
+vim.keymap.set('n', '<leader>S',   require('telescope.builtin').lsp_workspace_symbols, opts);
 vim.keymap.set('n', '<leader>tle', require('telescope.builtin').diagnostics, opts);
 
 -- Create keymap to browse the vim config files with Telescope
