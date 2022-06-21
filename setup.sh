@@ -34,7 +34,9 @@ pip3 install            \
   debugpy               `# Python DAP (Debug Adapter Protocoal) server`   \
   conan
 
-sudo npm install -g vim-language-server
+sudo npm install -g
+    vim-language-server
+    yarn                `# Used by iamcco/markdown-preview.nvim
 
 # install vim-plug
 curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \

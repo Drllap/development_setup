@@ -70,6 +70,8 @@ Plug 'onsails/lspkind-nvim'
 Plug 'mfussenegger/nvim-dap'
 
 " Plug 'ericcurtin/CurtineIncSw.vim'
+
+Plug 'iamcco/markdown-preview.nvim' , { 'do': 'cd app && yarn install' }
 call plug#end()
 
 colorscheme gruvbox

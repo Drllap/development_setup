@@ -66,7 +66,9 @@ Pop-Location
 
 # Install pyright, python LSP server, requires NodeJS
 # npm install -g pyright    # Install pyrigh with pip instead
-npm install -g vim-language-server
+npm install -g 
+    vim-language-server
+    yarn                    # Usesed by iamcco/markdown-preview.nvim
 
 pip3 install
     neovim
