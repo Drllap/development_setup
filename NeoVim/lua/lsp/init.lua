@@ -22,6 +22,18 @@ vim.keymap.set('n', '<leader><leader>S', vim.lsp.buf.workspace_symbol)
 vim.keymap.set('n', '<leader><leader>ic', vim.lsp.buf.incoming_calls)
 vim.keymap.set('n', '<leader><leader>oc', vim.lsp.buf.outgoing_calls)
 
+vim.diagnostic.config({
+  virtual_text = false,
+  float = {
+    show_header = true,
+    source = 'if_many',
+    border = 'rounded',
+    focusable = true,
+  },
+})
+
+vim.keymap.set('n', '<leader>DD', vim.diagnostic.open_float)
+
 --   buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
 --   buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
 --   buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
