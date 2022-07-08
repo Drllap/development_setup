@@ -21,7 +21,7 @@ vim.keymap.set('n', '<leader>tgs',  require('telescope.builtin').git_status, opt
 vim.keymap.set('n', '<leader>tgt',  require('telescope.builtin').git_stash, opts);
 
 vim.keymap.set('n', '<leader>tm', require('telescope.builtin').marks, opts);
-vim.keymap.set('n', '<leader>tr', require('telescope.builtin').registers, opts);
+vim.keymap.set('n', '<leader>tR', require('telescope.builtin').registers, opts);
 
 vim.keymap.set('n', '<leader>tld', require('telescope.builtin').lsp_definitions, opts);
 vim.keymap.set('n', '<leader>tlt', require('telescope.builtin').lsp_type_definitions, opts);
