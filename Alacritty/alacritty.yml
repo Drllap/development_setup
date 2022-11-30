@@ -1,0 +1,23 @@
+window:
+  opacity: 0.95
+  title: hommi
+  # font:
+    # normal:
+
+  # size: 15.0
+  cursor: 
+    style: 
+      shape: Beam
+
+key_bindings:
+  - { key: T,  mods: Alt, action: CreateNewWindow }
+
+    
+shell:
+  program: powershell
+  args:
+    - -NoLogo -ExecutionPolicy Unrestricted
+
+debug:
+  render_timer: true
+  print_events: true

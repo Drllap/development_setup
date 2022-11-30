@@ -13,6 +13,10 @@ Invoke-WebRequest -useb https://raw.githubusercontent.com/junegunn/vim-plug/mast
 New-Item -Path $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\ -Name settings.json `
     -Value .\WindowsTerminal\settings.json -ItemType SymbolicLink -Force
 
+# Add Symbolic Link to the Alacritty config
+New-Item -Path $env:APPDATA\alacritty\ -Name alacritty.yml -Value .\Alacritty\alacritty.yml `
+        -ItemType SymbolicLink -Force
+
 
 # setup git
 git config --global user.email "drllap@gmail.com"
