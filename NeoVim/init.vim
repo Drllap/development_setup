@@ -120,6 +120,12 @@ if has('win32')
   cabbrev vsedit :!&"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\devenv.exe" /edit "%"
 endif
 
+" Disable spell checking in terminal buffers
+augroup MyTerminalGroup
+autocmd!
+autocmd MyTerminalGroup TermOpen * setlocal nospell
+augroup END
+
 lua require('init')
 
 function! ToggleLogging()
