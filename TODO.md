@@ -41,5 +41,9 @@
 * set g:python3_host_prog (see :checkhealth)
 * My FileManager plugin
   * Handle when buffer isn't open file
-* Vime Status line
+* Vim Status line
+* Create build configuration manager.
+  * Cpp integration (MsBuild)
+  * cmake integration
+  * conan integration
 
