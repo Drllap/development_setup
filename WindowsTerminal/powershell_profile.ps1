@@ -30,6 +30,7 @@ if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
         "C:\Users\noob-destroyer\AppData\Roaming\npm;"
         "C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin;"
         "C:\tools\vim\vim82;"
+        "C:\tools\gsudo\Current;"
     );
 } elseif($env:COMPUTERNAME -eq "K-WIN10-29") {
     $private:Paths = @(
@@ -76,6 +77,7 @@ if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
         "C:\Users\palli\.dotnet\tools;",
         "C:\Users\palli\go\bin;"
         # "C:\tools\neovim\Neovim\bin;"
+        "C:\tools\gsudo\Current;"
     );
 }
 
@@ -239,6 +241,8 @@ Set-PSReadLineKeyHandler -Key Ctrl+k -Function ShowCommandHelp
 # Set-PSReadLineKeyHandler -Key Ctrl+e -Function ScrollDisplayUpLine
 
 Set-PSReadLineKeyHandler -Key Tab -Function Complete    # Changes compleation to bash-like, only compleate to divergence
+
+Import-Module 'C:\tools\gsudo\Current\gsudoModule.psd1' # Enable gsudo !! (and maybe other things)
 
 $ExecEnd = Get-Date
 Write-Host "Profile Load Time: $(($ExecEnd - $ExecStart).Milliseconds) Milliseconds"
