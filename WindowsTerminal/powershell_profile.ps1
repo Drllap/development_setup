@@ -34,11 +34,12 @@ if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
     );
 } elseif($env:COMPUTERNAME -eq "K-WIN10-29") {
     $private:Paths = @(
-        "C:\tools\Anaconda3;",
-        # "C:\tools\Anaconda3\Library\mingw-w64\bin;",
-        # "C:\tools\Anaconda3\Library\usr\bin;",
-        "C:\tools\Anaconda3\Library\bin;",
-        "C:\tools\Anaconda3\Scripts;",
+        "C:\tools\miniconda3;",
+        # "C:\tools\miniconda3\Library\mingw-w64\bin;",
+        # "C:\tools\miniconda3\Library\usr\bin;",
+        "C:\tools\miniconda3\Library\bin;",
+        "C:\tools\miniconda3\Scripts;",
+        $env:APPDATA + "\Python\Python39\Scripts;",
         "C:\WINDOWS\system32;",
         "C:\WINDOWS;",
         # "C:\WINDOWS\System32\Wbem;",
