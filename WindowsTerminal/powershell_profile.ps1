@@ -6,9 +6,10 @@ $env:LSP_Servers = $setup_dir.Parent.FullName + "\LSP-Servers\"
 if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
     $private:Paths = @(
         "C:\WINDOWS\system32;"
-        "C:\tools\Anaconda3;"
-        "C:\tools\Anaconda3\Library\bin;"
-        "C:\tools\Anaconda3\Scripts;"
+        "C:\tools\miniconda3;"
+        "C:\tools\miniconda3\Library\bin;"
+        "C:\tools\miniconda3\Scripts;"
+        "C:\Users\noob-destroyer\AppData\Roaming\Python\Python39\Scripts;"
         "C:\Windows\System32\WindowsPowerShell\v1.0\;"
         "C:\Windows\System32\OpenSSH\;"
         "C:\tools\neovim\nvim-win64\bin\;" # This needs to be above the chocolatey folder
