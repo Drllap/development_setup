@@ -119,3 +119,17 @@ if has('win32')
 endif
 
 lua require('init')
+
+function! ToggleLogging()
+  if !&verbose
+    execute 'set verbosefile=' .. getcwd() .. '\neovim.log'
+    set verbose=13
+    echo "Enabling logging"
+  else
+    set verbose=0
+    set verbosefile=
+    echo "Disabling logging"
+  endif
+endfunction
+command! -nargs=0 ToggleLogging call ToggleLogging()
+
