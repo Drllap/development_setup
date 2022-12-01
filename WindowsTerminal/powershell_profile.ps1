@@ -17,7 +17,7 @@ if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
                                            # one in chocolatey. The WSL will use the other one.
                                            # See bash/bash_profile
         "C:\ProgramData\chocolatey\bin;"
-        # "C:\Program Files\PostgreSQL\12\bin;",
+        "C:\Program Files\PostgreSQL\14\bin;",
         "C:\Program Files\Cmake\bin;"
         "C:\Program Files\LLVM\bin;"
         "C:\Program Files\Docker\Docker\resources\bin;"
