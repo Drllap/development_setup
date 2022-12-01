@@ -80,4 +80,5 @@ pip3 install
     pywin32
     pyright
     cmake-language-server
+    pyreadline  # Needed for tab autocompletion in python shell
 

@@ -32,11 +32,12 @@ pip3 install            \
   pyright               `# Python LSP (Language Server Protocoal) server` \
   cmake-language-server `# CMake LSP server`                              \
   debugpy               `# Python DAP (Debug Adapter Protocoal) server`   \
-  conan
+  conan                                                                   \
+  pyreadline            `# Needed for tab autocompletion in python shell`
 
 sudo npm install -g
     vim-language-server
-    yarn                `# Used by iamcco/markdown-preview.nvim
+    yarn                `# Used by iamcco/markdown-preview.nvim`
 
 # install vim-plug
 curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
