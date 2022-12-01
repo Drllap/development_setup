@@ -55,7 +55,7 @@ let g:NERDSpaceDelims = 1
 " Telescope stuff
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'Drllap/telescope-fzf-native.nvim', { 'do': 'cmake -S . -B build && cmake --build build --config Release && cmake --install build'}
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
 " Autocompleation plugins
 Plug 'hrsh7th/nvim-cmp'
