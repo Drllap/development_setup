@@ -44,7 +44,7 @@ Plug 'tpope/vim-dispatch'     " Async build
 
 Plug 'neovim/nvim-lspconfig' " LSP configuration plugin
 
-Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 
