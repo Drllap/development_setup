@@ -1,5 +1,5 @@
 # Coaching Livestream
-## Questions for next
+## Questions
 As you pointed out last week I have a ankle mobility issue. I have been working on it for months (if not a year)
 with some but limited success.
 * Should I postpone running the Beginning Weight Lifting Program while I try to fix the ankle issue?
@@ -10,8 +10,16 @@ with some but limited success.
   I can't to that every day)
   4. Can you recommend any resources/stretches/programs?
 
+* BWL W1D4 Forus:
+  * Active lats, wrists, pulling the bar towards me.
+  * Go slower (surprisingly hard), go through the position
+  * Aggressive foot movement in the PC
+  * Don't go passed the heal with the front knee in the jerk
+  * [Snatch + Snatch balance](https://youtu.be/rZjNZnkdWUQ?t=19)
+  * [C + PC + J](https://youtu.be/7PuuORg-9W8?t=20)
+
 ## [2022-12-02](https://www.facebook.com/daire.fitzgerald.94/videos/887558815579029)
-### Answare notes
+### Answer notes
 * I start at 3:37
 * On the Snatch:
   1. Too aggressive, go through the positions, more control
@@ -22,7 +30,7 @@ with some but limited success.
   1. The split is too low, too deep. *For knee too much forward, back leg too bent*. *Front knee should **never be come
 over the heel** of the front foot*
 
-### [Question Comment](https://www.facebook.com/groups/323490962344244/posts/889773539049314/?comment_id=889817389044929&__cft__[0]=AZVA3FwxtN9CXug7Lt6gbNAdGSkC5B2MpTWnWmoaYQS8vmAVBAUVw0d2uSVCAjbikLqyFFxM2AvxBfIIPN5zndBy1u9bGBIwVAmGC3IVxe-0ayqmJddgMOmejdx407_bXggrBYYdj7Un3dag8K6Bh68mc87NgoXGJk5A8T84LCd1VKox-zJrk4lSsVXrCXRqaLQ&__tn__=R]-R)
+### [Questions](https://www.facebook.com/groups/323490962344244/posts/889773539049314/?comment_id=889817389044929&__cft__[0]=AZVA3FwxtN9CXug7Lt6gbNAdGSkC5B2MpTWnWmoaYQS8vmAVBAUVw0d2uSVCAjbikLqyFFxM2AvxBfIIPN5zndBy1u9bGBIwVAmGC3IVxe-0ayqmJddgMOmejdx407_bXggrBYYdj7Un3dag8K6Bh68mc87NgoXGJk5A8T84LCd1VKox-zJrk4lSsVXrCXRqaLQ&__tn__=R]-R)
 Last week you told me I was cutting my 2nd pull too short, not sure if I was able to improve it:
 * [Snatch W1D1](https://youtu.be/3UxpvsmlT8s?t=8)
 * [Snatch W1D2](https://youtu.be/Iy2mcJ4fAuo?t=12)
