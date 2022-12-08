@@ -1,5 +1,5 @@
 # Coaching Livestream
-## Questions
+## [Questions](https://www.facebook.com/groups/323490962344244/posts/895588498467818/?comment_id=895897645103570&__cft__[0]=AZWS7JwaIINJrsrhG0-e3O8JI57FDCPMunclwosA0yQ8fEMY7fiKbr1k2venKiszhO6OpRg9mcR6JVxKRhjd2On_ssc1V3uUoE_12ZE7oskDfDVOhpH3em8z2cEfiOZ7NbE3PWXUOhCq0zNBNswXY9_VDeGRKNqV4HJprQlsbB4VvuF7_ep66i-VflV9uBj-ZeQ&__tn__=R]-R)
 As you pointed out last week I have a ankle mobility issue. I have been working on it for months (if not a year)
 with some but limited success.
 * Should I postpone running the Beginning Weight Lifting Program while I try to fix the ankle issue?
@@ -10,13 +10,15 @@ with some but limited success.
   I can't to that every day)
   4. Can you recommend any resources/stretches/programs?
 
-* BWL W1D4 Forus:
+* BWL W1D4 Focus:
   * Active lats, wrists, pulling the bar towards me.
   * Go slower (surprisingly hard), go through the position
   * Aggressive foot movement in the PC
   * Don't go passed the heal with the front knee in the jerk
   * [Snatch + Snatch balance](https://youtu.be/rZjNZnkdWUQ?t=19)
   * [C + PC + J](https://youtu.be/7PuuORg-9W8?t=20)
+
+* BWL W2D1 [Snatch](https://www.youtube.com/watch?v=gwsXCXMc9uc&t=16s)
 
 ## [2022-12-02](https://www.facebook.com/daire.fitzgerald.94/videos/887558815579029)
 ### Answer notes
