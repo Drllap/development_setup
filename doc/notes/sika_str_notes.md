@@ -1,4 +1,17 @@
 # Coaching Livestream
+## [2022-12-09](https://www.facebook.com/groups/323490962344244/posts/896899791670022/)
+* I Start at 26:25
+* 4-6 months of working on ankle mobility. 20m a day after the gym or in the evening
+  * Checkout out Squat University and/or Mobility Wod
+* Snatch:
+  * Film from the side.
+  * Make sure the shoulders over or in advance of the bar
+  * Change the starting position by racing the hips by 2-3 inches
+  * Keep going slow for the 1st pull but explode in the 2nd pull (from the knees)
+* Snatch balance/Jerk:
+  * Don't pause after the dip. Dip and drive should be smooth motion
+  * Don't check the feet position after the jerk. Just recover and finish the lift. Check the video after.
+
 ## [Questions](https://www.facebook.com/groups/323490962344244/posts/895588498467818/?comment_id=895897645103570)
 As you pointed out last week I have a ankle mobility issue. I have been working on it for months (if not a year)
 with some but limited success.
