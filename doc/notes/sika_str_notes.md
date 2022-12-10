@@ -1,5 +1,5 @@
 # Coaching Livestream
-## [Questions](https://www.facebook.com/groups/323490962344244/posts/895588498467818/?comment_id=895897645103570&__cft__[0]=AZWS7JwaIINJrsrhG0-e3O8JI57FDCPMunclwosA0yQ8fEMY7fiKbr1k2venKiszhO6OpRg9mcR6JVxKRhjd2On_ssc1V3uUoE_12ZE7oskDfDVOhpH3em8z2cEfiOZ7NbE3PWXUOhCq0zNBNswXY9_VDeGRKNqV4HJprQlsbB4VvuF7_ep66i-VflV9uBj-ZeQ&__tn__=R]-R)
+## [Questions](https://www.facebook.com/groups/323490962344244/posts/895588498467818/?comment_id=895897645103570)
 As you pointed out last week I have a ankle mobility issue. I have been working on it for months (if not a year)
 with some but limited success.
 * Should I postpone running the Beginning Weight Lifting Program while I try to fix the ankle issue?
@@ -32,7 +32,7 @@ with some but limited success.
   1. The split is too low, too deep. *For knee too much forward, back leg too bent*. *Front knee should **never be come
 over the heel** of the front foot*
 
-### [Questions](https://www.facebook.com/groups/323490962344244/posts/889773539049314/?comment_id=889817389044929&__cft__[0]=AZVA3FwxtN9CXug7Lt6gbNAdGSkC5B2MpTWnWmoaYQS8vmAVBAUVw0d2uSVCAjbikLqyFFxM2AvxBfIIPN5zndBy1u9bGBIwVAmGC3IVxe-0ayqmJddgMOmejdx407_bXggrBYYdj7Un3dag8K6Bh68mc87NgoXGJk5A8T84LCd1VKox-zJrk4lSsVXrCXRqaLQ&__tn__=R]-R)
+### [Questions](https://www.facebook.com/groups/323490962344244/posts/889773539049314/?comment_id=889817389044929)
 Last week you told me I was cutting my 2nd pull too short, not sure if I was able to improve it:
 * [Snatch W1D1](https://youtu.be/3UxpvsmlT8s?t=8)
 * [Snatch W1D2](https://youtu.be/Iy2mcJ4fAuo?t=12)
@@ -41,7 +41,7 @@ Last week you told me I was cutting my 2nd pull too short, not sure if I was abl
 PS: I sent you guys an e-mail, to sikastrength@gmail.com, last week about my BWL program because the 1RMs
 were incorrectly set but I haven't gotten any response?
 
-## [2022-11-25](https://www.facebook.com/groups/323490962344244/posts/886155642744437/?__cft__[0]=AZU0BHrT3L-EDMPC4Fv00HggW4KmGMK5P7rHlaS3TrdeQz65FNkUnPvz81V3gxQ6_iUJlrthe_U-Jhg0wMNBBGuZbwjBEcceiWKKK0xJt2oeOjANIdgoyBb_pOEzYXwfC0D5r8nFeUWAmTFgcAjkXJt8&__tn__=%2CO%2CP-R)
+## [2022-11-25](https://www.facebook.com/groups/323490962344244/posts/886155642744437/)
 * I start at 14:48
 * Snatch:
   1. Bringing my hips in too son and overextending them. Cutting the 2nd pull short.
@@ -52,7 +52,7 @@ were incorrectly set but I haven't gotten any response?
   2. Drive with the legs
   3. Extend straight up
 
-### [Question](https://www.facebook.com/groups/323490962344244/posts/884235426269792/?comment_id=884308396262495&__cft__[0]=AZVXf_He3_tnQxMho3LxzPDtKaiWzvpc64LUcWSW5vAfpraCRtuDFk2Krwc8UelyzxS5Y9orHl64LQx3iAIxWn1VcY5s9D8lv9OEgxaE6fSf4npQyfHJN-w7mH6_7vq5GF9gHf-EEJ3KUW9NoQLzThVI&__tn__=R]-R)
+### [Question](https://www.facebook.com/groups/323490962344244/posts/884235426269792/?comment_id=884308396262495)
 [This](https://www.youtube.com/watch?v=58eDfxaaLao) is how I typically fail stanches when I'm getting close to my 1RM:
 
 For some reason, the bar tends to be in front of me when I catch it. What is going in?
@@ -65,12 +65,12 @@ I'm planning on starting the "Beginner Weightlifting Program" next week. I can s
 
 PS: Calling me Paul is fine, you are never going to be able to pronounce Páll correctly anyway :D
 
-## [2022-11-03](https://www.facebook.com/groups/323490962344244/posts/870908534269148/?__cft__[0]=AZWmrHMvWGu6plBqXbox4D6ov3UknR-6c4h2H7Em0b6a5a5TFoaywHv0xYFd5QydEtYsRMkK149EnaIjkx3obtnjLFrd0uYCiN0jKueI5pJQldFdtCI0nK1GJ4HVdAinUBTh43xdhojiGs2cJ6wu21Zv&__tn__=%2CO%2CP-R)
+## [2022-11-03](https://www.facebook.com/groups/323490962344244/posts/870908534269148/)
 * I Start at 18:40
 * Back squat:
   * Keep the elbows a bit further back. Almost 45° angle.
 
-### [Question](https://www.facebook.com/groups/323490962344244/posts/870051171021551/?comment_id=870157261010942&__cft__[0]=AZXUCawX__b9w6SnwTzsLcXZ8-DTmKEHXu8bWafJxi2J7Mmld1XJE4wAk_v7LlpLAxcxbvIhLjTmEKfUCWkRVWT-ebtAbZyyMYxWKyIELcJF3rPBDae1RvAC_p1Xb2VsS-01_veyL5Ss7T2xdgK1JMuM&__tn__=R]-R)
+### [Question](https://www.facebook.com/groups/323490962344244/posts/870051171021551/?comment_id=870157261010942)
 Used to powerlifting style, wide stance low bar squats. Trying to modify them to weightlifting style high bar style:
 
 [Back squat](https://youtu.be/chJYyIczL9A?t=30)
