@@ -1,5 +1,17 @@
 # Coaching Livestream
+## [2022-12-16]()
+### Answer notes
+
+### [Questions](https://www.facebook.com/groups/323490962344244/posts/901938801166121/?comment_id=902253651134636)
+* BWL W3D2
+* [Snatch:](https://youtu.be/0KYQFJKtwEs?t=20)
+  * Focusing on shoulders in front of the bar.
+  * Changed the start position so it is now a bit higher. Is it maybe to high now, looks like my lower back is a bit rounded at the beginning of the pull.
+* [C&J:](https://youtu.be/kXy4gH8skaY?t=23) Focusing on keeping the foot in front of the knee in the jerk
+* [Clean DL:](https://youtu.be/atZGUmXazy8?t=24) Don't think I have done these before I started the program.
+
 ## [2022-12-09](https://www.facebook.com/groups/323490962344244/posts/896899791670022/)
+### Answer notes
 * I Start at 26:25
 * 4-6 months of working on ankle mobility. 20m a day after the gym or in the evening
   * Checkout out Squat University and/or Mobility Wod
@@ -12,7 +24,7 @@
   * Don't pause after the dip. Dip and drive should be smooth motion
   * Don't check the feet position after the jerk. Just recover and finish the lift. Check the video after.
 
-## [Questions](https://www.facebook.com/groups/323490962344244/posts/895588498467818/?comment_id=895897645103570)
+### [Questions](https://www.facebook.com/groups/323490962344244/posts/895588498467818/?comment_id=895897645103570)
 As you pointed out last week I have a ankle mobility issue. I have been working on it for months (if not a year)
 with some but limited success.
 * Should I postpone running the Beginning Weight Lifting Program while I try to fix the ankle issue?
@@ -65,7 +77,7 @@ were incorrectly set but I haven't gotten any response?
   2. Drive with the legs
   3. Extend straight up
 
-### [Question](https://www.facebook.com/groups/323490962344244/posts/884235426269792/?comment_id=884308396262495)
+### [Questions](https://www.facebook.com/groups/323490962344244/posts/884235426269792/?comment_id=884308396262495)
 [This](https://www.youtube.com/watch?v=58eDfxaaLao) is how I typically fail stanches when I'm getting close to my 1RM:
 
 For some reason, the bar tends to be in front of me when I catch it. What is going in?
@@ -83,7 +95,7 @@ PS: Calling me Paul is fine, you are never going to be able to pronounce Páll c
 * Back squat:
   * Keep the elbows a bit further back. Almost 45° angle.
 
-### [Question](https://www.facebook.com/groups/323490962344244/posts/870051171021551/?comment_id=870157261010942)
+### [Questions](https://www.facebook.com/groups/323490962344244/posts/870051171021551/?comment_id=870157261010942)
 Used to powerlifting style, wide stance low bar squats. Trying to modify them to weightlifting style high bar style:
 
 [Back squat](https://youtu.be/chJYyIczL9A?t=30)
