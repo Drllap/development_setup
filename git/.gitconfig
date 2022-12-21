@@ -5,7 +5,10 @@
 	editor = nvim
 	symlink = true
 [pull]
-        rebase = true
+    rebase = true
+    autoSetupRemote = true
 [rebase]
-        autoStash = true
+    autoStash = true
+[merge]
+    autoStash = true
 
