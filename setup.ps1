@@ -42,10 +42,6 @@ Install-Module PSReadLine -AllowPrerelease -Force
 # Wrapper for fzf
 # Install-Module -Name PSFzf -Scope CurrentUser
 
-Install-Module -Name oh-my-posh -Scope CurrentUser  # PowerShell promt moduel with theam support
-                                                    # Depends on Neard-Fonts, see Neard-Fonst folder for
-                                                    # fonts and readme for how to install
-
 Install-Module -Name posh-git -Scope CurrentUser    # Git tab autocompleation
 
 Install-Module -Name PowerColorLS -Scope CurrentUser    # Better (colorfull) ls/dir command

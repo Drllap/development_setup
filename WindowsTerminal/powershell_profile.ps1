@@ -2,85 +2,55 @@ $ExecStart = Get-Date
 
 $private:setup_dir = (Get-Item (Get-Item $PSCommandPath).Target).Directory.Parent
 $env:LSP_Servers = $setup_dir.Parent.FullName + "\LSP-Servers\"
+$private:Paths = New-Object System.Collections.ArrayList
 
 if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
-    $private:Paths = @(
-        "C:\WINDOWS\system32;"
-        "C:\tools\miniconda3;"
-        "C:\tools\miniconda3\Library\bin;"
-        "C:\tools\miniconda3\Scripts;"
-        "C:\Users\noob-destroyer\AppData\Roaming\Python\Python39\Scripts;"
-        "C:\Windows\System32\WindowsPowerShell\v1.0\;"
-        "C:\Windows\System32\OpenSSH\;"
-        "C:\tools\neovim\nvim-win64\bin\;" # This needs to be above the chocolatey folder
-                                           # so the the win32yank from that is prefered over the
-                                           # one in chocolatey. The WSL will use the other one.
-                                           # See bash/bash_profile
-        "C:\ProgramData\chocolatey\bin;"
-        "C:\Program Files\PostgreSQL\14\bin;",
-        "C:\Program Files\Cmake\bin;"
-        "C:\Program Files\LLVM\bin;"
-        "C:\Program Files\Docker\Docker\resources\bin;"
-        "C:\ProgramData\DockerDesktop\version-bin;"
-        # "C:\Program Files\dotnet\;",
-        "C:\Program Files\Git\cmd;",
-        "C:\Program Files\nodejs\;",
-        # "C:\Users\noob-destroyer\AppData\Local\Microsoft\WindowsApps;",
-        "C:\Program Files\GitHub CLI\;",
-        "C:\Users\noob-destroyer\AppData\Roaming\npm;"
-        "C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin;"
-        "C:\tools\vim\vim82;"
-        "C:\tools\gsudo\Current;"
-    );
+    $private:Paths.AddRange((
+        "C:\Windows\System32\WindowsPowerShell\v1.0\;",
+        "C:\Program Files\PostgreSQL\14\bin;"
+    ));
 } elseif($env:COMPUTERNAME -eq "K-WIN10-29") {
-    $private:Paths = @(
-        "C:\tools\miniconda3;",
-        # "C:\tools\miniconda3\Library\mingw-w64\bin;",
-        # "C:\tools\miniconda3\Library\usr\bin;",
-        "C:\tools\miniconda3\Library\bin;",
-        "C:\tools\miniconda3\Scripts;",
-        $env:APPDATA + "\Python\Python39\Scripts;",
-        "C:\WINDOWS\system32;",
-        "C:\WINDOWS;",
-        # "C:\WINDOWS\System32\Wbem;",
-        "C:\WINDOWS\System32\WindowsPowerShell\v1.0\;",
-        "C:\ProgramData\chocolatey\bin;",
-        "C:\Program Files\CMake\bin;",
-        # "C:\Program Files\Maven\apache-maven-3.5.0\bin;",
-        # "C:\Program Files\dotnet\;",
-        "C:\WINDOWS\System32\OpenSSH\;",
+    $private:Paths.AddRange((
         # "C:\Program Files\doxygen\bin;",
         # "C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;",
-        "C:\Program Files\nodejs\;",
         "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin;",
         # "C:\Program Files (x86)\dotnet\;",
         # "C:\Program Files\TortoiseGit\bin;",
-        # "C:\Program Files (x86)\Common Files\Oracle\Java\javapath;",
-        # "C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;",
-        # "C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;",
-        # "C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;",
-        # "C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;",
-        # "C:\Program Files\IVI Foundation\VISA\Win64\Bin\;",
-        # "C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;",
-        # "C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin\;",
-        "C:\Program Files\Go\bin;",
-        "C:\Program Files\LLVM\bin;",
-        "C:\Program Files\Git\cmd;",
-        "C:\Program Files\Docker\Docker\resources\bin;",
-        "C:\ProgramData\DockerDesktop\version-bin;",
         # "C:\Development\LSP-Servers\lua-language-server\3rd\luamake;",
-        # "C:\tools\cmder;",
         # "C:\Program Files\Microsoft VS Code\bin;",
-        "C:\Users\palli\AppData\Roaming\npm;",
-        "C:\tools\neovim\nvim-win64\bin\;",
-        "C:\Program Files (x86)\GitHub CLI\;",
         "C:\Users\palli\AppData\Local\Microsoft\WindowsApps;",
         "C:\Users\palli\.dotnet\tools;",
         "C:\Users\palli\go\bin;"
-        # "C:\tools\neovim\Neovim\bin;"
-        "C:\tools\gsudo\Current;"
-    );
+    ));
 }
+
+$private:Paths.AddRange((
+    -join($env:APPDATA, "\Python\Python39\Scripts;"),
+    -Join($env:APPDATA, "\npm"),
+    "C:\WINDOWS;",
+    "C:\WINDOWS\system32;",
+    "C:\WINDOWS\System32\WindowsPowerShell\v1.0\;",
+    "C:\WINDOWS\System32\OpenSSH\;",
+    "C:\Program Files (x86)\oh-my-posh\bin;",
+    "C:\Program Files\GitHub CLI\;",
+    "C:\Program Files\Cmake\bin;",
+    "C:\Program Files\LLVM\bin;",
+    "C:\Program Files\Git\cmd;",
+    "C:\Program Files\Go\bin;",
+    "C:\Program Files\nodejs\;",
+    "C:\Program Files\Docker\Docker\resources\bin;",
+    "C:\tools\neovim\nvim-win64\bin\;", # This needs to be above the chocolatey folder
+                                        # so the win32yank from that is preferred over the
+                                        # one in chocolatey. The WSL will use the other one .
+                                        # See bash/bash_profile
+    "C:\tools\miniconda3;",
+    "C:\tools\miniconda3\Library\bin;",
+    "C:\tools\miniconda3\Scripts;",
+    "C:\tools\gsudo\Current;",
+    "C:\tools\vim\vim82;",
+    "C:\ProgramData\chocolatey\bin;",
+    "C:\ProgramData\DockerDesktop\version-bin;"
+))
 
 if($null -ne $Paths) {
     $env:Path = $Paths -join '';
@@ -126,9 +96,8 @@ Import-Module z # Autojump like module
 # Configure PowerColorLS
 Set-Alias -Name ls -Value PowerColorLS -Option AllScope # Use PowerColorLS as default ls command
 
-# Set the theme for oh-my-posh
-# Set-PoshPrompt -Theme honukai
-Set-PoshPrompt -Theme jv_sitecorian
+oh-my-posh init powershell --config "$env:POSH_THEMES_PATH\jv_sitecorian.omp.json" | Invoke-Expression
+oh-my-posh completion powershell | Out-String | Invoke-Expression
 
 # Add tab Autocompletion for GitHub Cli by sourcing a file that can be generated by
 # gh completion -s powershell > github-cli-completion.ps1
