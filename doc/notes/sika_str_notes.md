@@ -1,4 +1,16 @@
 # Coaching Livestream
+## [2023-02-09]()
+### Questions
+* BWL. W6D4. [Back squats 6x4](https://www.facebook.com/groups/323490962344244/posts/939957527364248/?comment_id=940324147327586). This is the last set. Been a while since I have gone this heavy. The first set felt like
+shit but then they progressively got better.
+* [W6D3. Power snatch. 3x2.](https://www.facebook.com/groups/323490962344244/posts/939957527364248/?comment_id=940324147327586&reply_comment_id=940332417326759)
+* Last week you told me to focus on a having a long 2nd pull. I'm not entirely sure what is meant my that. Does that 
+mean getting my torso closer to horizontal, but still keeping my shoulders over the bar and my knees bent?
+* W7D2. Today's snatch training was complete shit. Was supposed to do 5x1 88kg. While building up to that I failed at
+87.5kg so I when back down for a few more warmups before I started to go up again.
+How does this change the program going forward? [Here](https://www.facebook.com/groups/323490962344244/posts/939957527364248/?comment_id=940324147327586&reply_comment_id=940340500659284) is me failing at 80kg.
+* W7D2 [Clean Pull + Clean + Jerk](https://www.facebook.com/groups/323490962344244/posts/939957527364248/?comment_id=940324147327586&reply_comment_id=940344307325570). In the clean I was trying to focus on pulling my self under the bar (as instructed last week) instead of focusing on the extension
+
 ## [2022-12-16]()
 ### Answer notes
 
