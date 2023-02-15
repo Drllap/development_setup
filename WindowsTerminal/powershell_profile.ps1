@@ -84,8 +84,7 @@ Import-Module PSReadLine -RequiredVersion "2.2.0"
 
 Import-Module posh-git  # posh-git, git info in prompt and auto tab completion
 
-$dockerCompletionModule = (Get-Item $PSCommandPath).Target | Split-Path | Join-Path -ChildPath "\DockerCompletion\DockerCompletion"
-Import-Module $dockerCompletionModule # Add tab Autocompletion for docker
+Import-Module DockerCompletion # Add tab Autocompletion for docker
  
 Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1 # Add tab Autocompletion for Chocolatey
  
