@@ -4,15 +4,15 @@ if not vim.env.LSP_Servers then
   return
 end
 
-local function sumneko_root_path()
+local function lua_lsp_root_path()
   return vim.env.LSP_Servers .. "/lua-language-server"
 end
 
-local function sumneko_binary()
+local function lua_lsp_binary()
   if "Linux" == vim.loop.os_uname().sysname then
-    return sumneko_root_path() .. '/bin/lua-language-server'
+    return lua_lsp_root_path() .. '/bin/lua-language-server'
   else
-    return sumneko_root_path() .. '/bin/windows/lua-language-server'
+    return lua_lsp_root_path() .. '/bin/windows/lua-language-server'
   end
 end
 
@@ -20,8 +20,8 @@ local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
-require('lspconfig').sumneko_lua.setup {
-  cmd = { sumneko_binary() , "-E", sumneko_root_path() .. "/main.lua"};
+require('lspconfig').lua_ls.setup {
+  cmd = { lua_lsp_binary() , "-E", lua_lsp_root_path() .. "/main.lua"};
     settings = {
         Lua = {
             runtime = {
