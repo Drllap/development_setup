@@ -1,7 +1,14 @@
 local function cmd()
-  if "Linux" == vim.loop.os_uname().sysname then
+  vim.notify_once("The cmd function that supplies the clangd executable for the lsp hasn't been set", vim.log.levels.WARN);
+  error("cmd not set")
+end
+
+if "Linux" == vim.loop.os_uname().system then
+  cmd = function()
     return { "clangd-12" };
-  else
+  end
+else
+  cmd = function()
     return { "clangd"};
   end
 end
@@ -9,3 +16,4 @@ end
 require('lspconfig').clangd.setup({
   cmd = cmd()
 })
+
