@@ -39,6 +39,8 @@ $private:Paths.AddRange((
     "C:\Program Files\Go\bin;",
     "C:\Program Files\nodejs\;",
     "C:\Program Files\Docker\Docker\resources\bin;",
+    "C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\;",  # This needs to be before the neovim folder,
+                                                                        # see commit msg for details
     "C:\tools\neovim\nvim-win64\bin\;", # This needs to be above the chocolatey folder
                                         # so the win32yank from that is preferred over the
                                         # one in chocolatey. The WSL will use the other one .
