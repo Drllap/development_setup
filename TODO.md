@@ -46,4 +46,8 @@
   * Cpp integration (MsBuild)
   * cmake integration
   * conan integration
+* PowerShell tab autocomplete
+  * conda
+  * conan
+  * cmake
 
