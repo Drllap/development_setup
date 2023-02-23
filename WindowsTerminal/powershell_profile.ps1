@@ -212,5 +212,47 @@ Set-PSReadLineKeyHandler -Key Tab -Function Complete    # Changes compleation to
 
 Import-Module 'C:\tools\gsudo\Current\gsudoModule.psd1' # Enable gsudo !! (and maybe other things)
 
+function toggle_conda {
+    if (Test-Path 'Env:CONDA_EXE') {
+        Write-Host "Deactivating Conda"
+
+        # CONDA_PROMPT_MODIFIER has the environment name withing parentheses. Extracting the name
+        $Env:CONDA_PREVIOUS_ACTIVE_ENV = [RegEx]::Matches($env:CONDA_PROMPT_MODIFIER, "\((.*)\)").groups[1].Value;
+
+        Remove-Module Conda
+        Remove-Item 'Env:CONDA_EXE'
+        # Remove-Item 'Env:_CE_M'
+        # Remove-Item 'Env:_CE_CONDA'
+        Remove-Item 'Env:_CONDA_ROOT'
+        Remove-Item 'Env:_CONDA_EXE'
+
+    } else {
+        Write-Host "Activating Conda"
+        $Env:CONDA_EXE = "C:\tools\miniconda3\Scripts\conda.exe"
+        # $Env:_CE_M = ""
+        # $Env:_CE_CONDA = ""
+        $Env:_CONDA_ROOT = "C:\tools\miniconda3"
+        $Env:_CONDA_EXE = "C:\tools\miniconda3\Scripts\conda.exe"
+        $CondaModuleArgs = @{ChangePs1 = $false}
+        Import-Module "$Env:_CONDA_ROOT\shell\condabin\Conda.psm1" -ArgumentList $CondaModuleArgs
+
+        if (Test-Path 'Env:CONDA_PREVIOUS_ACTIVE_ENV') {
+            $environment = [RegEx]::Matches($env:CONDA_PROMPT_MODIFIER, "\((.*)\)").groups[1].Value
+        } else {
+            $environment = $env:CONDA_DEFAULT_ENV
+        }
+
+        conda activate $environment
+    }
+
+# The above in influenced what is returned by call to 'conda "shell.powershell" "hook"'
+# See: conda init powershell --dry-run --verbose
+
+#region conda initialize
+# !! Contents within this block are managed by 'conda init' !!
+# (& "C:\tools\miniconda3\Scripts\conda.exe" "shell.powershell" "hook") | Out-String | Invoke-Expression
+#endregion
+}
+
 $ExecEnd = Get-Date
 Write-Host "Profile Load Time: $(($ExecEnd - $ExecStart).Milliseconds) Milliseconds"
