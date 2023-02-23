@@ -2,7 +2,7 @@
 * Move the .lua config files in NeoVim to a namesapce, palli
 * ~~Install DockerCompleteion via PowerShellGallery instead of sub-module~~
 * Jump to Visual Studio
-* C++ code completion
+* ~~C++ code completion~~
 * Report or fix bugs
   * Fix Qt conan packet on Linux when using shared lib option or create a bug report
   * vim/neovim :saveas
@@ -11,13 +11,7 @@
   * Scroll buffer with keybindings
 * Install LuaJIT with setup.ps1/.sh
   * Add inspect module to LuaJIT
-* PowerShell tools
-  * Update oh-my-posh, use the executable and cutomaze the theame to my liking
-  * Use fzf. There is a PS module for it
-  * Test/Fix PowerShell $PWD to nix()
-  * profile execution optimizzation
-    * See Optimizing your $Profile, https://devblogs.microsoft.com/powershell/optimizing-your-profile/ 
-* Markdown preview
+* ~~Markdown preview~~
 * Dictionary/spelling
 * Telescope
   * FileExplorer
@@ -37,6 +31,9 @@
     * vim-projectionist
     * Maybe some others
   * ToggleTerminal
+  * Jira integration: VIRA?
+  * GitLab integration: https://github.com/omrisarig13/vim-mr-interface
+  * GitHub integration?
 * Make vim-plug work with PowerShell (can I run the unit tests?)
 * set g:python3_host_prog (see :checkhealth)
 * My FileManager plugin
@@ -46,8 +43,15 @@
   * Cpp integration (MsBuild)
   * cmake integration
   * conan integration
-* PowerShell tab autocomplete
-  * conda
-  * conan
-  * cmake
+* PowerShell
+  * ~~Update oh-my-posh, use the executable and cutomaze the theame to my liking~~
+  * Use fzf. There is a PS module for it
+  * Test/Fix PowerShell $PWD to nix()
+  * profile execution optimization
+    * See Optimizing your $Profile, https://devblogs.microsoft.com/powershell/optimizing-your-profile/ 
+  * change the oh-my-posh prompt in toggle_conda function
+  * tab autocomplete
+    * ~~conda~~ (I think so at least)
+    * conan
+    * cmake
 
