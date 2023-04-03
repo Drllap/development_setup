@@ -43,9 +43,9 @@ config.keys = {
   { key = 'q', mods = 'LEADER', action = act.QuickSelect },
 
   -- CTRL-SHIFT-l activates the debug overlay
-  { key = 'L', mods = 'CTRL', action = act.ShowDebugOverlay },
+  { key = 'd', mods = 'LEADER', action = act.ShowDebugOverlay },
   -- CTLR-SHIFT-p activates the Command Palette
-  { key = 'P', mods = 'CTRL', action = act.ActivateCommandPalette, },
+  { key = 'p', mods = 'LEADER', action = act.ActivateCommandPalette, },
 
   -- Window commands
   { key = 'Enter', mods = 'ALT', action = act.ToggleFullScreen },
