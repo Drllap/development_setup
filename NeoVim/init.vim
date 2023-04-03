@@ -30,6 +30,8 @@ set termguicolors
 
 set colorcolumn=120
 
+set wildmode=longest:full " tab (wildchar) autocompletes to the longest common string, shows the full list in wildmenu
+
 let mapleader=" "
 
 call plug#begin(stdpath('data') . '/plugged')
