@@ -54,4 +54,7 @@
     * ~~conda~~ (I think so at least)
     * conan
     * cmake
+* The Vim/NeoVim's modes interface with PowerShell's VI mode when using terminal buffer (:term) with PowerShell
+  * Can we de-conflict this somehow?:
+    * Don't use Vim insert mode when in :term/Always use it?
 
