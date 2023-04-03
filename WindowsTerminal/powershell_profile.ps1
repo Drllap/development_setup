@@ -51,7 +51,8 @@ $private:Paths.AddRange((
     "C:\tools\gsudo\Current;",
     "C:\tools\vim\vim82;",
     "C:\ProgramData\chocolatey\bin;",
-    "C:\ProgramData\DockerDesktop\version-bin;"
+    "C:\ProgramData\DockerDesktop\version-bin;",
+    "C:\Program Files\WezTerm;"
 ))
 
 if($null -ne $Paths) {
@@ -97,6 +98,9 @@ Set-Alias -Name ls -Value PowerColorLS -Option AllScope # Use PowerColorLS as de
 
 oh-my-posh init powershell --config "$env:POSH_THEMES_PATH\jv_sitecorian.omp.json" | Invoke-Expression
 oh-my-posh completion powershell | Out-String | Invoke-Expression
+
+# WezTerm autocompletion
+wezterm shell-completion --shell power-shell | Out-String | Invoke-Expression
 
 # Add tab Autocompletion for GitHub Cli
 gh completion -s powershell | Out-String | Invoke-Expression

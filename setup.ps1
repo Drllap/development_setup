@@ -17,6 +17,9 @@ New-Item -Path $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbw
 New-Item -Path $env:APPDATA\alacritty\ -Name alacritty.yml -Value .\Alacritty\alacritty.yml `
         -ItemType SymbolicLink -Force
 
+# Add Symbolic Link to the Wezterm config
+New-Item -Path $HOME\.config\ -Name .\wezterm -Value .\wezterm\ `
+        -ItemType SymbolicLink -Force
 
 # setup git
 git config --global user.email "drllap@gmail.com"
