@@ -76,6 +76,8 @@ Plug 'mfussenegger/nvim-dap'
 " Plug 'ericcurtin/CurtineIncSw.vim'
 
 Plug 'iamcco/markdown-preview.nvim' , { 'do': 'cd app && yarn install' }
+
+Plug 'ggandor/leap.nvim'
 call plug#end()
 
 colorscheme gruvbox
