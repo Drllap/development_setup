@@ -26,6 +26,14 @@ end)
 
 config.leader = { key = 'Space', mods = 'ALT' }
 
+config.ssh_domains = {
+  {
+    name = 'kvikna',
+    remote_address = '192.168.20.161',
+    username = 'KVIKNA\\palli',
+  }
+}
+
 config.keys = {
   -- CTRL+SHIFT+Space, followed by 'r' will put us in resize-pane
   -- mode until we cancel that mode.
