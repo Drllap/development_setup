@@ -1,7 +1,10 @@
 $ExecStart = Get-Date
 
+# Should make the LSP_Servers env-variable persistent?
+# [System.Environment]::SetEnvironmentVariable("<Name>", "<Value>")
 $private:setup_dir = (Get-Item (Get-Item $PSCommandPath).Target).Directory.Parent
 $env:LSP_Servers = $setup_dir.Parent.FullName + "\LSP-Servers\"
+
 $private:Paths = New-Object System.Collections.ArrayList
 
 if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
@@ -52,7 +55,8 @@ $private:Paths.AddRange((
     "C:\tools\vim\vim82;",
     "C:\ProgramData\chocolatey\bin;",
     "C:\ProgramData\DockerDesktop\version-bin;",
-    "C:\Program Files\WezTerm;"
+    "C:\Program Files\WezTerm;",
+    "C:\Program Files\NeoVide;"
 ))
 
 if($null -ne $Paths) {

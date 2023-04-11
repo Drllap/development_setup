@@ -1,3 +1,6 @@
+if vim.g.neovide then
+  pcall(require, 'palli.neovide')
+end
 pcall(require,'lsp.init')
 pcall(require,'auto-completion')
 pcall(require,'nvim-dab-config')
