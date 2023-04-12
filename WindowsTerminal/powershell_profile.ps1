@@ -145,6 +145,10 @@ Set-Alias -Name MSBuild -Value "C:\Program Files (x86)\Microsoft Visual Studio\2
 Set-Alias -Name vswhere -Value "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe"
 Set-Alias -Name LuaJIT  -Value "F:\Development\luajit\installation\luajit.exe"
 Set-Alias -Name nn      -Value "nvim-qt"
+Remove-Item alias:nv -Force # nv is already a builtin alias for New-Variable
+$env:NEOVIDE_FRAME="none"   # Remove the frame from neovide by default, the default is "full"
+Set-Alias -Name nv      -Value "neovide"
+Set-Alias -name wez     -Value "wezterm"
 
 # Set opstions for PSReadLIne module
 # Change the cursor when goin in and out of Vi mode
