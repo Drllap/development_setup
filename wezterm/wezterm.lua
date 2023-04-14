@@ -36,6 +36,20 @@ config.ssh_domains = {
   }
 }
 
+config.unix_domains = {
+  {
+    name = 'tmux',
+  },
+}
+
+config.wsl_domains = {
+  {
+    name = "ub",
+    distribution = "Ubuntu-20.04",
+    -- This doesn't work for some reason -> default_cmd = "~/dev"
+  },
+}
+
 config.keys = {
   -- CTRL+SHIFT+Space, followed by 'r' will put us in resize-pane
   -- mode until we cancel that mode.
