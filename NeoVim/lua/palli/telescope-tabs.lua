@@ -9,5 +9,5 @@ end
 local config = { entry_formatter = list_cwds, entry_ordinal = list_cwds }
 
 vim.keymap.set('n', '<leader>tt', function() require('telescope-tabs').list_tabs(config) end)
-vim.keymap.set('n', '<leader>pt', function() require('telescope-tabs').go_to_previous() end);
+vim.keymap.set('n', '<leader>pt', function() require('telescope-tabs').go_to_previous()  end);
 
