@@ -12,6 +12,8 @@ config.default_prog = { 'powershell', '-NoLogo' }
 
 config.color_scheme = 'Gruvbox dark, medium (base16)'
 
+config.hide_tab_bar_if_only_one_tab = true
+
 -- config.debug_key_events = true
 config.disable_default_key_bindings = true
 
