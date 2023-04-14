@@ -3,9 +3,9 @@ local function cmd()
   error("cmd not set")
 end
 
-if "Linux" == vim.loop.os_uname().system then
+if "Linux" == vim.loop.os_uname().sysname then
   cmd = function()
-    return { "clangd-12" };
+    return { "clangd-14" };
   end
 else
   cmd = function()
