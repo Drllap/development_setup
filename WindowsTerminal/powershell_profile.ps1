@@ -56,7 +56,8 @@ $private:Paths.AddRange((
     "C:\ProgramData\chocolatey\bin;",
     "C:\ProgramData\DockerDesktop\version-bin;",
     "C:\Program Files\WezTerm;",
-    "C:\Program Files\NeoVide;"
+    "C:\Program Files\NeoVide;",
+    "C:\Strawberry\perl\bin;"
 ))
 
 if($null -ne $Paths) {
