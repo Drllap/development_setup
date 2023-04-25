@@ -278,5 +278,14 @@ function toggle_conda {
 #endregion
 }
 
+function enable_VSDevShell {
+    $current = Get-Location;
+    Import-Module ('C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\' +
+                   'Common7\Tools\Microsoft.VisualStudio.DevShell.dll');
+    Enter-VsDevShell b0c0bd68;  # This changes the CWD to C:\Users\<user>\source\repos for some reason
+    Set-Location $current
+}
+
 $ExecEnd = Get-Date
 Write-Host "Profile Load Time: $(($ExecEnd - $ExecStart).Milliseconds) Milliseconds"
+
