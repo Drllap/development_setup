@@ -1,5 +1,15 @@
 # TODO
 * Move the .lua config files in NeoVim to a namesapce, palli
+* Create a wrapper for `pcall` that prints error into `:messages` if it fails and use it in the NeoVim config
+* Add health.lua for:
+  * lsp config (lua/dap)
+    * rust
+    * cpp?
+    * python?
+  * dap config (lua/dap)
+    * python
+    * rust
+    * cpp?
 * ~~Install DockerCompleteion via PowerShellGallery instead of sub-module~~
 * Jump to Visual Studio
 * ~~C++ code completion~~

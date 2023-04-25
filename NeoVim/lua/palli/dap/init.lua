@@ -1,29 +1,3 @@
-local dap = require('dap')
-
-local function dap_python_command()
-  if 'Linux' == vim.loop.os_uname().sysname then
-    return 'python3'
-  else
-    return 'C:/tools/Anaconda3/python.exe'
-  end
-end
-
-dap.adapters.python = {
-    type = 'executable';
-    command = dap_python_command();
-    args = { '-m', 'debugpy.adapter' };
-}
-
-dap.configurations.python = {
-    {
-        type = 'python';
-        request = 'launch';
-        name = 'Launch file';
-        program = '${file}';
-        console = 'integratedTerminal';
-    },
-}
-
 local opts = { noremap = true, silent = true, expr = false };
 vim.api.nvim_set_keymap('n', '<leader>dd', "<cmd>lua require('dap').continue()<CR>",      opts);
 vim.api.nvim_set_keymap('n', '<leader>dl', "<cmd>lua require('dap').run_last()<CR>",      opts);
@@ -40,9 +14,11 @@ vim.api.nvim_set_keymap('n', '<leader>dh', "<cmd>lua require('dap.ui.widgets').h
 vim.api.nvim_set_keymap('n', '<leader>dS', "<cmd>lua local w=require('dap.ui.widgets');w.cursor_float(w.scopes)<CR>", opts)
 vim.api.nvim_set_keymap('n', '<leader>dF', "<cmd>lua local w=require('dap.ui.widgets');w.cursor_float(w.frames)<CR>", opts)
 
-
 vim.api.nvim_command([[
 autocmd FileType dap-repl lua require('dap.ext.autocompl').attach()
 ]]);
 
 vim.fn.sign_define('DapBreakpoint', {text='🛑', texthl='', linehl='', numhl=''})
+
+pcall(require, 'pali.dap.python')
+pcall(require, 'palli.dap.lldb')
