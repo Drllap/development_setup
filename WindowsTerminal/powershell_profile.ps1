@@ -109,6 +109,9 @@ wezterm shell-completion --shell power-shell | Out-String | Invoke-Expression
 # Add tab Autocompletion for GitHub Cli
 gh completion -s powershell | Out-String | Invoke-Expression
 
+# Add tab Autocompletion for rustup
+rustup completions powershell | Out-String | Invoke-Expression
+
 # Code taken from https://github.com/microsoft/terminal/issues/3158#issuecomment-789198188
 # Makes make new split panes open in current directory
 # My changes:
