@@ -133,11 +133,11 @@ if($env:WT_SESSION){
         }
 
         # Add Nix property to $PWD, returns the path in UNIX style
-        Add-Member                                          `
-            -InputObject $PWD                               `
-            -Name Nix                                       `
-            -Value { return $this.Path.Replace('\','/'); }  `
-            -MemberType ScriptProperty
+        # Add-Member                                          `
+        #     -InputObject $PWD                               `
+        #     -Name Nix                                       `
+        #     -Value { return $this.Path.Replace('\','/'); }  `
+        #     -MemberType ScriptProperty
 
         return $prevprompt.invoke()
     }
@@ -154,8 +154,9 @@ Set-Alias -Name nn      -Value "nvim-qt"
 Remove-Item alias:nv -Force # nv is already a builtin alias for New-Variable
 $env:NEOVIDE_FRAME="none"   # Remove the frame from neovide by default, the default is "full"
 Set-Alias -Name nv      -Value "neovide"
-Set-Alias -name wez     -Value "wezterm"
-Set-Alias -name wt      -Value "wezterm"
+Set-Alias -Name wez     -Value "wezterm"
+Set-Alias -Name wt      -Value "wezterm"
+Set-Alias -Name wh      -Value "where.exe"
 
 # Set options for PSReadLine module
 # Change the cursor when going in and out of Vi mode
