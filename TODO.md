@@ -1,15 +1,26 @@
 # TODO
-* Move the .lua config files in NeoVim to a namesapce, palli
-* Create a wrapper for `pcall` that prints error into `:messages` if it fails and use it in the NeoVim config
-* Add health.lua for:
-  * lsp config (lua/dap)
-    * rust
-    * cpp?
-    * python?
-  * dap config (lua/dap)
-    * python
-    * rust
-    * cpp?
+* Reorganise this file:
+  * Use `- [ ]` instead of `*` and check the checkbox instead of over lining (~~over lined~~)
+  * Put all NeoVim config related items in the **NeoVim** item below:
+* NeoVim:
+  * Move the .lua config files in NeoVim to a namesapce, palli
+  * Create a wrapper for `pcall` that prints error into `:messages` if it fails and use it in the NeoVim config
+  * Fix initCommands in dap.rust.lua. `script_import` doesn't point to an existing _lldb_lookup_py_
+  * Add health.lua for:
+    * lsp config (lua/dap)
+      * rust
+      * cpp?
+      * python?
+    * dap config (lua/dap)
+      * python
+      * rust
+      * cpp?
+* WezTerm:
+  * Make it so I can connect to another domain in the current pan/window. Currently when executing
+  `wezterm connect ub/kvikna` it opens a new wezgerm-gui
+  * Make it so that a new PS window/pan opens up in the CWD
+* PowerShell:
+  * Move the PowerShell related things (profile) out of WindowsTerminal folder into a deticated PowerShell folder
 * ~~Install DockerCompleteion via PowerShellGallery instead of sub-module~~
 * Jump to Visual Studio
 * ~~C++ code completion~~
