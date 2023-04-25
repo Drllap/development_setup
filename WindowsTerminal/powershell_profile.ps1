@@ -213,12 +213,24 @@ Set-PSReadLineKeyHandler -Key k -ViMode Insert -ScriptBlock {
     }
 }
  
-Set-PSReadLineKeyHandler -Key Ctrl+n -Function NextHistory
-Set-PSReadLineKeyHandler -Key Ctrl+p -Function PreviousHistory
+Set-PSReadLineKeyHandler -Key Ctrl+n -ViMode Insert -Function NextHistory
+Set-PSReadLineKeyHandler -Key Ctrl+p -ViMode Insert -Function PreviousHistory
+Set-PSReadLineKeyHandler -Key Ctrl+n -ViMode Command -Function NextHistory
+Set-PSReadLineKeyHandler -Key Ctrl+p -ViMode Command -Function PreviousHistory
 Set-PSReadLineKeyHandler -Key Ctrl+K -Function ShowParameterHelp
 Set-PSReadLineKeyHandler -Key Ctrl+k -Function ShowCommandHelp
 
-# Set-PSReadLineKeyHandler -Key Ctrl+e -Function ScrollDisplayUpLine
+# Set scroll functions start
+# These Scrolling function only work in the PowerShell terminal emulator
+# they don't work in WezTerm/WindowsTerminal
+Set-PSReadLineKeyHandler -Key Ctrl+e -Function ScrollDisplayUpLine
+Set-PSReadLineKeyHandler -Key Ctrl+y -Function ScrollDisplayUpLine
+
+Set-PSReadLineKeyHandler -Key j -ViMode Command -Function ScrollDisplayDownLine
+Set-PSReadLineKeyHandler -Key k -ViMode Command -Function ScrollDisplayUpLine
+Set-PSReadLineKeyHandler -Key J -ViMode Command -Function ScrollDisplayDown
+Set-PSReadLineKeyHandler -Key K -ViMode Command -Function ScrollDisplayUp
+# Set scroll functions end
 
 Set-PSReadLineKeyHandler -Key Tab -Function Complete    # Changes compleation to bash-like, only compleate to divergence
 
