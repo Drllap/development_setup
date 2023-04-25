@@ -16,17 +16,32 @@ config.hide_tab_bar_if_only_one_tab = true
 
 -- config.debug_key_events = true
 config.disable_default_key_bindings = true
+config.hide_tab_bar_if_only_one_tab = true
 
--- Show which key table is active in the status area
-wezterm.on('update-right-status', function(window, _)
+wezterm.on('update-right-status', function(window, pane)
+  -- Show which key table is active in the status area
   local name = window:active_key_table()
   if name then
     name = 'TABLE: ' .. name
+    window:set_right_status(name)
+    return
   end
-  window:set_right_status(name or '')
-end)
 
-config.leader = { key = 'Space', mods = 'ALT' }
+  -- Show latency
+  local meta = pane:get_metadata()
+
+  if not meta then
+    return
+  end
+
+  if meta.is_tardy then
+    local secs = meta.since_last_response_ms / 1000.0
+    window:set_right_status(string.format('tardy: %5.1fs⏳', secs))
+    return
+  end
+
+  window:set_right_status('')
+end)
 
 config.ssh_domains = {
   {
@@ -50,6 +65,8 @@ config.wsl_domains = {
   },
 }
 
+config.leader = { key = 'Space', mods = 'ALT' }
+
 config.keys = {
   -- CTRL+SHIFT+Space, followed by 'r' will put us in resize-pane
   -- mode until we cancel that mode.
@@ -70,6 +87,10 @@ config.keys = {
   { key = 'd', mods = 'LEADER', action = act.ShowDebugOverlay },
   -- CTLR-SHIFT-p activates the Command Palette
   { key = 'p', mods = 'LEADER', action = act.ActivateCommandPalette, },
+
+  -- Luncher Menu
+  { key = 'l', mods = 'LEADER', action = act.ShowLauncher },
+  -- { key = 'P', mods = 'SHIFT|ALT|CTRL', action = act.ShowLauncherArgs { flags = '' } },
 
   -- Window commands
   { key = 'Enter', mods = 'ALT', action = act.ToggleFullScreen },
@@ -93,7 +114,7 @@ config.keys = {
   { key = 'd', mods = 'ALT', action = act.SplitHorizontal { domain = 'CurrentPaneDomain' } },
   { key = 'D', mods = 'ALT', action = act.SplitVertical   { domain = 'CurrentPaneDomain' } },
 
-  { key = 'c', mods = 'ALT', action = act.CloseCurrentPane { confirm = false} },
+  { key = 'c', mods = 'ALT', action = act.CloseCurrentPane { confirm = true } },
 
   -- Pane movements, "normal mode"
   { key = 'h', mods = 'ALT', action = act.ActivatePaneDirection 'Left'},
@@ -102,7 +123,21 @@ config.keys = {
   { key = 'j', mods = 'ALT', action = act.ActivatePaneDirection 'Down' },
 
   -- Activate Pane Select mode
-  { key = 'g', mods = 'ALT', action = act.PaneSelect }
+  { key = 'g', mods = 'ALT', action = act.PaneSelect },
+
+  -- Scrolling
+  -- Scrolling line
+  { key = 'y', mods = 'ALT|CTRL', action = act.ScrollByLine(1)   },
+  { key = 'e', mods = 'ALT|CTRL', action = act.ScrollByLine(-1)  },
+
+  -- Scrolling multiple lines
+  { key = 'd', mods = 'ALT|CTRL', action = act.ScrollByLine(15)  },
+  { key = 'u', mods = 'ALT|CTRL', action = act.ScrollByLine(-15) },
+
+  -- { key = 'p', mods = 'ALT|CTRL', action = act.ScrollToPrompt(1) },
+
+  -- Copy paste
+  { key = 'v', mods = 'ALT|CTRL', action = act.PasteFrom('Clipboard') },
 }
 
 config.key_tables = {

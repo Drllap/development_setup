@@ -149,11 +149,12 @@ Remove-Item alias:nv -Force # nv is already a builtin alias for New-Variable
 $env:NEOVIDE_FRAME="none"   # Remove the frame from neovide by default, the default is "full"
 Set-Alias -Name nv      -Value "neovide"
 Set-Alias -name wez     -Value "wezterm"
+Set-Alias -name wt      -Value "wezterm"
 
-# Set opstions for PSReadLIne module
-# Change the cursor when goin in and out of Vi mode
+# Set options for PSReadLine module
+# Change the cursor when going in and out of Vi mode
 if ($PSVersionTable.PSVersion.Major -eq 5) {
-    # We need to hande PowerShell 5 specially
+    # We need to handle PowerShell 5 specially
     # https://github.com/PowerShell/PSReadLine/issues/3159#issuecomment-1015001655
     function Script:OnViModeChange {
         $esc = "$([char]0x1b)"
