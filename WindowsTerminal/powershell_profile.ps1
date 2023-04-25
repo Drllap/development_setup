@@ -28,8 +28,9 @@ if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
 }
 
 $private:Paths.AddRange((
-    -join($env:APPDATA, "\Python\Python39\Scripts;"),
+    -Join($env:APPDATA, "\Python\Python39\Scripts\;"),
     -Join($env:APPDATA, "\npm;"),
+    -Join($env:USERPROFILE, "\.cargo\bin\;"),
     "C:\WINDOWS;",
     "C:\WINDOWS\system32;",
     "C:\WINDOWS\System32\WindowsPowerShell\v1.0\;",
