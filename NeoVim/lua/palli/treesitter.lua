@@ -34,7 +34,7 @@ require('nvim-treesitter.configs').setup {
     enable = true,
 
      -- list of language that will be disabled
-    disable = { "python", "cpp", "json" },
+    disable = { "python", "cpp", "json", "lua" },
   },
 }
 
