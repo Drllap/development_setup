@@ -77,7 +77,7 @@ Plug 'mfussenegger/nvim-dap'
 
 Plug 'iamcco/markdown-preview.nvim' , { 'do': 'cd app && yarn install' }
 
-Plug 'ggandor/leap.nvim'
+Plug 'ggandor/leap.nvim' " Use s to make jumps to some char in view port
 call plug#end()
 
 colorscheme gruvbox
