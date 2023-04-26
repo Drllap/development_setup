@@ -83,9 +83,9 @@ config.keys = {
   -- Activate Quick Select Mode
   { key = 'q', mods = 'LEADER', action = act.QuickSelect },
 
-  -- CTRL-SHIFT-l activates the debug overlay
+  -- Overwrite old binding: CTRL-SHIFT-l activates the debug overlay
   { key = 'd', mods = 'LEADER', action = act.ShowDebugOverlay },
-  -- CTLR-SHIFT-p activates the Command Palette
+  -- Overwrite old binding: CTLR-SHIFT-p activates the Command Palette
   { key = 'p', mods = 'LEADER', action = act.ActivateCommandPalette, },
 
   -- Luncher Menu
@@ -114,6 +114,7 @@ config.keys = {
   { key = 'd', mods = 'ALT', action = act.SplitHorizontal { domain = 'CurrentPaneDomain' } },
   { key = 'D', mods = 'ALT', action = act.SplitVertical   { domain = 'CurrentPaneDomain' } },
 
+  { key = 'C', mods = 'ALT', action = act.QuitApplication },
   { key = 'c', mods = 'ALT', action = act.CloseCurrentPane { confirm = true } },
 
   -- Pane movements, "normal mode"
