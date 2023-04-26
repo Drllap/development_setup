@@ -157,6 +157,9 @@ Set-Alias -Name nv      -Value "neovide"
 Set-Alias -Name wez     -Value "wezterm"
 Set-Alias -Name wt      -Value "wezterm"
 Set-Alias -Name wh      -Value "where.exe"
+Remove-Item alias:curl  # curl is bound to Invoke-WebRequest by default
+Set-Alias -Name curl    -Value C:\ProgramData\chocolatey\bin\curl.exe
+
 
 # Set options for PSReadLine module
 # Change the cursor when going in and out of Vi mode
