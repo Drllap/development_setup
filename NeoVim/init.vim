@@ -45,7 +45,7 @@ Plug 'tpope/vim-dispatch'     " Async build
 " Plug 'tpope/vim-commentary'   " Comment out stuff
 Plug 'tpope/vim-surround'
 
-Plug 'neovim/nvim-lspconfig' " LSP configuration plugin
+Plug 'neovim/nvim-lspconfig'  " LSP configuration plugin
 
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'kyazdani42/nvim-web-devicons'
