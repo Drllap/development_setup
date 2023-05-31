@@ -5,7 +5,6 @@ local function dap_python_command()
     return 'python3'
   else
     return 'python.exe'
-    -- return 'C:/tools/Anaconda3/python.exe'
   end
 end
 

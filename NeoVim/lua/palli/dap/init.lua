@@ -20,5 +20,5 @@ autocmd FileType dap-repl lua require('dap.ext.autocompl').attach()
 
 vim.fn.sign_define('DapBreakpoint', {text='🛑', texthl='', linehl='', numhl=''})
 
-pcall(require, 'pali.dap.python')
+pcall(require, 'palli.dap.python')
 pcall(require, 'palli.dap.lldb')
