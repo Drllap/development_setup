@@ -160,6 +160,8 @@ Remove-Item alias:curl  # curl is bound to Invoke-WebRequest by default
 Set-Alias -Name curl    -Value C:\ProgramData\chocolatey\bin\curl.exe
 Set-Alias -Name tree    -Value C:\ProgramData\chocolatey\bin\tree.exe
 
+# Set environment
+$env:CMAKE_EXPORT_COMPILE_COMMANDS="ON";
 
 # Set options for PSReadLine module
 # Change the cursor when going in and out of Vi mode
