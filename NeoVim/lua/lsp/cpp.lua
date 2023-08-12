@@ -13,7 +13,18 @@ else
   end
 end
 
+local root_files = {
+  'compile_commands.json',
+}
+
+local util = require('lspconfig.util')
+
 require('lspconfig').clangd.setup({
-  cmd = cmd()
+  cmd = cmd(),
+
+  root_dir = function(fname)
+    return util.root_pattern(unpack(root_files))(fname) or util.find_git_ancestor(fname)
+  end,
+  -- single_file_support = false,
 })
 
