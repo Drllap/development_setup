@@ -78,6 +78,7 @@ Plug 'mfussenegger/nvim-dap'
 Plug 'iamcco/markdown-preview.nvim' , { 'do': 'cd app && yarn install' }
 
 Plug 'ggandor/leap.nvim' " Use s to make jumps to some char in view port
+Plug 'stevearc/oil.nvim'  " File Explorer
 call plug#end()
 
 colorscheme gruvbox
@@ -93,8 +94,14 @@ augroup END
 " Create an autocommand that creates the missing folder when writing a file
 " that doesn't exist
 augroup Mkdir
+    function! CreateMissingParentDirs()
+      if &ft =~ 'oil'
+        return 
+      endif
+      call mkdir(expand("<afile>:p:h"), "p")
+    endfunction
     autocmd!
-    autocmd BufWritePre * call mkdir(expand("<afile>:p:h"), "p")
+    autocmd BufWritePre * call CreateMissingParentDirs()
 augroup END
 
 " Exit insert mode with jk
