@@ -80,6 +80,8 @@ Plug 'iamcco/markdown-preview.nvim' , { 'do': 'cd app && yarn install' }
 Plug 'ggandor/leap.nvim' " Use s to make jumps to some char in view port
 Plug 'voldikss/vim-translator'
 
+Plug 'yorickpeterse/nvim-window'
+
 Plug 'stevearc/oil.nvim'  " File Explorer
 call plug#end()
 
