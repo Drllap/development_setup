@@ -78,10 +78,15 @@ Plug 'mfussenegger/nvim-dap'
 Plug 'iamcco/markdown-preview.nvim' , { 'do': 'cd app && yarn install' }
 
 Plug 'ggandor/leap.nvim' " Use s to make jumps to some char in view port
+Plug 'voldikss/vim-translator'
+
 Plug 'stevearc/oil.nvim'  " File Explorer
 call plug#end()
 
 colorscheme gruvbox
+" Configurations for vim-translator
+let g:translator_target_lang="en"
+let g:translator_source_lang="is"
 
 let g:netrw_liststyle = 3 " NetRW opens with the listings in tree style by default
 
