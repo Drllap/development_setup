@@ -116,7 +116,7 @@ augroup END
 " Exit insert mode with jk
 inoremap <silent> jk <esc>
 cnoremap <silent> jk <C-c>
-tnoremap <silent> jk <C-\><C-N>
+tnoremap <silent> JK <C-\><C-N>
 
 nnoremap <silent> <leader>h <C-w>h
 nnoremap <silent> <leader>j <C-w>j
