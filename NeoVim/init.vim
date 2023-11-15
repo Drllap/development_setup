@@ -82,6 +82,8 @@ Plug 'voldikss/vim-translator'
 
 Plug 'yorickpeterse/nvim-window'
 
+Plug 'lewis6991/gitsigns.nvim'
+
 Plug 'stevearc/oil.nvim'  " File Explorer
 call plug#end()
 
