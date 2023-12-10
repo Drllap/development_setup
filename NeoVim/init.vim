@@ -85,6 +85,9 @@ Plug 'yorickpeterse/nvim-window'
 Plug 'lewis6991/gitsigns.nvim'
 
 Plug 'stevearc/oil.nvim'  " File Explorer
+
+Plug 'jackMort/ChatGPT.nvim'
+Plug 'MunifTanjim/nui.nvim'
 call plug#end()
 
 colorscheme gruvbox

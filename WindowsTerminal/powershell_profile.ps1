@@ -1,9 +1,10 @@
 $ExecStart = Get-Date
 
-# Should make the LSP_Servers env-variable persistent?
-# [System.Environment]::SetEnvironmentVariable("<Name>", "<Value>")
-$private:setup_dir = (Get-Item (Get-Item $PSCommandPath).Target).Directory.Parent
-$env:LSP_Servers = $setup_dir.Parent.FullName + "\LSP-Servers\"
+$private:developer_setup = (Get-Item (Get-Item $PSCommandPath).Target).Directory.Parent
+$env:LSP_Servers = $developer_setup.Parent.FullName + "\LSP-Servers\"
+
+$env:PSModulePath = $developer_setup.FullName + "\PowerShell;" + $env:PSModulePath
+. ($developer_setup.FullName + "\PowerShell\keys.ps1")
 
 $private:Paths = New-Object System.Collections.ArrayList
 
