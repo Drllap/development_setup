@@ -18,6 +18,11 @@ shell:
   args:
     - -NoLogo -ExecutionPolicy Unrestricted
 
-debug:
-  render_timer: true
-  print_events: true
+font:
+  normal:
+    family: CaskaydiaCove NF
+  size: 10.5
+  
+# debug:
+  # render_timer: true
+  # print_events: true
