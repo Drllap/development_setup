@@ -48,6 +48,7 @@ Plug 'tpope/vim-surround'
 Plug 'neovim/nvim-lspconfig'  " LSP configuration plugin
 
 Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 
