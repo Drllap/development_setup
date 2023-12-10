@@ -2,12 +2,13 @@ syntax on
 set keywordprg=:help " set the Shift+k to use :help, syntax on, above changes it to :Man
 
 set expandtab
- 	
-set exrc " local .vimrc files are sorced when doing nvim . 
-
-" set guicursor= " always uses block curser instead of thin line
-
+set tabstop=4
 set splitright " makes new buffer opened in vertical split open on the right side
+set splitbelow
+set exrc " local .vimrc files are sourced when doing nvim . 
+
+" set guicursor= " always uses block cursor instead of thin line
+" set mouse=  " Disable the mouse completely
 
 set relativenumber
 set number
