@@ -163,6 +163,7 @@ Set-Alias -Name tree    -Value C:\ProgramData\chocolatey\bin\tree.exe
 
 # Set environment
 $env:CMAKE_EXPORT_COMPILE_COMMANDS="ON";
+$env:BUILD_TESTING="ON"
 
 # Set options for PSReadLine module
 # Change the cursor when going in and out of Vi mode
