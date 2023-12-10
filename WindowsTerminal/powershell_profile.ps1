@@ -76,11 +76,6 @@ function autojump {
     python $Env:APPDATA\..\Local\autojump\bin\autojump $args
 }
 
-function test {
-    Write-Output "STFU"
-    Write-Output "STFU2"
-}
-
 # re-source the profile
 # refresh profile: . so
 function so {
