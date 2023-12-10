@@ -7,8 +7,11 @@
 [pull]
     rebase = true
     autoSetupRemote = true
+[push]
+    autoStash = true
 [rebase]
     autoStash = true
 [merge]
     autoStash = true
-
+[branch]
+    sort = -committerdate
