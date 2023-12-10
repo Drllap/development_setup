@@ -1,7 +1,7 @@
 local M = {}
 
 local API_key_avalible = function()
-  return false
+  return nil ~= os.getenv("OPENAI_API_KEY")
 end
 
 M.check = function()
