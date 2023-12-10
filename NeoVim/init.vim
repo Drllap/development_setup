@@ -40,7 +40,7 @@ Plug 'gruvbox-community/gruvbox' " Gruvbox theam
 
 " TPope plugins
 Plug 'tpope/vim-fugitive'     " Git wrapper plugin
-Plug 'tpope/vim-obsession'    " Extends/tweeks the vim built in :mksession
+Plug 'tpope/vim-obsession'    " Extends/tweaks the vim built in :mksession
 Plug 'tpope/vim-dispatch'     " Async build
 " Plug 'tpope/vim-commentary'   " Comment out stuff
 Plug 'tpope/vim-surround'
