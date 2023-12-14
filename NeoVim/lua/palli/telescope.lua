@@ -36,7 +36,11 @@ vim.keymap.set('n', '<leader>S',   require('telescope.builtin').lsp_workspace_sy
 vim.keymap.set('n', '<leader>tle', require('telescope.builtin').diagnostics, opts);
 
 -- Create keymap to browse the vim config files with Telescope
-local vim_config_root = { cwd = vim.fn.fnamemodify(vim.fn.resolve(vim.env.MYVIMRC), ':h:h'), };
+local vim_config_root = {
+  cwd = vim.fn.fnamemodify(vim.fn.resolve(vim.env.MYVIMRC), ':h:h'),
+  hidden = true,
+  no_ignore = true,
+};
 vim.keymap.set('n', '<leader>tc', function() return require('telescope.builtin').find_files(vim_config_root) end, opts);
 
 -- Create keymap to browse the vim pluggins files with Telescope
