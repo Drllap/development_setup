@@ -45,6 +45,7 @@ Plug 'tpope/vim-obsession'    " Extends/tweaks the vim built in :mksession
 Plug 'tpope/vim-dispatch'     " Async build
 " Plug 'tpope/vim-commentary'   " Comment out stuff
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 
 Plug 'neovim/nvim-lspconfig'  " LSP configuration plugin
 
