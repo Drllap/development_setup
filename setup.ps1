@@ -14,7 +14,7 @@ New-Item -Path $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbw
     -Value .\WindowsTerminal\settings.json -ItemType SymbolicLink -Force
 
 # Add Symbolic Link to the Alacritty config
-New-Item -Path $env:APPDATA\alacritty\ -Name alacritty.yml -Value .\Alacritty\alacritty.yml `
+New-Item -Path $env:APPDATA\ -Name .\alacritty -Value .\Alacritty\ `
         -ItemType SymbolicLink -Force
 
 # Add Symbolic Link to the Wezterm config
