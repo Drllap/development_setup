@@ -11,6 +11,12 @@ mean getting my torso closer to horizontal, but still keeping my shoulders over 
 How does this change the program going forward? [Here](https://www.facebook.com/groups/323490962344244/posts/939957527364248/?comment_id=940324147327586&reply_comment_id=940340500659284) is me failing at 80kg.
 * W7D2 [Clean Pull + Clean + Jerk](https://www.facebook.com/groups/323490962344244/posts/939957527364248/?comment_id=940324147327586&reply_comment_id=940344307325570). In the clean I was trying to focus on pulling my self under the bar (as instructed last week) instead of focusing on the extension
 
+## [2023-02-??]()
+### [Answer notes](https://www.facebook.com/groups/323490962344244/posts/933917154634952/)
+* I start at 7:55
+* Star at a point in front of me when getting into the initial position. The face should be vertical.
+* Long 2nd pull in the snatch
+
 ## [2022-12-16]()
 ### Answer notes
 
