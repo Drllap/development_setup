@@ -1,0 +1,24 @@
+
+set editing-mode vi
+# use `bind -V` in bash to list current readline variable names and values
+
+set keymap vi-insert
+"jk": vi-movement-mode
+"\C-n": next-history
+"\C-p": previous-history
+"\C-l": clear-screen
+
+set keymap vi-command
+"\C-l": clear-screen
+
+# Make the cusor as pipe in insert-mod
+# and as block in command/normal mode
+# When show-mode-in-prompt is on the prompt, PS1 or PS#,
+# plus the relevant string is written to the terminal when switching 
+# tho the mode. \1 and \2 are used to escapes of begin and end 
+# sequences of non-printing chars.
+# See `man readline`
+set show-mode-in-prompt on
+set vi-cmd-mode-string "\1\e[2 q\2"
+set vi-ins-mode-string "\1\e[6 q\2"
+
