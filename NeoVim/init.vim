@@ -137,13 +137,9 @@ nnoremap <silent> <leader>l <C-w>l
 " default
 
 if has('win32')
-  map <C-z> <Nop>
-endif
-
-if has('win32')
-  " Add abrivioation to open current file in visual studio
-
-  cabbrev vsedit :!&"C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\devenv.exe" /edit "%"
+  runtime Windows.vim
+elseif has('linux')
+  runtime Linux.vim
 endif
 
 " Disable spell checking in terminal buffers
