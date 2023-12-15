@@ -8,15 +8,20 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
-config.default_prog = { 'powershell', '-NoLogo' }
+if wezterm.hostname() == 'archlinux' then
+  -- config.default_prog = { '/usr/bin/bash' } -- doing it like this makes it so .bash_profile isn't sourced
+  -- config.default_prog = { '/usr/bin/sh' }
+else
+  config.default_prog = { 'powershell', '-NoLogo' }
+end
 
 config.color_scheme = 'Gruvbox dark, medium (base16)'
-
-config.hide_tab_bar_if_only_one_tab = true
+-- config.
 
 -- config.debug_key_events = true
 config.disable_default_key_bindings = true
 config.hide_tab_bar_if_only_one_tab = true
+-- config.warn_about_missing_glyphs = false
 
 wezterm.on('update-right-status', function(window, pane)
   -- Show which key table is active in the status area
