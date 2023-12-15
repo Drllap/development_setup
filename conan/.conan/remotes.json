@@ -1,0 +1,20 @@
+{
+ "remotes": [
+  {
+   "name": "gitlab-conan-project",
+   "url": "https://gitlab.norbit.com/api/v4/projects/150/packages/conan",
+   "verify_ssl": true
+  },
+  {
+   "name": "conancenter",
+   "url": "https://center.conan.io",
+   "verify_ssl": true
+  },
+  {
+   "name": "gitlab",
+   "url": "https://gitlab.norbit.com/api/v4/packages/conan",
+   "verify_ssl": true
+  }
+ ]
+}
+
