@@ -91,6 +91,8 @@ Plug 'stevearc/oil.nvim'  " File Explorer
 
 Plug 'jackMort/ChatGPT.nvim'
 Plug 'MunifTanjim/nui.nvim'
+
+Plug 'lambdalisue/suda.vim'
 call plug#end()
 
 colorscheme gruvbox
