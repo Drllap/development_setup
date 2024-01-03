@@ -6,9 +6,9 @@
 	symlink = true
 [pull]
     rebase = true
-    autoSetupRemote = true
 [push]
     autoStash = true
+    autoSetupRemote = true
 [rebase]
     autoStash = true
 [merge]
