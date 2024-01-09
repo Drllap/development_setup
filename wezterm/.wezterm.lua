@@ -9,7 +9,9 @@ if wezterm.config_builder then
 end
 
 if wezterm.hostname() == 'archlinux' then
-  -- config.default_prog = { '/usr/bin/bash' } -- doing it like this makes it so .bash_profile isn't sourced
+  -- use bash in not login mode
+  -- doing it like this makes it so .bash_profile isn't sourced
+  config.default_prog = { '/usr/bin/bash' }
   -- config.default_prog = { '/usr/bin/sh' }
 else
   config.default_prog = { 'powershell', '-NoLogo' }

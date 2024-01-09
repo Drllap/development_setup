@@ -31,4 +31,5 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 
 eval "$(zoxide init bash)"
+eval "$(starship init bash)"
 

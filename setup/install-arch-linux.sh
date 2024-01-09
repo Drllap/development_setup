@@ -43,4 +43,5 @@ stow --target=$HOME wezterm
 stow --target=$HOME readline
 stow --target=$HOME conan
 stow --target=$HOME nushell
+stow --target=$HOME starship
 
