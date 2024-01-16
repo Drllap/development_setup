@@ -1,4 +1,56 @@
 # Coaching Livestream
+
+## [Livestream]()
+* I start at 
+* [My quesionts](https://www.facebook.com/groups/323490962344244/posts/1127959805230685/?comment_id=1128105471882785&__cft__[0]=AZWQTGuBJSTeXDFBPrAuUkVVFVFiLFWaQBhjhGe7N8eJ9zbihjWF1LvYvu6E0q7ZUtPyAlbeLdv4a2Ac21jlCSpt_uNUeYPAl8jxkgu2gREcrui50JOsVFDr765N8znRbZcPc3b5mKrqFdHtCfDfDbMkieetxCKg_MVAC5-3cqBtXHW3qjtHrBYYU4P09wd_5Lg&__tn__=R]-R)
+* BWL W7D3. 
+Had an off day. Failed the two heavier PC&J. I Failed the PC, but this was weight that I have easily PC before.
+Not sure what was going on, probably a combination of sleep issues and bad nutrition. 
+Unless you say otherwise I plan just to ignore this setback and continue with the program as normal?
+* BWL W7D4 C&J 3x1
+Last week, you told me to straighten my back during the dynamic start before the pull. Was trying to get rid of this early elbow bend. I really thought had nailed it when doing the lift but I can still clearly see it on the video.
+The toes are still moving to the sides at the end of the dynamic start, need to focus more on that.
+* BWL W8D1
+Snatch Highpull + High Hang Snatch 2x(1+1)
+Last week you told me to focus on pulling with my back when in the extension and get my elbows high
+
+## [Livestream 2024-01-12](https://www.facebook.com/100001054104188/videos/1132045914469704/)
+* I start at 28:17
+* [My questions](https://www.facebook.com/groups/323490962344244/posts/1123631138996885/?comment_id=1123762735650392&__cft__[0]=AZWXW_fwzwmEStVHZZ5G_-aUw7UVJDGZ6d5Vt9wAj96LsAd218X2VS-Iyyxs5S9r8S1gHDGMqsARmoXQwCuL4JY3DFzedBMVCPhbm4EzlKhfpcHD_GiKrRWeBgzODsCG4V9T-1onBsLov6_aFwQj-k1jP_4M3bLrIebvWAV0UXPUOH4r8obewbDQAe2zlJu9jSE&__tn__=R]-R)
+* I'm taking your advice from your 16 tips video and starting to do cardio after my WL sessions. I will start by spending 20 min on C2 bike twice this week and plan to build that up to 30 min almost every day. Now my question is, should I have a plan on how to ramp this up, or should I just go by feel? How long should this ramp-up take?
+  * Consider using the cardio program when it becomes available on the app
+* I have started to play around a bit with dynamic start BWL W6D2 Snatch 5x1
+  * Focus on flattening out the back when going down in the dynamic start
+  * Focus on pulling with the back after the second pull in the extension. Elbows high.
+  * Pull the feet up from the floor.
+* BWL W6D4 C&J 3x2
+  * Set the tow angle so that they don't move when going down in the dynamic start
+  * Don't bend the elbows to get the bar into my hip
+* BWL W7D1 FS Proceed to maximum = 150kg. My FS has always lagged way behind my BS due to lat and ankle mobility issues. This either is or is very close to my all-time FS PB. Don't feel like mobility is a hindrance in the FS any more.
+  * Work on ankle mobility
+
+## [Livestream 2023-12-23](https://www.facebook.com/100001054104188/videos/1152746065705083/)
+* I start at 1:26:09
+* [My questions](https://www.facebook.com/groups/323490962344244/posts/1112116666814999/?comment_id=1112596483433684&__cft__[0]=AZV37nI1KLZWh-zrGehNM4D8xNAo52WqXNcQOUHw1U3GgtvOEmgoYXBWopv0l3dNxgKydXDjTfh6BP4SRuWwxQt9mwJRwqOwjCw4JXpaFey_Dy3cls2dMFwrWjIEh85Xs6uiVSb9WdD_F0tCBmA0ZgPHCDCh28lvWB2zXEWr2LS0iI8lTKYp5RZ0SNY_XMctfUE&__tn__=R]-R)
+* First, to answer your questions since last week:
+  1. Yes, this is CrossFit Reykjavík.
+  2. It is fine to call me Paul. I will teach you how to pronounce Páll when you come to visit.
+* BWL
+  W4D4
+  Snatch 3x1 72kg
+  Last week you told me I was moving my hips into the bar too early. Now trying to keep my hips back, shoulders over the bar for longer
+  * Keep focusing on the same positions but start to incorporate dynamic start and a bit more aggression.
+  * Don't scoop the hips under the bar in the second pull. Just focus on getting up vertical and extend 
+
+## [Livestream 2023-12-14](https://www.facebook.com/100001054104188/videos/916119433189520/)
+* I start at 1:13:44
+* [My questions](https://www.facebook.com/groups/323490962344244/posts/1107090220650977/?comment_id=1107657790594220&__cft__[0]=AZVxUY5qJhJmNtoZCZ_TD9F2N6JAuVxq4SLCxHAT72ZjhPmCDOjpDpfwhLx4aIwLE5wrQ5UIQ2bFQPe9mqiYsXLuGwM9fvVvTlcdsGbPFcYHkSEurzog3hzRdyCJbmDA1qB0uShuxgEkvaWNDEQq5g-Y&__tn__=R]-R)
+* W4D1 BWL
+  Snatch 3x2
+  Dorsiflexion is still a problem, even though I've been working on it with limited, but still some, progress
+  * Stretch every day, foam role at least one a week
+  * Keep the hips back for longer, 2nd pull need to last longer. Hips back, shoulders over the bar
+
 ## [2023-02-09]()
 ### Questions
 * BWL. W6D4. [Back squats 6x4](https://www.facebook.com/groups/323490962344244/posts/939957527364248/?comment_id=940324147327586). This is the last set. Been a while since I have gone this heavy. The first set felt like
