@@ -1,7 +1,7 @@
 require('nvim-treesitter.configs').setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
   ensure_installed = { "c", "cpp", "rust", "cmake", "dockerfile", "lua", "vim", "python",
-                       "json", "yaml", "toml", "markdown" },
+                       "json", "yaml", "toml", "markdown", "bash", },
 
   highlight = {
     enable = true,
@@ -17,7 +17,7 @@ require('nvim-treesitter.configs').setup {
     -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
     -- Using this option may slow down your editor, and you may see some duplicate highlights.
     -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = true,
+    additional_vim_regex_highlighting = false,
   },
 
 --  incremental_selection = {
@@ -31,10 +31,7 @@ require('nvim-treesitter.configs').setup {
 --  },
 
   indent = {
-    enable = true,
-
-     -- list of language that will be disabled
-    disable = { "python", "cpp", "json", "lua" },
+    enable = false,
   },
 
   textobjects = {
