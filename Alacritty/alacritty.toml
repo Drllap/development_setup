@@ -1,0 +1,27 @@
+import = ["/home/palli/AppData/Roaming/alacritty/themes/themes/gruvbox_dark.yaml"]
+
+# [debug]
+# print_events = true
+# render_timer = true
+
+[font]
+size = 10.5
+
+[font.normal]
+family = "CaskaydiaCove NF"
+
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "T"
+mods = "Alt"
+
+[shell]
+args = ["-NoLogo -ExecutionPolicy Unrestricted"]
+program = "powershell"
+
+[window]
+opacity = 0.95
+title = "hommi"
+
+[window.cursor.style]
+shape = "Beam"
