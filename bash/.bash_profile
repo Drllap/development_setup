@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# ~/.bashrc
+# ~/.bash_profile
 #
 
 # If not running interactively, don't do anything
