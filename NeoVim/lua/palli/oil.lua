@@ -1,3 +1,7 @@
 local oil = require('oil')
-oil.setup()
+oil.setup({
+  keymaps = {
+    ["~"] = false
+  }
+})
 
