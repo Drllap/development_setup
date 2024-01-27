@@ -10,8 +10,6 @@ case $- in
     *) return;;
 esac
 
-alias ls='ls --color=auto'
-
 DEV_DIR="$(realpath $(dirname $(readlink -f $BASH_SOURCE))/../)"
 
 if [ -f $DEV_DIR/secrets/export-keys.sh ] ; then
@@ -23,6 +21,8 @@ fi
 if [ -f $DEV_DIR/scripts/bash/conan.sh ] ; then
     source $DEV_DIR/scripts/bash/conan.sh
 fi
+source $DEV_DIR/scripts/bash/aliases.sh
+source $DEV_DIR/scripts/bash/path.sh
 source $DEV_DIR/scripts/bash/fzf.sh
 
 export LSP_Servers=$(realpath $DEV_DIR/../../LSP-Servers)
