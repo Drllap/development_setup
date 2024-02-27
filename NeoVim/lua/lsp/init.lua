@@ -5,6 +5,7 @@ pcall(require,'lsp.cmake')
 pcall(require,'lsp.vim')
 pcall(require,'lsp.cpp')
 pcall(require,'lsp.rust')
+pcall(require,'lsp.sh')
 
 vim.keymap.set('n', '<leader><leader>R', vim.lsp.buf.rename)
 vim.keymap.set('n', '<leader><leader>A', vim.lsp.buf.code_action)
