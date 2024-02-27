@@ -93,12 +93,26 @@ Plug 'jackMort/ChatGPT.nvim'
 Plug 'MunifTanjim/nui.nvim'
 
 Plug 'lambdalisue/suda.vim'
+
+Plug 'haya14busa/vim-asterisk'
 call plug#end()
 
 colorscheme gruvbox
 " Configurations for vim-translator
 let g:translator_target_lang="en"
 let g:translator_source_lang="is"
+
+" Configurations for vim-asterisk
+" map *   <Plug>(asterisk-*)
+" map #   <Plug>(asterisk-#)
+map g*  <Plug>(asterisk-g*)
+map g#  <Plug>(asterisk-g#)
+map *   <Plug>(asterisk-z*)
+" map gz* <Plug>(asterisk-gz*)
+map #   <Plug>(asterisk-z#)
+" map gz# <Plug>(asterisk-gz#)
+
+let g:asterisk#keeppos = 1
 
 let g:netrw_liststyle = 3 " NetRW opens with the listings in tree style by default
 
