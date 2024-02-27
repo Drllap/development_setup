@@ -5,7 +5,7 @@ require('telescope').load_extension('fzf')
 local opts = { noremap = true, silent = true, expr = false };
 local set_keymap = vim.api.nvim_set_keymap;
 set_keymap('n', '<leader>f',  '<cmd>lua require("telescope.builtin").find_files()<cr>', opts);
-set_keymap('n', '<leader>F',  '<cmd>lua require("telescope.builtin").find_files({ hidden = true, no_ignore = true })<cr>', opts);
+set_keymap('n', '<leader>F',  '<cmd>lua require("telescope.builtin").find_files({ hidden = true, no_ignore = true, follow = true })<cr>', opts);
 vim.keymap.set('n', '<leader>tb',
   function() require("telescope.builtin").buffers({ sort_mru = true, only_cwd = true, ignore_current_buffer = true}) end, opts);
 vim.keymap.set('n', '<leader>tB',
