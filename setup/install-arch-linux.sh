@@ -10,6 +10,8 @@ pacman -Su                  \
     github-cli              \
     bash-completion         \
     bash-language-server    \
+    vivid                   \
+    pkgfile                 \
     wezterm                 \
     curl                    \
     signal-desktop          \
@@ -17,6 +19,7 @@ pacman -Su                  \
     tree                    \
     fd                      \
     ripgrep                 \
+    bat                     \
     clang                   \
     pyright                 \
     alacritty               \
