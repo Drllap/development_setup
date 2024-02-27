@@ -95,6 +95,8 @@ Import-Module npm-completion    # Add tab Autocompletion for npm
 
 Import-Module z # Autojump like module
 
+Invoke-Expression (& { (zoxide init powershell --cmd go | Out-String) })
+
 # Configure PowerColorLS
 Set-Alias -Name ls -Value PowerColorLS -Option AllScope # Use PowerColorLS as default ls command
 
