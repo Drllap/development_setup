@@ -14,8 +14,6 @@ sudo apt install    \
   gh                \
   npm               \
 #  neovim            \ building from source, see below
-  ripgrep           \
-  fd-find           \
   python3           \
   python3-pip       \
   ninja-build       \
@@ -38,6 +36,10 @@ pip3 install            \
 sudo npm install -g
     vim-language-server
     yarn                `# Used by iamcco/markdown-preview.nvim`
+
+# install rustup
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+cargo install ripgrep zoxide starship fd-find vivid
 
 # install vim-plug
 curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
