@@ -34,6 +34,7 @@ pacman -Su                  \
     rustup                  \
     zig                     \
     zls                     \
+    gnupg                   \
     nushell
 
 npm install -g 
