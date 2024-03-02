@@ -50,6 +50,16 @@ wezterm.on('update-right-status', function(window, pane)
   window:set_right_status('')
 end)
 
+wezterm.on("toggle-tab", function(window, pane)
+  local overrides = window:get_config_overrides() or {}
+  if overrides.enable_tab_bar == nil then
+    overrides.enable_tab_bar = false
+  else
+    overrides.enable_tab_bar = nil
+  end
+  window:set_config_overrides(overrides)
+end)
+
 config.ssh_domains = {
   {
     name = 'kvikna',
@@ -75,6 +85,9 @@ config.wsl_domains = {
 config.leader = { key = 'Space', mods = 'ALT' }
 
 config.keys = {
+  { key = 't', mods = 'LEADER', action = act.EmitEvent("toggle-tab") },
+  { key = 'T', mods = 'LEADER', action = act.ShowTabNavigator },
+
   -- CTRL+SHIFT+Space, followed by 'r' will put us in resize-pane
   -- mode until we cancel that mode.
   { key = 'r', mods = 'LEADER', action = act.ActivateKeyTable { name = 'resize_pane', one_shot = false, }, },
