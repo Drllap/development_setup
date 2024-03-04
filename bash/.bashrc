@@ -12,8 +12,8 @@ esac
 
 DEV_DIR="$(realpath $(dirname $(readlink -f $BASH_SOURCE))/../)"
 
-if [ -f $DEV_DIR/secrets/export-keys.sh ] ; then
-    source $DEV_DIR/secrets/export-keys.sh
+if [ -f $DEV_DIR/secrets/secret-handlers.sh ] ; then
+    source $DEV_DIR/secrets/secret-handlers.sh
 fi
 if [ -f $DEV_DIR/scripts/bash/plex.sh ] ; then
     source $DEV_DIR/scripts/bash/plex.sh
