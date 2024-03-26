@@ -37,6 +37,9 @@ set wildmode=longest:full " tab (wildchar) autocompletes to the longest common s
 
 let mapleader=" "
 
+set list
+set listchars=tab:≫\ ,eol:,nbsp:󱓇,precedes:↼,extends:⇀,space:\ ,trail:𝀈
+
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'pprovost/vim-ps1' " PowerShell scrip support
 Plug 'gruvbox-community/gruvbox' " Gruvbox theam
