@@ -2,6 +2,8 @@
 
 ## [Livestream]()
 * I start at 
+## [Livestream 2024-01-22](https://www.facebook.com/100001054104188/videos/1369259043794796/)
+* I start at 24:06
 * [My quesionts](https://www.facebook.com/groups/323490962344244/posts/1127959805230685/?comment_id=1128105471882785&__cft__[0]=AZWQTGuBJSTeXDFBPrAuUkVVFVFiLFWaQBhjhGe7N8eJ9zbihjWF1LvYvu6E0q7ZUtPyAlbeLdv4a2Ac21jlCSpt_uNUeYPAl8jxkgu2gREcrui50JOsVFDr765N8znRbZcPc3b5mKrqFdHtCfDfDbMkieetxCKg_MVAC5-3cqBtXHW3qjtHrBYYU4P09wd_5Lg&__tn__=R]-R)
 * BWL W7D3. 
 Had an off day. Failed the two heavier PC&J. I Failed the PC, but this was weight that I have easily PC before.
@@ -13,6 +15,8 @@ The toes are still moving to the sides at the end of the dynamic start, need to 
 * BWL W8D1
 Snatch Highpull + High Hang Snatch 2x(1+1)
 Last week you told me to focus on pulling with my back when in the extension and get my elbows high
+  * No technical pointers. I'm probably close to overstraining. Get my nutrition and sleep in order. 
+    Take a couple more days of. Only train for 3 days a week for the next two weeks. Add 15 min more to the warm-up
 
 ## [Livestream 2024-01-12](https://www.facebook.com/100001054104188/videos/1132045914469704/)
 * I start at 28:17
