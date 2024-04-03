@@ -2,15 +2,23 @@
 
 ## [Livestream]()
 * I start at 
-* [My quesionts](https://www.facebook.com/groups/323490962344244/posts/1168898227803509/?comment_id=1169156411111024&__cft__[0]=AZVZxSwVUn6yHoTUZ73mjAuVn0zp9vP5tYyQ9JXQkJbW36KFT6_XHRK17lnvpbhzFiD9wba1HEFT_75vxp7c9dHjjow8_jR6zKssc7Tb4Kh3Tu8EcGWT7Q8FpKrRtZ_i-fHWPJaZcbLsR2RxfNs9E6c4K4HyiaHOsclobEwypH5eM4040-O_gFpJM0kIx7Be8E0&__tn__=R]-R)
+* [My quesionts]()
+
+## [Livestream 2024-03-28](https://www.facebook.com/100001054104188/videos/440310081859444/)
+* I start at 19:25
+* [My quesionts](https://www.facebook.com/groups/323490962344244/posts/1168898227803509/?comment_id=1169156411111024)
 * Long time no post.
 I'm starting the 3rd week of the Weightlifting program, block 1.
 Some of the accessory exercises seem pointlessly easy.
 More specifically the back extensions, side plank and the bottom-up kb presses.
 And looking ahead in the program there doesn't seem to be any progression on them.
 Should I change the weight or the exercises? I'm thinking heavier kb, reverse hypers and weighted situps
+  * e-mail them about it.
 * W2D2 no contact clean 4x3
 Never done these before, am l doing them right? Anything special one should be focusing on?
+  * Start the acceleration earlier, from the knees or even slightly earlier
+  * Keep full grip on the bar when in rack position, especially when the weights are light like this.
+    Try to maintain the hook-grip
 
 ## [Livestream 2024-01-22](https://www.facebook.com/100001054104188/videos/1369259043794796/)
 * I start at 24:06
