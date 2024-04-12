@@ -18,7 +18,7 @@ New-Item -Path $env:APPDATA\ -Name .\alacritty -Value .\Alacritty\ `
         -ItemType SymbolicLink -Force
 
 # Add Symbolic Link to the Wezterm config
-New-Item -Path $HOME\.config\ -Name .\wezterm -Value .\wezterm\ `
+New-Item -Path $HOME\.config\wezterm -Name .\wezterm.lua -Value .\wezterm\.wezterm.lua `
         -ItemType SymbolicLink -Force
 
 # setup git
@@ -36,7 +36,7 @@ Install-Module -Name PowerShellGet -Scope CurrentUser -Force -AllowClobber
 
 # Update PSReadLine,
 #   -Force needed because older version is built in
-Install-Module PSReadLine -AllowPrerelease -Force
+Install-Module PSReadLine -Force
 
 # Install-Module -Name PSFzf -Scope CurrentUser          # Wrapper for fzf
 Install-Module -Name npm-completion -Scope CurrentUser   # Tab autocompletion for nodes npm
@@ -55,7 +55,6 @@ Expand-Archive PowerShellEditorServices.zip -DestinationPath "../LSP-Servers/Pow
 Remove-Item PowerShellEditorServices.zip
 
 # Download and Install lua-language-server (sumneko_lua) into ../LSP-Servers
-choco install ninja
 git clone https://github.com/sumneko/lua-language-server ../LSP-Servers/lua-language-server
 Push-Location ../LSP-Servers/lua-language-server/
 git submodule update --init --recursive
@@ -67,14 +66,15 @@ Pop-Location
 
 # Install pyright, python LSP server, requires NodeJS
 # npm install -g pyright    # Install pyrigh with pip instead
-npm install -g 
-    vim-language-server
+npm install -g              `
+    vim-language-server     `
     yarn                    # Usesed by iamcco/markdown-preview.nvim
 
-pip3 install
-    neovim
-    pywin32
-    pyright
-    cmake-language-server
+pip3 install                `
+    neovim                  `
+    pywin32                 `
+    pyright                 `
+    cmake-language-server   `
+    conan                   `
     pyreadline  # Needed for tab autocompletion in python shell
 
