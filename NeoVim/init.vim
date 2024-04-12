@@ -20,7 +20,6 @@ set nowrap
 set ignorecase " enable smartcase while searching
 set smartcase  " smartcase only workes if ignorecase is enabled
 
-set noswapfile
 set nobackup
 set undodir=~/.vim/undodir " maybe add plugin called undotree
 set undofile
