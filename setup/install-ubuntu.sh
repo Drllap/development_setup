@@ -39,7 +39,7 @@ sudo npm install -g
 
 # install rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-cargo install ripgrep zoxide starship fd-find vivid
+cargo install ripgrep zoxide starship fd-find vivid exa
 
 # install vim-plug
 curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \

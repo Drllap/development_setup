@@ -20,6 +20,7 @@ pacman -Su                  \
     fd                      \
     ripgrep                 \
     bat                     \
+    exa                     \
     clang                   \
     pyright                 \
     alacritty               \
