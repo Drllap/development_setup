@@ -1,9 +1,5 @@
 #!/bin/bash
 
-#
-# ~/.bashrc
-#
-
 # If not running interactively, don't do anything
 case $- in
   *i*) ;;
@@ -25,6 +21,7 @@ source $DEV_DIR/scripts/bash/aliases.sh
 source $DEV_DIR/scripts/bash/path.sh
 source $DEV_DIR/scripts/bash/fzf.sh
 source $DEV_DIR/scripts/bash/shell-options.sh
+source $DEV_DIR/scripts/bash/history.sh
 
 source /usr/share/doc/pkgfile/command-not-found.bash
 

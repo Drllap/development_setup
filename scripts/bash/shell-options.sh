@@ -7,4 +7,5 @@ shopt -s checkjobs
 shopt -s direxpand # maybe disable this again?
 shopt -s dirspell
 shopt -s shift_verbose
+shopt -s histappend
 
