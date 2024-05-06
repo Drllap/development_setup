@@ -23,7 +23,9 @@ source $DEV_DIR/scripts/bash/fzf.sh
 source $DEV_DIR/scripts/bash/shell-options.sh
 source $DEV_DIR/scripts/bash/history.sh
 
-source /usr/share/doc/pkgfile/command-not-found.bash
+if [ -f /usr/share/doc/pkgfile/command-not-found.bash ] ; then
+  source /usr/share/doc/pkgfile/command-not-found.bash
+fi
 
 export LSP_Servers=$(realpath $DEV_DIR/../../LSP-Servers)
 
