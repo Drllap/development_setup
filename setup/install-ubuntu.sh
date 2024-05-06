@@ -37,6 +37,10 @@ sudo npm install -g
     vim-language-server
     yarn                `# Used by iamcco/markdown-preview.nvim`
 
+# install homebew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install fzf
+
 # install rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 cargo install ripgrep zoxide starship fd-find vivid eza bat
