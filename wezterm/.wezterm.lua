@@ -24,6 +24,12 @@ config.color_scheme = 'Gruvbox dark, medium (base16)'
 config.disable_default_key_bindings = true
 config.hide_tab_bar_if_only_one_tab = true
 -- config.warn_about_missing_glyphs = false
+config.window_padding = {
+  left = 0,
+  right = 0,
+  bottom = 0,
+  top = 0,
+}
 
 wezterm.on('update-right-status', function(window, pane)
   -- Show which key table is active in the status area
