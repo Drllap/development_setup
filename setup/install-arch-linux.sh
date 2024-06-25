@@ -3,6 +3,8 @@ set -e
 
 pacman -Su                  \
     sudo                    \
+    man-db                  \
+    man-pages               \
     vim                     \
     neovim                  \
     neovide                 \
@@ -49,4 +51,5 @@ stow --target=$HOME readline
 stow --target=$HOME conan
 stow --target=$HOME nushell
 stow --target=$HOME starship
+stow --target=$HOME awesome
 
