@@ -29,10 +29,9 @@ fi
 
 export LSP_Servers=$(realpath $DEV_DIR/../../LSP-Servers)
 
-# use 'bat' for man pages
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'" # use 'bat' for man pages
 export MANROFFOPT="-c"
-
+export LESS="--QUIET --no-vbell" # totally disable terminal bell and visual bell when using less/man
 # use 'vivid' to color theme 'ls'/'tree'/'fd'/ ...
 export LS_COLORS="$(vivid generate gruvbox-dark-hard)"
 
