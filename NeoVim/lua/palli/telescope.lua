@@ -11,9 +11,11 @@ vim.keymap.set('n', '<leader>tb',
 vim.keymap.set('n', '<leader>tB',
   function() require("telescope.builtin").buffers({ sort_mru = true, ignore_current_buffer = true}) end, opts);
 
-set_keymap('n', '<leader>th', '<cmd>lua require("telescope.builtin").help_tags()<cr>', opts);
-set_keymap('n', '<leader>tw', '<cmd>lua require("telescope.builtin").live_grep()<cr>', opts);
-set_keymap('n', '<leader>ts', '<cmd>lua require("telescope.builtin").grep_string()<cr>', opts);
+vim.keymap.set('n', '<leader>th', '<cmd>lua require("telescope.builtin").help_tags()<cr>', opts);
+vim.keymap.set('n', '<leader>tw', '<cmd>lua require("telescope.builtin").live_grep()<cr>', opts);
+vim.keymap.set('n', '<leader>tW', '<cmd>lua require("telescope.builtin").live_grep({additional_args = {"--hidden"} })<cr>', opts);
+vim.keymap.set('n', '<leader>ts', '<cmd>lua require("telescope.builtin").grep_string()<cr>', opts);
+vim.keymap.set('n', '<leader>tS', '<cmd>lua require("telescope.builtin").grep_string({additional_args = {"--hidden"} })<cr>', opts);
 
 vim.keymap.set('n', '<leader>;',  require('telescope.builtin').current_buffer_fuzzy_find, opts);
 vim.keymap.set('n', '<leader>tr', require('telescope.builtin').resume, opts);
