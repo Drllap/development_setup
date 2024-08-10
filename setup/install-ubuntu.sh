@@ -24,6 +24,7 @@ sudo apt install    \
   autoconf          \
   unzip             \
   wget              \
+  luarocks          \
   clangd-12
 
 pip3 install            \

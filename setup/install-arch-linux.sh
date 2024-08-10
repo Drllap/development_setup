@@ -33,6 +33,7 @@ pacman -Su                  \
     xclip                   \
     npm                     \
     lua-language-server     \
+    luarocks                \
     stow                    \
     rustup                  \
     zig                     \
