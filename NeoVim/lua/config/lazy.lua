@@ -24,6 +24,7 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
+    -- Color schemes
     {
       'gruvbox-community/gruvbox',
       lazy = false,
@@ -32,10 +33,31 @@ require("lazy").setup({
         vim.cmd([[colorscheme gruvbox]])
       end,
     },
+    {
+      'folke/tokyonight.nvim',
+      lazy = false,
+      priority = 1000,
+      config = function()
+        vim.cmd([[colorscheme tokyonight-moon]])
+      end,
+      enabled = false,
+    },
 
     -- TPope plugins
-    { 'tpope/vim-fugitive',   event   = "VeryLazy"  },  -- Git wrapper plugin
-    { 'tpope/vim-obsession',  event   = "VeryLazy"  },  -- Extends/tweaks the vim built in :mksession
+    { -- Git wrapper plugin
+      'tpope/vim-fugitive',
+      event = "VeryLazy",
+      init  = function()
+        vim.g.fugitive_no_maps = 1
+      end,
+    },
+    {  -- Extends/tweaks the vim built in :mksession
+      'tpope/vim-obsession',
+      event   = "VeryLazy",
+      config = function()
+        -- vim.cmd([[set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{ObsessionStatus('OB','NS')}\ \ %P]])
+      end,
+    },
     { 'tpope/vim-dispatch',   event   = "VeryLazy"  },  -- Async build
     { 'tpope/vim-surround',   event   = "VeryLazy"  },
     { 'tpope/vim-repeat',     event   = "VeryLazy"  },
@@ -60,6 +82,11 @@ require("lazy").setup({
         require("palli.dap")
       end,
       enabled = false,
+    },
+    {
+      'Drllap/visual-studio-integration.vim',
+      event   = "VeryLazy",
+      enabled = vim.fn.has("win32") == 1,
     },
 
     -- Completion
@@ -185,6 +212,11 @@ require("lazy").setup({
       event = "VeryLazy",
       opts  = {},
       dependencies = 'MunifTanjim/nui.nvim',
+    },
+    {
+      'Drllap/gtest.nvim',
+      event = "VeryLazy",
+      -- dependencies   TODO depends on telescope?
     },
 
 

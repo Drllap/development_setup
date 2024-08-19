@@ -39,23 +39,6 @@ let mapleader=" "
 set list
 set listchars=tab:≫\ ,eol:,nbsp:󱓇,precedes:↼,extends:⇀,space:\ ,trail:𝀈
 
-" Plug 'neovim/nvim-lspconfig'  " LSP configuration plugin
-
-" " Autocompleation plugins
-" Plug 'hrsh7th/nvim-cmp'
-" Plug 'hrsh7th/cmp-nvim-lsp'
-" Plug 'hrsh7th/cmp-buffer'
-" Plug 'hrsh7th/cmp-path'
-" Plug 'hrsh7th/cmp-cmdline'
-" Plug 'hrsh7th/cmp-nvim-lua'
-" Plug 'onsails/lspkind-nvim'
-
-" Plug 'jackMort/ChatGPT.nvim'
-" Plug 'MunifTanjim/nui.nvim'
-"
-" Plug 'ziglang/zig.vim'
-
-" Plug 'LhKipp/nvim-nu'
 
 let g:netrw_liststyle = 3 " NetRW opens with the listings in tree style by default
 
