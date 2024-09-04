@@ -55,7 +55,7 @@ require("lazy").setup({
       'tpope/vim-obsession',
       event   = "VeryLazy",
       config = function()
-        -- vim.cmd([[set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{ObsessionStatus('OB','NS')}\ \ %P]])
+        vim.cmd([[set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{ObsessionStatus('OB','NS')}\ \ %P]])
       end,
     },
     { 'tpope/vim-dispatch',   event   = "VeryLazy", },  -- Async build
@@ -63,11 +63,9 @@ require("lazy").setup({
     { 'tpope/vim-repeat',     event   = "VeryLazy", },
     { 'tpope/vim-commentary', event   = "VeryLazy",   enabled = false  },
 
-    -- TODO this probably can't be lazy, can we do this differently
     -- LSP configuration plugin
     {
       'neovim/nvim-lspconfig',
-      -- lazy  = true,
       event  = "VeryLazy",
       config = function()
         require("lsp")
@@ -126,7 +124,6 @@ require("lazy").setup({
       dependencies = 'nvim-lua/plenary.nvim',
       event   = "VeryLazy",
       config  = function()
-        -- helpers.safe_require("palli.telescope")
         require("palli.telescope")
       end,
     },
@@ -134,13 +131,18 @@ require("lazy").setup({
       'nvim-telescope/telescope-fzf-native.nvim',
       event = "VeryLazy",
       build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release',
+      dependencies = { 'nvim-telescope/telescope.nvim' },
+      config = function()
+        require("telescope").load_extension("fzf")
+      end,
     },
-    { -- TODO this probably depends on nvim-telescope
+    {
       'LukasPietzschmann/telescope-tabs',
       event = "VeryLazy",
       config = function()
         require("palli.telescope-tabs")
       end,
+      dependencies = { 'nvim-telescope/telescope.nvim' },
     },
 
     {
@@ -240,5 +242,8 @@ require("lazy").setup({
   -- colorscheme that will be used when installing plugins.
   install = { colorscheme = { "gruvbox" } },
   -- automatically check for plugin updates
-  checker = { enabled = true },
+  checker = {
+    enabled = true,
+    notify  = false,
+  },
 })
