@@ -58,10 +58,10 @@ require("lazy").setup({
         -- vim.cmd([[set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{ObsessionStatus('OB','NS')}\ \ %P]])
       end,
     },
-    { 'tpope/vim-dispatch',   event   = "VeryLazy"  },  -- Async build
-    { 'tpope/vim-surround',   event   = "VeryLazy"  },
-    { 'tpope/vim-repeat',     event   = "VeryLazy"  },
-    { 'tpope/vim-commentary', enabled = false       },
+    { 'tpope/vim-dispatch',   event   = "VeryLazy", },  -- Async build
+    { 'tpope/vim-surround',   event   = "VeryLazy", },
+    { 'tpope/vim-repeat',     event   = "VeryLazy", },
+    { 'tpope/vim-commentary', event   = "VeryLazy",   enabled = false  },
 
     -- TODO this probably can't be lazy, can we do this differently
     -- LSP configuration plugin
@@ -140,7 +140,7 @@ require("lazy").setup({
       event = "VeryLazy",
       config = function()
         require("palli.telescope-tabs")
-      end
+      end,
     },
 
     {
@@ -211,7 +211,12 @@ require("lazy").setup({
       'jackMort/ChatGPT.nvim',
       event = "VeryLazy",
       opts  = {},
-      dependencies = 'MunifTanjim/nui.nvim',
+      dependencies = {
+        "MunifTanjim/nui.nvim",
+        "nvim-lua/plenary.nvim",
+        "folke/trouble.nvim",
+        "nvim-telescope/telescope.nvim",
+      },
     },
     {
       'Drllap/gtest.nvim',
