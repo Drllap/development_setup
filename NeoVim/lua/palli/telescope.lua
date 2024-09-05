@@ -1,5 +1,4 @@
 require('telescope').setup {}
-require('telescope').load_extension('fzf')
 
 -- Create keymap to browse the files in the current "project" (files under CWD)
 local opts = { noremap = true, silent = true, expr = false };

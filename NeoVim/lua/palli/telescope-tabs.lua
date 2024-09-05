@@ -1,3 +1,5 @@
+require('telescope').load_extension('telescope-tabs')
+
 local list_cwds = function(tab_id, buffer_ids, file_names, file_paths)
   return vim.fn.getcwd(-1, vim.api.nvim_tabpage_get_number(tab_id))
 end
