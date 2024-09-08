@@ -1,9 +1,13 @@
 [user]
-	email = drllap@gmail.com
-	name = Pall Palsson
+    email = drllap@gmail.com
+    name = Pall Palsson
 [core]
-	editor = nvim
-	symlink = true
+    editor = nvim
+    symlink = true
+    pager = less -FRX   # Because I have added the LESS environmental variabl
+                        # doesn't add FRX options the LESS when pageing
+                        # See core.pager in git config docs
+                        # https://git-scm.com/docs/git-config#Documentation/git-config.txt-corepager
 [pull]
     rebase = true
 [push]
