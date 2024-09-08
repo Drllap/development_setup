@@ -84,6 +84,8 @@ elseif has('linux')
   runtime Linux.vim
 endif
 
+runtime Abbreviations.vim
+
 " Disable spell checking in terminal buffers
 augroup MyTerminalGroup
 autocmd!
