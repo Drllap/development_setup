@@ -2,7 +2,8 @@ syntax on
 set keywordprg=:help " set the Shift+k to use :help, syntax on, above changes it to :Man
 
 set expandtab
-set tabstop=4
+set tabstop=2
+set shiftwidth=2
 set splitright " makes new buffer opened in vertical split open on the right side
 set splitbelow
 set exrc " local .vimrc files are sourced when doing nvim . 
@@ -39,8 +40,12 @@ let mapleader=" "
 set list
 set listchars=tab:≫\ ,eol:,nbsp:󱓇,precedes:↼,extends:⇀,space:\ ,trail:𝀈
 
+set spell
 
 let g:netrw_liststyle = 3 " NetRW opens with the listings in tree style by default
+let g:loaded_node_provider = 0
+let g:loaded_perl_provider = 0
+" let g:loaded_python3_provider = 0
 
 " Highlights the text that is yanked when in normal mode
 augroup LuaHighlight
