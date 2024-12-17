@@ -26,5 +26,10 @@ require('lspconfig').clangd.setup({
     return util.root_pattern(unpack(root_files))(fname) or util.find_git_ancestor(fname)
   end,
   -- single_file_support = false,
+
+  on_attach = function()
+    vim.keymap.set('n', 'ssi', "<cmd>ClangdShowSymbolInfo<cr>",     { buffer = true, })
+    vim.keymap.set('n', 'gh',  "<cmd>ClangdSwitchSourceHeader<cr>", { buffer = true, })
+  end,
 })
 
