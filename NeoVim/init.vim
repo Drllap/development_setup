@@ -47,11 +47,19 @@ let g:loaded_node_provider = 0
 let g:loaded_perl_provider = 0
 " let g:loaded_python3_provider = 0
 
-" Highlights the text that is yanked when in normal mode
-augroup LuaHighlight
+if has("nvim-0.11")
+  " Highlights the text that is yanked when in normal mode
+  augroup LuaHighlight
+    au!
+    au TextYankPost * silent! lua return (not vim.v.event.visual) and require'vim.hl'.on_yank()
+  augroup END
+else
+  " Highlights the text that is yanked when in normal mode
+  augroup LuaHighlight
     au!
     au TextYankPost * silent! lua return (not vim.v.event.visual) and require'vim.highlight'.on_yank()
-augroup END
+  augroup END
+end
 
 " Create an autocommand that creates the missing folder when writing a file
 " that doesn't exist
