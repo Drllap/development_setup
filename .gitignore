@@ -5,3 +5,6 @@ Session.vim
 PowerShell/keys.ps1
 secrets/plain.txt
 
+# this is a symbolic link
+wezterm/wezterm.lua 
+
