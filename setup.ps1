@@ -73,6 +73,7 @@ Pop-Location
 # npm install -g pyright    # Install pyrigh with pip instead
 npm install -g              `
     vim-language-server     `
+    bash-language-server    `
     yarn                    # Usesed by iamcco/markdown-preview.nvim
 
 pip3 install                `
