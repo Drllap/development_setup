@@ -15,6 +15,7 @@
     autoSetupRemote = true
 [rebase]
     autoStash = true
+    updateRefs = true
 [merge]
     autoStash = true
 [branch]

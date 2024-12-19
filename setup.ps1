@@ -33,6 +33,7 @@ git config --global core.symlink true
 git config --global pull.rebase true
 git config --global pull.autoSetupRemote true
 git config --global rebase.autoStash true
+git config --global rebase.updateRefs true
 git config --global merge.autoStash true
 
 # Update PowerShellGet and Dependences (PackageManagement)
