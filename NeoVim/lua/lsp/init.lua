@@ -1,4 +1,4 @@
-pcall(require,'lsp.lua')
+pcall(require,'lsp.lua_ls')
 pcall(require,'lsp.PowerShell')
 pcall(require,'lsp.python')
 pcall(require,'lsp.cmake')
