@@ -44,6 +44,7 @@ pacman -Su                  \
     gnupg                   \
     nushell                 \
     hyprland                \
+    waybar                  \
     wl-clipboard
 
 npm install -g 
@@ -59,4 +60,5 @@ stow --target=$HOME nushell
 stow --target=$HOME starship
 stow --target=$HOME awesome
 stow --target=$HOME hyprland
+stow --target=$HOME waybar
 
