@@ -20,3 +20,5 @@
     autoStash = true
 [branch]
     sort = -committerdate
+[init]
+	defaultBranch = master
