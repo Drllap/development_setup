@@ -42,7 +42,9 @@ pacman -Su                  \
     gopls                   \
     delve                   \
     gnupg                   \
-    nushell
+    nushell                 \
+    hyprland                \
+    wl-clipboard
 
 npm install -g 
     vim-language-server
@@ -56,4 +58,5 @@ stow --target=$HOME conan
 stow --target=$HOME nushell
 stow --target=$HOME starship
 stow --target=$HOME awesome
+stow --target=$HOME hyprland
 
