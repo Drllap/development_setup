@@ -15,18 +15,21 @@ pacman -Su                  \
     vivid                   \
     pkgfile                 \
     wezterm                 \
+    alacritty               \
+    zellij                  \
     curl                    \
     signal-desktop          \
     cmake                   \
+    meson                   \
     tree                    \
     fd                      \
     ripgrep                 \
     bat                     \
     eza                     \
     clang                   \
+    python                  \
+    python-pipx             \
     pyright                 \
-    alacritty               \
-    zellij                  \
     zoxide                  \
     vlc                     \
     fzf                     \
@@ -48,8 +51,11 @@ pacman -Su                  \
     rofi-wayland            \
     wl-clipboard
 
-npm install -g 
+npm install -g  \
     vim-language-server
+
+pipx install  \
+    cmake-language-server
 
 # stow everything, execute from repo root
 stow --target=$HOME bash
