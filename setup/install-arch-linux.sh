@@ -38,6 +38,9 @@ pacman -Su                  \
     rustup                  \
     zig                     \
     zls                     \
+    go                      \
+    gopls                   \
+    delve                   \
     gnupg                   \
     nushell
 
