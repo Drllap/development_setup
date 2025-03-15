@@ -5,6 +5,7 @@ pcall(require,'lsp.cmake')
 pcall(require,'lsp.vim')
 pcall(require,'lsp.cpp')
 pcall(require,'lsp.rust')
+pcall(require,'lsp.nu')
 pcall(require,'lsp.sh')
 pcall(require,'lsp.go')
 
