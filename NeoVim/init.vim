@@ -42,6 +42,13 @@ set listchars=tab:≫\ ,eol:,nbsp:󱓇,precedes:↼,extends:⇀,space:\ ,trai
 
 set spell
 
+" Disable netrw
+" See: https://www.reddit.com/r/neovim/comments/yckqsn/comment/itnaqcl/
+let g:loaded_netrwPlugin = 1
+let g:loaded_netrw = 1
+let g:loaded_netrwSettings = 1
+let g:loaded_netrwFileHandlers = 1
+let g:loaded_netrw_gitignore = 1
 let g:netrw_liststyle = 3 " NetRW opens with the listings in tree style by default
 let g:loaded_node_provider = 0
 let g:loaded_perl_provider = 0
