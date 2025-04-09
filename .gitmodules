@@ -1,3 +1,6 @@
 [submodule "Alacritty/themes"]
 	path = Alacritty/themes
 	url = https://github.com/alacritty/alacritty-theme
+[submodule "rio/themes"]
+	path = rio/themes
+	url = git@github.com:raphamorim/rio-terminal-themes.git
