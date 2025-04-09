@@ -1,5 +1,5 @@
 @echo off
-powershell -NoProfile -NoLogo %*
+pwsh -NoProfile -NoLogo %*
 
 REM This file is a hack to resolve the issue that Win32-OpenSSH doesn't (didn't) respect the
 REM DefaultShellArguments/DefaultShellCommandOption registers
