@@ -69,4 +69,5 @@ stow --target=$HOME awesome
 stow --target=$HOME hyprland
 stow --target=$HOME rofi
 stow --target=$HOME waybar
+stow --target=$HOME rio
 

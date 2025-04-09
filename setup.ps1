@@ -25,8 +25,8 @@ New-Item -Path $env:APPDATA\ -Name .\alacritty -Value .\Alacritty\ `
 New-Item -Path $HOME\.config\wezterm -Name .\wezterm.lua -Value .\wezterm\.wezterm.lua `
         -ItemType SymbolicLink -Force
 
-# Add Symbolic Link to the R terminal config
-New-Item -Path $env:LOCALAPPDATA\ -Name rio -Target $PWD\rio\  -ItemType SymbolicLink -Force
+# Add Symbolic Link to the Rio terminal config
+New-Item -Path $env:LOCALAPPDATA\ -Name rio -Target $PWD\rio\.config\rio  -ItemType SymbolicLink -Force
 
 # setup git
 git config --global user.email "drllap@gmail.com"
