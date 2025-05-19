@@ -70,32 +70,25 @@ function so {
     Write-Host "re-sourcing profile: " $PROFILE.CurrentUserAllHosts
 }
 
-Import-Module PSReadLine -MinimumVersion "2.2.3"
-
 Import-Module posh-git  # posh-git, git info in prompt and auto tab completion
 
-Import-Module DockerCompletion # Add tab Autocompletion for docker
- 
-Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1 # Add tab Autocompletion for Chocolatey
- 
-Import-Module npm-completion    # Add tab Autocompletion for npm
-
-Import-Module z # Autojump like module
-
-Invoke-Expression (& { (zoxide init powershell --cmd go | Out-String) })
-
+# Import-Module PSReadLine -MinimumVersion "2.2.3"
+# Import-Module DockerCompletion # Add tab Autocompletion for docker
+# Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1 # Add tab Autocompletion for Chocolatey
+# Import-Module npm-completion    # Add tab Autocompletion for npm
+# Import-Module 'C:\tools\gsudo\Current\gsudoModule.psd1' # Enable gsudo !! (and maybe other things)
+# WezTerm autocompletion
+# wezterm shell-completion --shell power-shell | Out-String | Invoke-Expression
+##Add tab Autocompletion for GitHub Cli
+# gh completion -s powershell | Out-String | Invoke-Expression
+## Add tab Autocompletion for rustup
+# rustup completions powershell | Out-String | Invoke-Expression
 
 oh-my-posh init powershell --config "$env:POSH_THEMES_PATH\jv_sitecorian.omp.json" | Invoke-Expression
-oh-my-posh completion powershell | Out-String | Invoke-Expression
 
-# WezTerm autocompletion
-wezterm shell-completion --shell power-shell | Out-String | Invoke-Expression
 
-# Add tab Autocompletion for GitHub Cli
-gh completion -s powershell | Out-String | Invoke-Expression
+Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
-# Add tab Autocompletion for rustup
-rustup completions powershell | Out-String | Invoke-Expression
 
 # Code taken from https://github.com/microsoft/terminal/issues/3158#issuecomment-789198188
 # Makes make new split panes open in current directory
@@ -134,19 +127,23 @@ Set-Alias -Name ls -Value ls_temp
 # Set-Alias -Name cmd     -Value C:\Windows\System32\cmd.exe
 # Set-Alias -Name cmd.exe -Value C:\Windows\System32\cmd.exe
 Set-Alias -Name ub      -Value ($env:LOCALAPPDATA | Join-Path -ChildPath "Microsoft\WindowsApps\ubuntu2004.exe")
-Set-Alias -Name MSBuild -Value "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\MSBuild.exe"
+Set-Alias -Name MSBuild -Value "C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\Bin\MSBuild.exe"
+Set-Alias -Name cl      -Value ('C:\Program Files\Microsoft Visual Studio\2022\Professional\' + `
+                                'VC\Tools\MSVC\14.40.33807\bin\Hostx64\x64\cl.exe')
 Set-Alias -Name vswhere -Value "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe"
 Set-Alias -Name LuaJIT  -Value "F:\Development\luajit\installation\luajit.exe"
 Set-Alias -Name nn      -Value "nvim-qt"
 Remove-Item alias:nv -Force # nv is already a builtin alias for New-Variable
-$env:NEOVIDE_FRAME="none"   # Remove the frame from neovide by default, the default is "full"
+# $env:NEOVIDE_FRAME="none"   # Remove the frame from neovide by default, the default is "full"
+Set-Alias -Name n       -Value "nvim"
 Set-Alias -Name nv      -Value "neovide"
 Set-Alias -Name wez     -Value "wezterm"
 Set-Alias -Name wt      -Value "wezterm"
-Set-Alias -Name wh      -Value "where.exe"
-Remove-Item alias:curl  # curl is bound to Invoke-WebRequest by default
-Set-Alias -Name curl    -Value C:\ProgramData\chocolatey\bin\curl.exe
-Set-Alias -Name tree    -Value C:\ProgramData\chocolatey\bin\tree.exe
+Set-Alias -Name wh      -Value "C:\Windows\System32\where.exe"
+Set-Alias -Name ip      -Value "ipython"
+# Remove-Item alias:curl  # curl is bound to Invoke-WebRequest by default # Not needed in pwsh (PS7)
+# Set-Alias -Name curl    -Value C:\ProgramData\chocolatey\bin\curl.exe
+# Set-Alias -Name tree    -Value C:\ProgramData\chocolatey\bin\tree.exe
 
 # Set environment
 $env:CMAKE_EXPORT_COMPILE_COMMANDS="ON";
@@ -157,29 +154,33 @@ $env:BUILD_TESTING="ON"
 if ($PSVersionTable.PSVersion.Major -eq 5) {
     # We need to handle PowerShell 5 specially
     # https://github.com/PowerShell/PSReadLine/issues/3159#issuecomment-1015001655
+    $esc = "$([char]0x1b)"
     function Script:OnViModeChange {
-        $esc = "$([char]0x1b)"
         if ($args[0] -eq 'Command') {
             # Set the cursor to a blinking block.
-            Write-Host -NoNewline "${esc}[1 q"
+            $Host.UI.Write("${esc}[1 q")
             # Write-Host "$esc e[1 q" -NoNewLine
         } else {
             # Set the cursor to a blinking line.
-            Write-Host -NoNewline "${esc}[5 q"
+            $Host.UI.Write("${esc}[5 q")
         }
     }
+    # Set the cursor to a blinking line.
+    $Host.UI.Write("${esc}[5 q")
 } else {
     # https://docs.microsoft.com/en-us/powershell/module/psreadline/set-psreadlineoption?
     # view=powershell-7.2#example-6--use-vimodechangehandler-to-display-vi-mode-changes
     function Script:OnViModeChange {
         if ($args[0] -eq 'Command') {
             # Set the cursor to a blinking block.
-            Write-Host -NoNewLine "`e[1 q"
+            $Host.UI.Write("`e[1 q")
         } else {
             # Set the cursor to a blinking line.
-            Write-Host -NoNewLine "`e[5 q"
+            $Host.UI.Write("`e[5 q")
         }
     }
+    # Set the cursor to a blinking line.
+    $Host.UI.Write("`e[5 q")
 }
 
 $env:VISUAL = "nvim"    # When in Command Mod, <v> will open the current line content in nvim
@@ -193,7 +194,6 @@ $Script:PSReadLineOptions = @{
     ViModeChangeHandler = $Function:OnViModeChange
 }
 Set-PSReadLineOption @PSReadLineOptions
-
 
 $j_timer = New-Object System.Diagnostics.Stopwatch
 
@@ -214,6 +214,12 @@ Set-PSReadLineKeyHandler -Key k -ViMode Insert -ScriptBlock {
         [Microsoft.PowerShell.PSConsoleReadLine]::SetCursorPosition($cursor-1)
     }
 }
+
+Set-PSReadLineKeyHandler -Key Ctrl+a -ViMode Command -Function BeginningOfLine
+Set-PSReadLineKeyHandler -Key Ctrl+a -ViMode Insert  -Function BeginningOfLine
+Set-PSReadLineKeyHandler -Key Ctrl+e -ViMode Command -Function EndOfLine
+Set-PSReadLineKeyHandler -Key Ctrl+e -ViMode Insert  -Function EndOfLine
+Set-PSReadLineKeyHandler -Key Ctrl+w -Function UnixWordRubout
  
 Set-PSReadLineKeyHandler -Key Ctrl+n -ViMode Insert -Function NextHistory
 Set-PSReadLineKeyHandler -Key Ctrl+p -ViMode Insert -Function PreviousHistory
@@ -225,8 +231,8 @@ Set-PSReadLineKeyHandler -Key Ctrl+k -Function ShowCommandHelp
 # Set scroll functions start
 # These Scrolling function only work in the PowerShell terminal emulator
 # they don't work in WezTerm/WindowsTerminal
-Set-PSReadLineKeyHandler -Key Ctrl+e -Function ScrollDisplayUpLine
-Set-PSReadLineKeyHandler -Key Ctrl+y -Function ScrollDisplayUpLine
+# Set-PSReadLineKeyHandler -Key Ctrl+e -Function ScrollDisplayUpLine    # Ctrl+e already in use
+# Set-PSReadLineKeyHandler -Key Ctrl+y -Function ScrollDisplayUpLine
 
 Set-PSReadLineKeyHandler -Key j -ViMode Command -Function ScrollDisplayDownLine
 Set-PSReadLineKeyHandler -Key k -ViMode Command -Function ScrollDisplayUpLine
@@ -234,9 +240,7 @@ Set-PSReadLineKeyHandler -Key J -ViMode Command -Function ScrollDisplayDown
 Set-PSReadLineKeyHandler -Key K -ViMode Command -Function ScrollDisplayUp
 # Set scroll functions end
 
-Set-PSReadLineKeyHandler -Key Tab -Function Complete    # Changes compleation to bash-like, only compleate to divergence
-
-Import-Module 'C:\tools\gsudo\Current\gsudoModule.psd1' # Enable gsudo !! (and maybe other things)
+Set-PSReadLineKeyHandler -Key Tab -Function Complete    # Changes completion to bash-like, only complete to divergence
 
 function toggle_conda {
     if (Test-Path 'Env:CONDA_EXE') {
@@ -296,7 +300,7 @@ function msb {
         return 
     }
 
-    MSBuild $target
+    MSBuild -maxCpuCount:2 $target
 }
 
 $ExecEnd = Get-Date

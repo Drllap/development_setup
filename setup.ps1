@@ -109,12 +109,12 @@ Install-Module -Name PowerShellGet -Scope CurrentUser -Force -AllowClobber
 Install-Module PSReadLine -Force
 
 # Install-Module -Name PSFzf -Scope CurrentUser          # Wrapper for fzf
-Install-Module -Name npm-completion -Scope CurrentUser   # Tab autocompletion for nodes npm
+# Install-Module -Name npm-completion -Scope CurrentUser   # Tab autocompletion for nodes npm
 Install-Module -Name posh-git -Scope CurrentUser         # Git tab autocompletion
-Install-Module -Name z -Scope CurrentUser -AllowClobber  # Navigation module for PowerShell, similar to autojump
-Install-Module -Name DockerCompletion -Scope CurrentUser # Add tab Autocompletion for docker
 # Install-Module -Name PowerColorLS -Scope CurrentUser     # Better (colorfull) ls/dir command
 # Install-Module -Name Terminal-Icons -Scope CurrentUser   # Dependency of PowerColorLS
+# Install-Module -Name z -Scope CurrentUser -AllowClobber  # Navigation module for PowerShell, similar to autojump
+# Install-Module -Name DockerCompletion -Scope CurrentUser # Add tab Autocompletion for docker
 
 # Download and install PowerShell LSP Server into ../LSP-Servers
 mkdir ../LSP-Servers
