@@ -10,59 +10,54 @@ $private:Paths = New-Object System.Collections.ArrayList
 
 if($env:COMPUTERNAME -eq "DESKTOP-8GI3BII") {
     $private:Paths.AddRange((
-        "C:\Windows\System32\WindowsPowerShell\v1.0\;",
+        # "C:\Windows\System32\WindowsPowerShell\v1.0\;",
         "C:\Program Files\PostgreSQL\14\bin;"
     ));
 } elseif($env:COMPUTERNAME -eq "K-WIN10-29") {
     $private:Paths.AddRange((
         # "C:\Program Files\doxygen\bin;",
         # "C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;",
-        "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin;",
-        # "C:\Program Files (x86)\dotnet\;",
-        # "C:\Program Files\TortoiseGit\bin;",
-        # "C:\Development\LSP-Servers\lua-language-server\3rd\luamake;",
-        # "C:\Program Files\Microsoft VS Code\bin;",
+        "C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\Bin;",
         "C:\Users\palli\AppData\Local\Microsoft\WindowsApps;",
-        "C:\Users\palli\.dotnet\tools;",
-        "C:\Users\palli\go\bin;"
+        # "C:\Users\palli\.dotnet\tools;",
+        "C:\Program Files\Sublime Text 3;"
     ));
 }
 
 $private:Paths.AddRange((
+    # "C:\WINDOWS;",
+    "C:\WINDOWS\System32;",
+    -Join($env:USERPROFILE, "\scoop\shims\;"),
+    -Join($env:USERPROFILE, "\scoop\apps\llvm\current\bin\;"),
+    -Join($env:USERPROFILE, "\scoop\apps\rustup\current\.cargo\bin\;"),
+    -Join($env:USERPROFILE, "\scoop\apps\perl\current\perl\bin;"),
+    -Join($env:USERPROFILE, "\scoop\apps\nodejs\current\;"),                        # this
+    # -Join($env:USERPROFILE, "\scoop\apps\nodejs\current\bin\;"),                    # this
+    -Join($env:USERPROFILE, "\scoop\apps\yarn\current\bin\;"),                      # this
+    # -Join($env:USERPROFILE, "\scoop\apps\yarn\current\global\node_modules\.bin\;"), # this
+    -Join($env:USERPROFILE, "\scoop\apps\gpg4win\current\GnuPG\bin;"),
+    -Join($env:USERPROFILE, "\scoop\apps\gpg4win\current\Gpg4win\bin;"),
     -Join($env:APPDATA, "\Python\Python39\Scripts\;"),
-    -Join($env:APPDATA, "\npm;"),
-    -Join($env:USERPROFILE, "\.cargo\bin\;"),
-    "C:\WINDOWS;",
-    "C:\WINDOWS\system32;",
-    "C:\WINDOWS\System32\WindowsPowerShell\v1.0\;",
-    "C:\WINDOWS\System32\OpenSSH\;",
-    "C:\Program Files (x86)\oh-my-posh\bin;",
-    "C:\Program Files\GitHub CLI\;",
-    "C:\Program Files\Cmake\bin;",
-    "C:\Program Files\LLVM\bin;",
-    "C:\Program Files\Git\cmd;",
-    "C:\Program Files\Go\bin;",
-    "C:\Program Files\nodejs\;",
+    # -Join($env:APPDATA, "\npm;"),
+    # -Join($env:USERPROFILE, "\.cargo\bin\;"),
+    # "C:\Program Files\nodejs\;",
     "C:\Program Files\Docker\Docker\resources\bin;",
     "C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin\;",  # This needs to be before the neovim folder,
                                                                         # see commit msg for details
-    "C:\tools\neovim\nvim-win64\bin\;", # This needs to be above the chocolatey folder
-                                        # so the win32yank from that is preferred over the
-                                        # one in chocolatey. The WSL will use the other one .
-                                        # See bash/bash_profile
+    # "C:\tools\neovim\nvim-win64\bin\;", # This needs to be above the chocolatey folder
+    #                                     # so the win32yank from that is preferred over the
+    #                                     # one in chocolatey. The WSL will use the other one .
+    #                                     # See bash/bash_profile
     "C:\tools\miniconda3;",
     "C:\tools\miniconda3\Library\bin;",
     "C:\tools\miniconda3\Scripts;",
-    "C:\tools\gsudo\Current;",
-    "C:\tools\vim\vim82;",
     "C:\ProgramData\chocolatey\bin;",
     "C:\ProgramData\DockerDesktop\version-bin;",
-    "C:\Program Files\WezTerm;",
-    "C:\Program Files\NeoVide;",
-    "C:\Strawberry\perl\bin;"
+    -Join($env:USERPROFILE, "\.local\bin;")
+    # -Join($env:LOCALAPPDATA, "\Yarn\bin;")
 ))
 
-if($null -ne $Paths) {
+if ($null -ne $Paths) {
     $env:Path = $Paths -join '';
 } else {
     Write-Warning "Path for current COMPUTERNAME not set: $env:COMPUTERNAME ,keeping the system path"
@@ -118,14 +113,14 @@ rustup completions powershell | Out-String | Invoke-Expression
 #       Instead of executing "$prevprompt" explicitly execute the prompt from posh-git
 #       This is done because posh-git doesn't overwrite the prompt function if it
 #       already exists.
-if($env:WT_SESSION){
+if ($env:WT_SESSION) {
     $prevprompt = $Function:prompt
     function prompt {
         if ($pwd.provider.name -eq "FileSystem") {
           $p = $pwd.providerpath
           $esc = [char]27
           Write-Host "$esc]9;9;`"$p`"$esc\" -NoNewline
-          
+
           $esc = "$([char]0x1b)"
           Write-Host -NoNewline "${esc}[5 q"
         }

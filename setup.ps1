@@ -28,6 +28,68 @@ New-Item -Path $HOME\.config\wezterm -Name .\wezterm.lua -Value .\wezterm\.wezte
 # Add Symbolic Link to the Rio terminal config
 New-Item -Path $env:LOCALAPPDATA\ -Name rio -Target $PWD\rio\.config\rio  -ItemType SymbolicLink -Force
 
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+scoop bucket add extras
+scoop bucket add versions
+scoop bucket add sysinternals
+scoop install                   `
+    git                         `
+    gh                          `
+    unzip                       `
+    7zip                        `
+    jq                          `
+    jid                         `
+    ripgrep                     `
+    fzf                         `
+    fd                          `
+    eza                         `
+    bat                         `
+    less                        `
+    tre                         `
+    bottom                      `
+    gsudo                       `
+    curl                        `
+    openssh                     `
+    # openvpn                     `
+    gpg4win                     `
+    putty                       `
+    zoxide                      `
+    oh-my-posh                  `
+    cmake                       `
+    ninja                       `
+    llvm                        `
+    nasm                        `
+    perl                        `
+    flatc                       `
+    rustup                      `
+    go                          `
+    nodejs                      `
+    yarn                        ` # Usesed by iamcco/markdown-preview.nvim
+    octave                      `
+    lua-language-server         `
+    pwsh                        `
+    nu                          `
+    # extras/wezterm-nightly      `
+    versions/wezterm-nightly    `
+    alacritty                   `
+    rio                         `
+    windows-terminal            `
+    vim                         `
+    neovim                      `
+    # versions/neovim-nightly     `
+    neovide                     `
+    helix                       `
+    notepadplusplus             `
+    dbeaver                     `
+    imhex                       `
+    process-explorer            `
+    # powertoys                   `
+    # nmap                        `
+    # ffmpeg                      `
+    # draw.io                     `
+    # slack                       `
+
 # setup git
 git config --global user.email "drllap@gmail.com"
 git config --global user.name "Pall Palsson"
@@ -62,22 +124,23 @@ Invoke-WebRequest `
 Expand-Archive PowerShellEditorServices.zip -DestinationPath "../LSP-Servers/PowerShellEditorServices"
 Remove-Item PowerShellEditorServices.zip
 
-# Download and Install lua-language-server (sumneko_lua) into ../LSP-Servers
-git clone https://github.com/sumneko/lua-language-server ../LSP-Servers/lua-language-server
-Push-Location ../LSP-Servers/lua-language-server/
-git submodule update --init --recursive
-Set-Location 3rd/luamake
-compile/install.bat
-Set-Location ../..
-3rd/luamake/luamake.exe rebuild
-Pop-Location
+# # Download and Install lua-language-server (sumneko_lua) into ../LSP-Servers    # We can install this via scoop
+# git clone https://github.com/sumneko/lua-language-server ../LSP-Servers/lua-language-server
+# Push-Location ../LSP-Servers/lua-language-server/
+# git submodule update --init --recursive
+# Set-Location 3rd/luamake
+# compile/install.bat
+# Set-Location ../..
+# 3rd/luamake/luamake.exe rebuild
+# Pop-Location
 
 # Install pyright, python LSP server, requires NodeJS
 # npm install -g pyright    # Install pyrigh with pip instead
 npm install -g              `
     vim-language-server     `
-    bash-language-server    `
-    yarn                    # Usesed by iamcco/markdown-preview.nvim
+    bash-language-server
+
+yarn global add yaml-language-server    # LSP server for yaml
 
 pip3 install                `
     neovim                  `
