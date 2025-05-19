@@ -63,14 +63,6 @@ if ($null -ne $Paths) {
     Write-Warning "Path for current COMPUTERNAME not set: $env:COMPUTERNAME ,keeping the system path"
 }
 
-# function j {
-#     python $Env:APPDATA\..\Local\autojump\bin\autojump $args
-# }
-
-function autojump {
-    python $Env:APPDATA\..\Local\autojump\bin\autojump $args
-}
-
 # re-source the profile
 # refresh profile: . so
 function so {
