@@ -1,16 +1,15 @@
 local function cmd()
-  vim.notify_once("The cmd function that supplies the clangd executable for the lsp hasn't been set", vim.log.levels.WARN);
-  error("cmd not set")
-end
-
-if "Linux" == vim.loop.os_uname().sysname then
-  cmd = function()
-    return { "clangd-14" };
-  end
-else
-  cmd = function()
-    return { "clangd"};
-  end
+  return {
+    'clangd',
+    '--background-index',
+    '--background-index-priority=low',
+    '--clang-tidy',
+    '--header-insertion=never',
+    '--function-arg-placeholders',
+    '--log=verbose',
+    '--completion-style=detailed',
+    '--fallback-style=llvm',
+  }
 end
 
 local root_files = {
@@ -23,8 +22,18 @@ require('lspconfig').clangd.setup({
   cmd = cmd(),
 
   root_dir = function(fname)
-    return util.root_pattern(unpack(root_files))(fname) or util.find_git_ancestor(fname)
+    local asdf = util.root_pattern(unpack(root_files))(fname) or util.find_git_ancestor(fname)
+    vim.print(asdf)
+    return asdf
   end,
+
+  init_options = {
+    fallback_flags = { '-std=c++23' },
+    usePlaceholders = true,
+    completeUnimported = true,
+    clangdFileStatus = true,
+  },
+
   -- single_file_support = false,
 
   on_attach = function()
