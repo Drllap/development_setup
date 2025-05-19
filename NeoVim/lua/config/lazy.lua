@@ -116,6 +116,9 @@ require("lazy").setup({
       'nvim-treesitter/nvim-treesitter-textobjects',
       event = "VeryLazy",
       dependencies = 'nvim-treesitter/nvim-treesitter',
+    {
+      "ibhagwan/fzf-lua",
+      dependencies = { 'nvim-tree/nvim-web-devicons' },
     },
 
     -- Telescope
@@ -218,6 +221,19 @@ require("lazy").setup({
         "nvim-lua/plenary.nvim",
         "folke/trouble.nvim",
         "nvim-telescope/telescope.nvim",
+      },
+    {
+      'frankroeder/parrot.nvim',
+      dependencies = {
+        'nvim-lua/plenary.nvim',
+        'ibhagwan/fzf-lua',
+      },
+      opts = {
+        providers = {
+          pplx = {
+            api_key = os.getenv("PERPLEXITY_API_KEY"),
+          },
+        },
       },
     },
     {
