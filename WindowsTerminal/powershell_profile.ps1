@@ -84,8 +84,6 @@ Import-Module z # Autojump like module
 
 Invoke-Expression (& { (zoxide init powershell --cmd go | Out-String) })
 
-# Configure PowerColorLS
-Set-Alias -Name ls -Value PowerColorLS -Option AllScope # Use PowerColorLS as default ls command
 
 oh-my-posh init powershell --config "$env:POSH_THEMES_PATH\jv_sitecorian.omp.json" | Invoke-Expression
 oh-my-posh completion powershell | Out-String | Invoke-Expression
@@ -128,6 +126,11 @@ if ($env:WT_SESSION) {
     }
 }
 
+
+function ls_temp {
+    eza --icons=auto $args
+}
+Set-Alias -Name ls -Value ls_temp
 # Set-Alias -Name cmd     -Value C:\Windows\System32\cmd.exe
 # Set-Alias -Name cmd.exe -Value C:\Windows\System32\cmd.exe
 Set-Alias -Name ub      -Value ($env:LOCALAPPDATA | Join-Path -ChildPath "Microsoft\WindowsApps\ubuntu2004.exe")
