@@ -117,6 +117,7 @@ require("lazy").setup({
       'nvim-treesitter/nvim-treesitter-textobjects',
       event = "VeryLazy",
       dependencies = 'nvim-treesitter/nvim-treesitter',
+    },
     {
       "ibhagwan/fzf-lua",
       dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -223,6 +224,7 @@ require("lazy").setup({
         "folke/trouble.nvim",
         "nvim-telescope/telescope.nvim",
       },
+    },
     {
       'frankroeder/parrot.nvim',
       dependencies = {
