@@ -14,7 +14,7 @@ if wezterm.hostname() == 'archlinux' then
   config.default_prog = { '/usr/bin/bash' }
   -- config.default_prog = { '/usr/bin/sh' }
 else
-  config.default_prog = { 'powershell', '-NoLogo' }
+  config.default_prog = { os.getenv("USERPROFILE") .. '\\scoop\\shims\\pwsh', '-NoLogo' }
 end
 
 config.color_scheme = 'Gruvbox dark, medium (base16)'
