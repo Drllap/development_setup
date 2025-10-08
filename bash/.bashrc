@@ -40,9 +40,9 @@ export VISUAL="nvim"
 
 export DIFFPROG='nvim -d'
 
-eval "$(zoxide init bash)"
 # Enable bash tab autocomplete when installed with brew
 [[ -r "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh" ]] && . "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh"
 
 eval "$(starship init bash)"
+eval "$(zoxide init bash)"
 
