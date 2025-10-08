@@ -70,4 +70,5 @@ stow --target=$HOME hyprland
 stow --target=$HOME rofi
 stow --target=$HOME waybar
 stow --target=$HOME rio
+stow --target=$HOME gdb
 
