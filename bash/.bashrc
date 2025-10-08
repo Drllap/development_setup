@@ -23,6 +23,7 @@ source $DEV_DIR/scripts/bash/fzf.sh
 source $DEV_DIR/scripts/bash/shell-options.sh
 source $DEV_DIR/scripts/bash/history.sh
 source $DEV_DIR/scripts/bash/cmake.sh
+source $DEV_DIR/scripts/bash/git.sh
 
 if [ -f /usr/share/doc/pkgfile/command-not-found.bash ] ; then
   source /usr/share/doc/pkgfile/command-not-found.bash
