@@ -1,14 +1,38 @@
-pcall(require,'lsp.lua_ls')
-pcall(require,'lsp.PowerShell')
-pcall(require,'lsp.python')
-pcall(require,'lsp.cmake')
-pcall(require,'lsp.vim')
-pcall(require,'lsp.cpp')
-pcall(require,'lsp.rust')
-pcall(require,'lsp.zig')
-pcall(require,'lsp.nu')
-pcall(require,'lsp.sh')
-pcall(require,'lsp.go')
+-- pcall(require,'lsp.lua_ls')
+-- pcall(require,'lsp.PowerShell')
+-- pcall(require,'lsp.cpp')
+
+local original = vim.lsp.config.clangd
+vim.lsp.config('clangd', {
+  cmd = {
+    'clangd',
+    '--background-index',
+    '--background-index-priority=low',
+    '--clang-tidy',
+    '--header-insertion=never',
+    '--function-arg-placeholders',
+    '--log=verbose',
+    '--completion-style=detailed',
+    '--fallback-style=llvm',
+    -- '--log=verbose' ,
+  },
+  on_attach = function(client, bufnr)
+    original.on_attach(client, bufnr)
+    vim.keymap.set('n', 'ssi', "<cmd>LspClangdShowSymbolInfo<cr>",     { buffer = true, })
+    vim.keymap.set('n', 'gh',  "<cmd>LspClangdSwitchSourceHeader<cr>", { buffer = true, })
+  end,
+})
+vim.lsp.config('cspell_ls', {
+    filetypes = {"go", "rust", "js", "ts", "html", "css", "json", "yaml", "markdown", "gitcommit", "cpp", "c" },
+})
+
+vim.lsp.enable({
+  'clangd', 'cmake',
+  'pyright', 'rust_analyzer', 'zls', 'gopls',
+  'vimls', 'lua_ls',
+  'cspell_ls', 'harper_ls',
+  'bashls', 'nushell'
+})
 
 vim.keymap.set('n', '<leader><leader>R', vim.lsp.buf.rename)
 vim.keymap.set('n', '<leader><leader>A', vim.lsp.buf.code_action)
