@@ -84,6 +84,7 @@ scoop install                   `
     dbeaver                     `
     imhex                       `
     process-explorer            `
+    harper                      `
     # powertoys                   `
     # nmap                        `
     # ffmpeg                      `
@@ -138,9 +139,9 @@ Remove-Item PowerShellEditorServices.zip
 # npm install -g pyright    # Install pyrigh with pip instead
 npm install -g              `
     vim-language-server     `
-    bash-language-server
-
-yarn global add yaml-language-server    # LSP server for yaml
+    bash-language-server    `
+    yaml-language-server    ` # LSP server for yaml
+    @vlabo/cspell-lsp       ` # LSP for spell spell checking using CSpell
 
 pip3 install                `
     neovim                  `

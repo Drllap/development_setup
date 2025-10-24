@@ -72,6 +72,7 @@ require("lazy").setup({
         require("lsp")
       end,
     },
+    { 'b0o/schemastore.nvim', event = "VeryLazy", },  -- Used by lspconfig yamlls
 
     -- DAP stuff
     {
