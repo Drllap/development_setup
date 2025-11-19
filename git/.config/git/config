@@ -1,0 +1,60 @@
+[user]
+  email = drllap@gmail.com
+  name = Pall Palsson
+
+[includeIf "gitdir:~/dev/work/norbit/"]
+  path = config_norbit
+
+[core]
+  editor = nvim
+  symlink = true
+  pager = less -FRX   # Because I have added the LESS environmental variabl
+                        # doesn't add FRX options the LESS when pageing
+                        # See core.pager in git config docs
+                        # https://git-scm.com/docs/git-config#Documentation/git-config.txt-corepager
+[init]
+  defaultBranch = master
+
+[commit]
+  verbose = true
+
+[fetch]
+  prune = true
+
+[pull]
+  rebase = true
+
+[push]
+  autoStash = true
+  autoSetupRemote = true
+
+[rebase]
+  autoSquash = true
+  autoStash = true
+  updateRefs = true
+
+[rerere]
+  enabled = true
+  autoupdate = true
+
+[merge]
+  autoStash = true
+  conflictstyle = zdiff3
+
+[branch]
+  sort = -committerdate
+
+[tab]
+  sort = version:refname
+
+[diff]
+  algorithm = histogram
+  coloredMove = plain
+  renames = true
+  mnemonicPrefix = true
+
+[help]
+  autocorrect = prompt
+
+[alias]
+lol = log --oneline --graph --all
