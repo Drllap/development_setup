@@ -69,7 +69,10 @@ vim.lsp.config('lua_ls', {
 })
 
 vim.lsp.config('cspell_ls', {
-    filetypes = {"go", "rust", "js", "ts", "html", "css", "json", "yaml", "markdown", "gitcommit", "cpp", "c" },
+  filetypes = {
+    "go", "rust", "js", "ts", "html", "css", "json", "yaml", "markdown", "gitcommit", "cpp", "c",
+    "sh", "ps1", "lua"
+  },
 })
 
 vim.lsp.config('yamlls', {
