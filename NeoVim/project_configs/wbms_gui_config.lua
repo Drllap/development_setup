@@ -1,26 +1,22 @@
--- opts = { noremap = true, silent = true, expr = false };
 vim.keymap.set('n', '<leader>tC', function() 
-  local opts = { search_dirs = { "~/.config/Norbit"} }
-  return require('telescope.builtin').find_files(opts)
-end,
+    local opts = { search_dirs = { "~/AppData/Roaming/Norbit"} }
+    return require('telescope.builtin').find_files(opts)
+  end,
+  { noremap = true, silent = true, expr = false }
+)
 -- function() return require('telescope.builtin').find_files("~/AppData/Roaming/Norbit") end, 
-{ noremap = true, silent = true, expr = false })
 
+if 1 == vim.fn.has("linux") then
+  vim.keymap.set('n', '<leader>tC', function() 
+    local opts = { search_dirs = { "~/.config/Norbit"} }
+    return require('telescope.builtin').find_files(opts)
+  end,
+  { noremap = true, silent = true, expr = false })
+  vim.cmd("runtime project_configs/dap/gcc/wbms_gui.lua")
+end
 
-local dap = require("dap")
-dap.configurations.cpp = {
-  {
-      name = "Launch",
-      type = "gdb",
-      request = "launch",
-      program = function()
-        local ret = vim.fn.getcwd() .. '/build/output/wbmsgui'
-        vim.print("Starting gdb with: " .. ret)
-        return ret
-      end,
-      args = {}, -- provide arguments if needed
-      cwd = "${workspaceFolder}",
-      stopAtBeginningOfMainSubprogram = false,
-  },
-}
+vim.api.nvim_create_user_command('Setup', function()
+  vim.cmd(":runtime project_configs/setup/wbms_gui.vim")
+end, { bang = true})
 
+vim.cmd(":runtime project_configs/compilers/msb.vim")
