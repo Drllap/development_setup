@@ -150,6 +150,8 @@ Set-Alias -Name ip      -Value "ipython"
 # Set environment
 $env:CMAKE_EXPORT_COMPILE_COMMANDS="ON";
 $env:BUILD_TESTING="ON"
+$env:CMAKE_GENERATOR="Visual Studio 17 2022"
+$env:CMAKE_BUILD_TYPE="Debug"
 
 # Set options for PSReadLine module
 # Change the cursor when going in and out of Vi mode
