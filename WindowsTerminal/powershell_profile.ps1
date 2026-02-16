@@ -28,6 +28,7 @@ $private:Paths.AddRange((
     # "C:\WINDOWS;",
     "C:\WINDOWS\System32;",
     -Join($env:USERPROFILE, "\scoop\shims\;"),
+    -Join($env:USERPROFILE, "\scoop\apps\git\current\bin\;"),
     -Join($env:USERPROFILE, "\scoop\apps\llvm\current\bin\;"),
     -Join($env:USERPROFILE, "\scoop\apps\rustup\current\.cargo\bin\;"),
     -Join($env:USERPROFILE, "\scoop\apps\perl\current\perl\bin;"),
