@@ -28,6 +28,9 @@ New-Item -Path $HOME\.config\wezterm -Name .\wezterm.lua -Value .\wezterm\.wezte
 # Add Symbolic Link to the Rio terminal config
 New-Item -Path $env:LOCALAPPDATA\ -Name rio -Target $PWD\rio\.config\rio  -ItemType SymbolicLink -Force
 
+# Add Symbolic Link to the config for starship
+New-Item -Path $HOME\.config\ -Name starship.toml -Target $PWD\starship\.config\starship.toml -ItemType SymbolicLink -Force
+
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 scoop bucket add extras
@@ -56,6 +59,7 @@ scoop install                   `
     putty                       `
     zoxide                      `
     oh-my-posh                  `
+    starship                    `
     cmake                       `
     ninja                       `
     llvm                        `

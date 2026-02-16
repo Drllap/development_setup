@@ -85,8 +85,9 @@ Import-Module posh-git  # posh-git, git info in prompt and auto tab completion
 ## Add tab Autocompletion for rustup
 # rustup completions powershell | Out-String | Invoke-Expression
 
-oh-my-posh init powershell --config "$env:POSH_THEMES_PATH\jv_sitecorian.omp.json" | Invoke-Expression
+# oh-my-posh init powershell --config "$env:POSH_THEMES_PATH\jv_sitecorian.omp.json" | Invoke-Expression
 
+Invoke-Expression (&starship init powershell)
 
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
