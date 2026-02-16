@@ -7,3 +7,4 @@ conanbuildinfo.txt
 conaninfo.txt
 conan.lock
 graph_info.json
+CMakeUserPresets.json

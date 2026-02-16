@@ -31,6 +31,9 @@ New-Item -Path $env:LOCALAPPDATA\ -Name rio -Target $PWD\rio\.config\rio  -ItemT
 # Add Symbolic Link to the config for starship
 New-Item -Path $HOME\.config\ -Name starship.toml -Target $PWD\starship\.config\starship.toml -ItemType SymbolicLink -Force
 
+# Add Symbolic Link to the config for git
+New-Item -Path $HOME\.config\ -Name git -Target $PWD\git\.config\git -ItemType SymbolicLink -Force
+
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 scoop bucket add extras
@@ -96,10 +99,12 @@ scoop install                   `
     # slack                       `
 
 # setup git
+# TODO this should be in the config files
 git config --global user.email "drllap@gmail.com"
 git config --global user.name "Pall Palsson"
 git config --global core.editor "nvim"  # Use NeoVim as git editor
 git config --global core.symlink true
+git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
 git config --global pull.rebase true
 git config --global pull.autoSetupRemote true
 git config --global rebase.autoStash true

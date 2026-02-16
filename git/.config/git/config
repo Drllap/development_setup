@@ -2,7 +2,7 @@
   email = drllap@gmail.com
   name = Pall Palsson
 
-[includeIf "gitdir:~/dev/work/norbit/"]
+[includeIf "gitdir/i:*/norbit/"]
   path = config_norbit
 
 [core]
