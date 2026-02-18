@@ -27,8 +27,9 @@ pacman -Su                  \
     bat                     \
     eza                     \
     clang                   \
-    python                  \
-    python-pipx             \
+    uv                      \
+    # python                  \
+    # python-pipx             \
     pyright                 \
     zoxide                  \
     vlc                     \
@@ -54,8 +55,19 @@ pacman -Su                  \
 npm install -g  \
     vim-language-server
 
-pipx install  \
-    cmake-language-server
+# pipx install  \
+#     cmake-language-server
+
+# The limitation of pygls is because of this bug:
+# https://github.com/regen100/cmake-language-server/issues/101
+uv tool install --with 'pygls<2' cmake-language-server
+uv tool install 'conan<2'
+
+# Crate a python venv for neovim to use
+uv venv ~/.venvs/neovim
+source ~/.venvs/neovim/bin/activate
+uv pip install pynvim
+deactivate
 
 # stow everything, execute from repo root
 stow --target=$HOME bash
