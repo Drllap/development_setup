@@ -4,14 +4,25 @@ function wtf {
 
   repos=( \
   )
+
   function run_fzf {
-    printf "%s\n" "${repos[@]}" | xargs -I{} sh -c '
-      repo="{}"
-      git -C "$repo" worktree list
-      ' | fzf --cycle --bind 'enter:become(echo {1})'
+
+    for repo in "${repos[@]}"; do
+      git -C "$repo" worktree list --porcelain 2>/dev/null \
+        | awk '/^worktree /{print $2}'
+    done \
+    | fzf --cycle \
+        --preview 'wt={}; 
+                   if [ -d "$wt/.git" ] || [ -f "$wt/.git" ]; then
+                     git -C "$wt" -c color.status=always status --short --branch 2>/dev/null \
+                       | (command -v bat >/dev/null && bat --paging=never --plain --language=diff || cat)
+                   else
+                     echo "Not a git worktree: $wt"
+                   fi' \
+        --preview-window 'right:60%:wrap' \
+        --bind 'enter:become(echo {})'
   }
 
-  # echo "$(run_fzf)"
   dest=$(run_fzf)
   if [[ -n $dest ]]; then
     builtin cd $dest;
