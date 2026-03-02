@@ -1,3 +1,4 @@
+-- vim.log.levels.DEBUG = true
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -25,6 +26,28 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
   spec = {
     -- Color schemes
+    -- {
+    --   'gruvbox-community/gruvbox',
+    --   lazy = false,
+    --   priority = 1000,
+    --   config = function()
+    --     vim.cmd([[colorscheme gruvbox]])
+    --   end,
+    --   commit = "9e415283ed649fa3bfba2c45efc56d26871cee67",
+    --   enabled = false,
+    -- },
+    -- {
+    --   'morhetz/gruvbox',
+    --   lazy = false,
+    --   priority = 1000,
+    --   config = function()
+    --     -- vim.cmd([[let g:gruvbox_contrast = 'soft']])
+    --     -- vim.cmd([[let g:gruvbox_contrast_soft = 1 ]])
+    --     vim.cmd([[set termguicolors]])
+    --     vim.cmd([[let g:gruvbox_contrast_dark = 'soft' ]])
+    --     vim.cmd([[colorscheme gruvbox]])
+    --   end,
+    -- },
     {
       'ellisonleao/gruvbox.nvim',
       lazy = false,
@@ -55,8 +78,12 @@ require("lazy").setup({
     {  -- Extends/tweaks the vim built in :mksession
       'tpope/vim-obsession',
       event   = "VeryLazy",
+      dependencies = {
+        'tpope/vim-fugitive'
+      },
       config = function()
         vim.cmd([[set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{ObsessionStatus('OB','NS')}\ \ %P]])
+        vim.cmd([[set statusline+=%{fugitive#statusline()}]])
       end,
     },
     { 'tpope/vim-dispatch',   event   = "VeryLazy", },  -- Async build
@@ -136,7 +163,10 @@ require("lazy").setup({
     {
       'nvim-telescope/telescope-fzf-native.nvim',
       event = "VeryLazy",
-      build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release',
+      -- build = "echo '$env:Path'",
+      build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && ' ..
+              'cmake --build build --config Release && ' ..
+              'cmake --build build --target  install',
       dependencies = { 'nvim-telescope/telescope.nvim' },
       config = function()
         require("telescope").load_extension("fzf")
@@ -256,6 +286,9 @@ require("lazy").setup({
       ft = { "markdown" },
       build = function() vim.fn["mkdp#util#install"]() end, -- TODO can we remove yarn and npm?
     },
+    {
+      "nanotee/zoxide.vim"
+    },
 
   },
   -- Configure any other settings here. See the documentation for more details.
@@ -265,5 +298,20 @@ require("lazy").setup({
   checker = {
     enabled = true,
     notify  = false,
+  },
+
+  performance = {
+    rtp = {
+      disabled_plugins = {
+        -- "gzip",
+        -- "matchit",
+        -- "matchparen",
+        "netrwPlugin",
+        "tarPlugin",
+        "tohtml",
+        "tutor",
+        "zipPlugin",
+      },
+    }
   },
 })

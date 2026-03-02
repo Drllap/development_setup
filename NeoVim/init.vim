@@ -165,3 +165,47 @@ augroup TabConfigSwitcher
   autocmd TabEnter * call ResetNvimRC()
 augroup END
 
+function! MyTabLine()
+  let parent_dirs = getcwd()->split('[/\\]')
+  if len(parent_dirs) == 0
+    return "Parent Directory List Empty?"
+  endif
+
+  " check if we have a parent folder named "wt", this generally means we are
+  " not in the "main" workingtree for the project but in one of the others
+  let working_tree_idx = parent_dirs->index("wt")
+
+  function! WtFolder() closure
+    if working_tree_idx >= 0 " We found a "wt" directory in one of the parents. We are in a git worktree
+      " We should check that 0 <= working_tree_idx < len(parent_dirs)
+      return " WT:".. parent_dirs[working_tree_idx+1]
+    endif
+    return ""
+  endfunction
+
+  function! Project() closure
+    if working_tree_idx >= 0 " We are in one of the "other" workingtrees
+      return parent_dirs[working_tree_idx-1]
+    endif
+
+    if parent_dirs[-1] == "source"  " We are in the main source folder in the project
+      return getcwd()->fnamemodify(':h:t')
+    endif
+
+    return getcwd()->fnamemodify(':t')
+  endfunction
+
+  function! Branch()
+    "g:... is the head of the CWD while b:.. is the head of the current buffer
+    if exists("b:gitsigns_head") && len(b:gitsigns_head) != 0
+      return " B:" .. b:gitsigns_head
+    endif
+    return ""
+  endfunction
+
+  return Project() .. WtFolder()
+
+endfunction
+
+set tabline=%!MyTabLine()
+

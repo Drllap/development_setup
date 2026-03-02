@@ -1,9 +1,47 @@
+hide-cursor-when-typing = true
+
+theme = "themes/GruvboxDark"
+
+[bindings]
+keys = [
+  { key = "t", with = "alt",            action = "CreateTab" },
+  { key = "1", with = "alt | control",  action = "SelectTab(0)" },
+  { key = "2", with = "alt | control",  action = "SelectTab(1)" },
+  { key = "3", with = "alt | control",  action = "SelectTab(2)" },
+  { key = "4", with = "alt | control",  action = "SelectTab(3)" },
+  { key = "5", with = "alt | control",  action = "SelectTab(4)" },
+  { key = "6", with = "alt | control",  action = "SelectTab(5)" },
+  { key = "7", with = "alt | control",  action = "SelectTab(6)" },
+  { key = "8", with = "alt | control",  action = "SelectTab(7)" },
+  { key = "9", with = "alt | control",  action = "SelectTab(8)" },
+  { key = "r", with = "control",        text = "Rio is awesome!" },
+]
+
+# [bindings]
+# keys = [
+#   { key = "b", with = "alt",            action = "CreateTab" },
+#   { key = "b", with = "control",        action = "CreateTab" },
+#   { key = "b", with = "alt | control",  action = "CreateTab" },
+#   { key = "t", with = "alt",            action = "CreateTab" },
+#   { key = "1", with = "alt",            action = "SelectTab(0)" },
+#   { key = "2", with = "alt | control",  action = "SelectTab(1)" },
+#   { key = "r", with = "control",        text = "Rio is awesome!" },
+#   { key = "r", with = "alt",        text = "Rio is awesome!" },
+# ]
+
+[platform]
+# Microsoft Windows overwrite
+windows.shell.program = "pwsh"
+windows.shell.args = ["-NoLogo"]
+
+[bell]
+audio  = false
+visual = false
 
 # Hide the cursor while typing
 #
 # Default is `false`
 #
-hide-cursor-when-typing = true
 
 # Ignore theme selection foreground color
 #
@@ -19,7 +57,6 @@ hide-cursor-when-typing = true
 # (windows: C:\Users\USER\AppData\Local\rio\themes\dracula.toml)
 #
 # Example:
-theme = "themes/GruvboxDark"
 
 # Padding-x
 #
@@ -338,20 +375,6 @@ color-automation = []
 #   { key = "home", with = "super | shift", bytes = [27, 91, 53, 126] }
 # ]
 
-[bindings]
-keys = [
-  { key = "t", with = "alt",            action = "CreateTab" },
-  { key = "1", with = "alt | control",  action = "SelectTab(0)" },
-  { key = "2", with = "alt | control",  action = "SelectTab(1)" },
-  { key = "3", with = "alt | control",  action = "SelectTab(2)" },
-  { key = "4", with = "alt | control",  action = "SelectTab(3)" },
-  { key = "5", with = "alt | control",  action = "SelectTab(4)" },
-  { key = "6", with = "alt | control",  action = "SelectTab(5)" },
-  { key = "7", with = "alt | control",  action = "SelectTab(6)" },
-  { key = "8", with = "alt | control",  action = "SelectTab(7)" },
-  { key = "9", with = "alt | control",  action = "SelectTab(8)" },
-  { key = "r", with = "control",        text = "Rio is awesome!" },
-]
 
 # Platform
 #
@@ -364,11 +387,6 @@ keys = [
 # # default (in this case will be used only on MacOS)
 # program = "/bin/fish"
 # args = ["--login"]
-#
-[platform]
-# Microsoft Windows overwrite
-windows.shell.program = "pwsh"
-windows.shell.args = ["-NoLogo"]
 #
 # # Linux overwrite
 # linux.shell.program = "tmux"

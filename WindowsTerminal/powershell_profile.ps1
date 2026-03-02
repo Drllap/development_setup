@@ -33,6 +33,7 @@ $private:Paths.AddRange((
     -Join($env:USERPROFILE, "\scoop\apps\rustup\current\.cargo\bin\;"),
     -Join($env:USERPROFILE, "\scoop\apps\perl\current\perl\bin;"),
     -Join($env:USERPROFILE, "\scoop\apps\nodejs\current\;"),                        # this
+    -Join($env:USERPROFILE, "\scoop\apps\nodejs\current\bin\;"),
     # -Join($env:USERPROFILE, "\scoop\apps\nodejs\current\bin\;"),                    # this
     -Join($env:USERPROFILE, "\scoop\apps\yarn\current\bin\;"),                      # this
     # -Join($env:USERPROFILE, "\scoop\apps\yarn\current\global\node_modules\.bin\;"), # this
@@ -71,7 +72,12 @@ function so {
     Write-Host "re-sourcing profile: " $PROFILE.CurrentUserAllHosts
 }
 
+Set-Variable MaximumHistoryCount -Value 30000
+
 Import-Module posh-git  # posh-git, git info in prompt and auto tab completion
+$GitPromptSettings.EnableFileStatus = $false
+$GitPromptSettings.EnableStashStatus = $false
+$GitPromptSettings.EnablePromptStatus = $false
 
 # Import-Module PSReadLine -MinimumVersion "2.2.3"
 # Import-Module DockerCompletion # Add tab Autocompletion for docker
@@ -91,6 +97,7 @@ Invoke-Expression (&starship init powershell)
 
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
+# $env:FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
 
 # Code taken from https://github.com/microsoft/terminal/issues/3158#issuecomment-789198188
 # Makes make new split panes open in current directory
@@ -121,6 +128,21 @@ if ($env:WT_SESSION) {
     }
 }
 
+# if ($env:WEZTERM_PANE or $env:TERM) {
+if ($env:TERM_PROGRAM -eq "WezTerm" -or $env:TERM_PROGRAM -eq "rio") {
+    $prevprompt = $Function:prompt
+    function prompt {
+        $p = $executionContext.SessionState.Path.CurrentLocation
+        $osc7 = ""
+        if ($p.Provider.Name -eq "FileSystem") {
+            $ansi_escape = [char]27
+            $provider_path = $p.ProviderPath -Replace "\\", "/"
+            $osc7 = "$ansi_escape]7;file://${env:COMPUTERNAME}/${provider_path}${ansi_escape}\"
+            $Host.UI.Write($osc7)
+        }
+        return $prevprompt.invoke()
+    }
+}
 
 function ls_temp {
     eza --icons=auto $args
@@ -146,6 +168,13 @@ Set-Alias -Name ip      -Value "ipython"
 # Remove-Item alias:curl  # curl is bound to Invoke-WebRequest by default # Not needed in pwsh (PS7)
 # Set-Alias -Name curl    -Value C:\ProgramData\chocolatey\bin\curl.exe
 # Set-Alias -Name tree    -Value C:\ProgramData\chocolatey\bin\tree.exe
+
+# Norbit specific 
+Set-Alias -Name sim -Value D:\dev\Norbit\sim-em-ulator\source\build\cli_wrapper\Debug\sim-em-ulator_cli.exe;
+Set-Alias -Name wbm -Value D:\dev\Norbit\wbms-gui\two\build\output\Debug\wbm_tool.exe;
+# Set-Alias -Name wbt -Value D:\dev\Norbit\wbm-tool\build\cli_wrapper\Debug\wbm-tool_cli.exe;
+Set-Alias -Name wbt -Value D:\dev\Norbit\wbms-gui\two\build\output\Debug\wbm_tool.exe
+Set-Alias -Name inf-man -Value D:\dev\Norbit\wbm-file-info-manager\build\src\Debug\wbm-file-info-manager.exe;
 
 # Set environment
 $env:CMAKE_EXPORT_COMPILE_COMMANDS="ON";
