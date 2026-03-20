@@ -4,35 +4,72 @@ function sdf {
 
 function wtf {
 
-    $trees = & {
-        git -C C:\Development\development_setup worktree list
-        git -C D:\dev\Norbit\wbms-gui\source worktree list
-        git -C D:\dev\Norbit\wbm-file-lib\source worktree list
-        git -C D:\dev\Norbit\wbm-tool\source worktree list
-        git -C D:\dev\Norbit\wbm-file-info-manager worktree list
-        git -C D:\dev\Norbit\wbm-file-nav-interface\source worktree list
-        git -C D:\dev\Norbit\aplnx-grps\source worktree list
-        git -C D:\dev\Norbit\tss1-lib\source worktree list
-        git -C D:\dev\Norbit\em3000-wbm-types\source worktree list
-        git -C D:\dev\Norbit\em3000-ipos-wrapper\source worktree list
-        git -C D:\dev\Norbit\rotator-wbm-types\source worktree list
-        git -C D:\dev\Norbit\rotator-ipos-wrapper\source worktree list
-        git -C D:\dev\Norbit\sbg-wbm-types\source worktree list
-        git -C D:\dev\Norbit\sbg-ipos-wrapper\source worktree list
-        git -C D:\dev\Norbit\rotator-api\source worktree list
-        git -C D:\dev\Norbit\sim-em-ulator\source worktree list
-        git -C D:\dev\Norbit\wbmsgui-build-dependencies worktree list
-    };
+    $nullDevice = if ($IsWindows) { 'NUL' } else { '/dev/null' }
 
-    $selected = $trees | fzf --cycle
+    $repos = @(
+        "F:\dev\mine\development_setup"
+        "F:\dev\norbit\wbms-gui\source"
+        "F:\dev\norbit\wbm-file-lib\source"
+        "F:\dev\norbit\sem\source"
+    );
+
+    $worktrees = foreach ($repo in $repos) {
+        $worktreePath = $null
+        $branch = $null
+
+        foreach ($line in (git -C $repo worktree list --porcelain 2> $nullDevice)) {
+            if (-not $line) {
+                if ($worktreePath) {
+                    $branchName = if ($branch -like 'refs/heads/*') { $branch.Substring(11) } else { $branch }
+                    [PSCustomObject]@{
+                        Path = $worktreePath
+                        Branch = $branchName
+                    }
+                }
+
+                $worktreePath = $null
+                $branch = $null
+                continue
+            }
+
+            if ($line -like 'worktree *') {
+                $worktreePath = $line.Substring(9)
+                continue
+            }
+
+            if ($line -like 'branch *') {
+                $branch = $line.Substring(7)
+            }
+        }
+
+        if ($worktreePath) {
+            $branchName = if ($branch -like 'refs/heads/*') { $branch.Substring(11) } else { $branch }
+            [PSCustomObject]@{
+                Path = $worktreePath
+                Branch = $branchName
+            }
+        }
+    }
+
+    $maxPathLength = ($worktrees | ForEach-Object { $_.Path.Length } | Measure-Object -Maximum).Maximum
+    $items = $worktrees | ForEach-Object {
+        $branchLabel = if ($_.Branch) { "[{0}]" -f $_.Branch } else { '' }
+        "{0}  {1}`t{2}" -f $_.Path.PadRight($maxPathLength), $branchLabel, $_.Path
+    }
+
+    $selected = $items |
+        fzf `
+        --delimiter "`t" `
+        --with-nth 1 `
+        --preview-window 'right,60%,wrap,<140(down,45%,wrap)' `
+        --preview "git -C {2} -c color.status=always status --branch --short 2>$nullDevice"
 
     if (-not $selected) {
         Write-Output "no file selected"
         return;
     }
 
-    $path = $selected.split()[0]
-    Set-Location $path
+    Set-Location ($selected -split "`t", 2)[1]
 }
 
 function mod {
