@@ -84,6 +84,7 @@ scoop install                   `
     windows-terminal            `
     vim                         `
     neovim                      `
+    win32yank                   ` # Used by NeoVim as clippboard when in WSL so it can be shared with Windows
     # versions/neovim-nightly     `
     neovide                     `
     helix                       `
