@@ -1,11 +1,9 @@
 # Add symbolik link for init.vim for NeoVim
-New-Item -Path $env:LOCALAPPDATA\ -Name nvim -ItemType SymbolicLink -Value .\NeoVim\ -Force
+New-Item -Path $env:LOCALAPPDATA\ -Name nvim -ItemType SymbolicLink -Value ${PWD}\NeoVim\ -Force
 
 # Add symbolic link PowerShell profile
-New-Item -Path (Split-Path $PROFILE.CurrentUserAllHosts) -Name (Split-Path $PROFILE.CurrentUserAllHosts -Leaf) `
-    -ItemType SymbolicLink -Value ${PWD}\WindowsTerminal\powershell_profile.ps1 -Force
-
-# Add symbolic link PowerShell profile for PS7. The above is for PS5
+# Make sure that the $PROFILE isn't pointing to OneDrive. If it does, change the location of the Documents folder
+# Make sure to run it in the correct version of PowerShell. The $PROFILE is can be defferent between version, 5 vs 7
 New-Item -Path (Split-Path $PROFILE.CurrentUserAllHosts) -Name (Split-Path $PROFILE.CurrentUserAllHosts -Leaf) `
     -ItemType SymbolicLink -Value ${PWD}\WindowsTerminal\powershell_profile.ps1 -Force
 
@@ -15,14 +13,14 @@ New-Item -Path (Split-Path $PROFILE.CurrentUserAllHosts) -Name (Split-Path $PROF
 
 # Add SymbolicLink to settings.json for Windows Terminal
 New-Item -Path $env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\ -Name settings.json `
-    -Value .\WindowsTerminal\settings.json -ItemType SymbolicLink -Force
+    -Value ${PWD}\WindowsTerminal\settings.json -ItemType SymbolicLink -Force
 
 # Add Symbolic Link to the Alacritty config
-New-Item -Path $env:APPDATA\ -Name .\alacritty -Value .\Alacritty\ `
+New-Item -Path $env:APPDATA\ -Name .\alacritty -Value ${PWD}\Alacritty\ `
         -ItemType SymbolicLink -Force
 
 # Add Symbolic Link to the Wezterm config
-New-Item -Path $HOME\.config\wezterm -Name .\wezterm.lua -Value .\wezterm\.wezterm.lua `
+New-Item -Path $HOME\.config\wezterm -Name .\wezterm.lua -Value ${PWD}\wezterm\.wezterm.lua `
         -ItemType SymbolicLink -Force
 
 # Add Symbolic Link to the Rio terminal config
