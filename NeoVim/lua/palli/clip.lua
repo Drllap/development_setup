@@ -1,5 +1,4 @@
 if os.getenv("WSL_DISTRO_NAME") == nil then
-  vim.print("Hommi")
   return
 end
 vim.g.clipboard = {
