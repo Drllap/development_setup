@@ -75,7 +75,7 @@ scoop install                   `
     lua-language-server         `
     pwsh                        `
     nu                          `
-    # extras/wezterm-nightly      `
+    # extras/wezterm              ` # I checked v20240203-110809-5046fc22, undercurl doesn't work in NeoVim, so using nightly
     versions/wezterm-nightly    `
     alacritty                   `
     rio                         `
