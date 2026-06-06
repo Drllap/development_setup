@@ -167,7 +167,13 @@ config.keys = {
   { key = 'v', mods = 'ALT|CTRL', action = act.PasteFrom('Clipboard') },
 }
 
+local copy_mode = wezterm.gui.default_key_tables().copy_mode
+table.insert(copy_mode, { key = 'p', mods = 'CTRL', action = act.CopyMode { MoveBackwardZoneOfType = 'Prompt' } })
+table.insert(copy_mode, { key = 'n', mods = 'CTRL', action = act.CopyMode { MoveForwardZoneOfType  = 'Prompt' } })
+
 config.key_tables = {
+  copy_mode = copy_mode,
+
   -- Defines the keys that are active in our resize-pane mode.
   -- Since we're likely to want to make multiple adjustments,
   -- we made the activation one_shot=false. We therefore need
