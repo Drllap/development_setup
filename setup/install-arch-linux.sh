@@ -90,4 +90,5 @@ stow --target=$HOME waybar
 stow --target=$HOME rio
 stow --target=$HOME gdb
 stow --target=$HOME dunst
+stow --target=$HOME mime
 
