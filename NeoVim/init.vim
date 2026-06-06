@@ -131,27 +131,7 @@ command! -nargs=0 ToggleLogging call ToggleLogging()
 
 function! ResetNvimRC()
   function! SetDefaults()
-    compiler! msbuild
-    noremap <leader>R :Dispatch ../build/test/Debug/unit-tests.exe<CR>
-
-    noremap <leader>b :silent! :wall <bar> :execute ':Make ' .. '*.sln'->globpath('../build/')<CR>
-    noremap <leader>B :silent! :wall <bar> :execute ':Dispatch msbuild ' .. '*.sln'->globpath('../build/')<CR>
-
-    noremap <leader>R :Dispatch ../build/test/Debug/unit-tests.exe<CR>
-
-    noremap <leader>b :silent! :wall <bar> :execute ':Make ' .. '*.sln'->globpath('../build/')<CR>
-    noremap <leader>B :silent! :wall <bar> :execute ':Dispatch msbuild ' .. '*.sln'->globpath('../build/')<CR>
-
-    noremap <leader>C         :silent! :wall <bar>
-                            \ :execute ":! cmake -B ../build_ninja -S . -G Ninja
-                            \                    -DBUILD_TESTING=ON
-                            \                    -DCMAKE_EXPORT_COMPILE_COMMANDS=ON 
-                            \                    -DCMAKE_MODULE_PATH=" .. "../build_ninja"->fnamemodify(':p')->substitute('\','/','g')<CR>
-    noremap <leader><leader>C :silent! :wall <bar>
-                            \ :execute ":! cmake -B ../build -S .
-                            \                    -DBUILD_TESTING=ON
-                            \                    -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
-                            \                    -DCMAKE_MODULE_PATH=" .. "../build"->fnamemodify(':p')->substitute('\','/','g')<CR>
+    " No defaults anymore
   endfunction
   call SetDefaults()
   if filereadable(".nvimrc")
