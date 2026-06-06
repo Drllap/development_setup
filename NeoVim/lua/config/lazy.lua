@@ -110,6 +110,12 @@ require("lazy").setup({
     {
       'nvim-treesitter/nvim-treesitter',
       event = "VeryLazy",
+      build = function()
+        local parser_root = vim.fs.joinpath(vim.fn.stdpath("data"), "ts-parsers")
+        vim.opt.runtimepath:prepend(parser_root)
+        require("nvim-treesitter.configs").setup({ parser_install_dir = parser_root })
+        vim.cmd("TSUpdateSync")
+      end,
       config = function()
         require("palli.treesitter")
       end,

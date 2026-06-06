@@ -1,7 +1,13 @@
+local parser_root = vim.fs.joinpath(vim.fn.stdpath("data"), "ts-parsers")
+local parsers = { "c", "cpp", "rust", "cmake", "dockerfile", "lua", "vim", "python", "zig",
+                  "json", "yaml", "toml", "markdown", "markdown_inline", "bash", "vimdoc", "proto", "go" }
+
+vim.opt.runtimepath:prepend(parser_root)
+
 require('nvim-treesitter.configs').setup {
+  parser_install_dir = parser_root,
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
-  ensure_installed = { "c", "cpp", "rust", "cmake", "dockerfile", "lua", "vim", "python",  "zig",
-                       "json", "yaml", "toml", "markdown", "bash",  "vimdoc", "proto", "go" },
+  ensure_installed = parsers,
 
   highlight = {
     enable = true,
@@ -53,5 +59,4 @@ require('nvim-treesitter.configs').setup {
     },
   },
 }
-
 
