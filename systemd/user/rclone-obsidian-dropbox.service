@@ -1,0 +1,13 @@
+[Unit]
+Description=Sync Obsidian vault with Dropbox using rclone bisync
+Documentation=man:rclone(1)
+Wants=network-online.target
+After=network-online.target
+ConditionPathExists=/home/palli/Obsidian/.obsidian
+
+[Service]
+Type=oneshot
+ExecStart=/home/palli/dev/development_setup/scripts/obsidian-dropbox-bisync.sh
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7

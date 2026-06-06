@@ -55,6 +55,8 @@ pacman -Su                  \
     duf                     \
     dust                    \
     wl-clipboard            \
+    obsidian                \
+    rclone                  \ # sync files, e.i. obsidian vaults
 
 npm install -g  \
     vim-language-server

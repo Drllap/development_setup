@@ -1,0 +1,12 @@
+[Unit]
+Description=Run Obsidian Dropbox sync periodically
+
+[Timer]
+OnBootSec=2min
+OnCalendar=*:0/10
+AccuracySec=30s
+Persistent=true
+Unit=rclone-obsidian-dropbox.service
+
+[Install]
+WantedBy=timers.target
