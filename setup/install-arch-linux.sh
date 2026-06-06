@@ -51,6 +51,7 @@ pacman -Su                  \
     waybar                  \
     rofi-wayland            \
     wl-clipboard
+    dunst                   \ # Notification-deamon
 
 npm install -g  \
     vim-language-server
@@ -83,4 +84,5 @@ stow --target=$HOME rofi
 stow --target=$HOME waybar
 stow --target=$HOME rio
 stow --target=$HOME gdb
+stow --target=$HOME dunst
 

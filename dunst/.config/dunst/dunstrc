@@ -1,0 +1,93 @@
+[global]
+    monitor = 0
+    follow = none
+
+    width = (320, 420)
+    height = (0, 220)
+    origin = top-right
+    offset = (12, 34)
+    scale = 0
+    notification_limit = 5
+
+    progress_bar = true
+    progress_bar_height = 6
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 180
+    progress_bar_max_width = 420
+    progress_bar_corner_radius = 3
+
+    indicate_hidden = yes
+    transparency = 0
+    separator_height = 0
+    padding = 10
+    horizontal_padding = 12
+    text_icon_padding = 10
+    frame_width = 1
+    frame_color = "#268bd2"
+    gap_size = 4
+    separator_color = frame
+    sort = update
+
+    font = Noto Sans Mono 10
+    line_height = 2
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = 60
+    ellipsize = middle
+    ignore_newline = no
+    word_wrap = yes
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+
+    enable_recursive_icon_lookup = true
+    icon_theme = "Adwaita, hicolor"
+    icon_position = left
+    min_icon_size = 24
+    max_icon_size = 48
+    icon_corner_radius = 3
+
+    sticky_history = yes
+    history_length = 50
+
+    dmenu = /usr/bin/rofi -dmenu -p dunst
+    browser = /usr/bin/xdg-open
+    always_run_script = true
+
+    corner_radius = 3
+    corners = all
+    ignore_dbusclose = false
+    force_xwayland = false
+
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+
+[experimental]
+    per_monitor_dpi = false
+    pause_on_mouse_over = true
+
+[urgency_low]
+    background = "#1a1a1a"
+    foreground = "#93a1a1"
+    frame_color = "#595959"
+    timeout = 6
+    default_icon = dialog-information
+
+[urgency_normal]
+    background = "#292b2e"
+    foreground = "#fdf6e3"
+    frame_color = "#268bd2"
+    timeout = 0
+    override_pause_level = 30
+    default_icon = dialog-information
+
+[urgency_critical]
+    background = "#3a1f1f"
+    foreground = "#fdf6e3"
+    frame_color = "#dc322f"
+    timeout = 0
+    override_pause_level = 60
+    default_icon = dialog-warning
