@@ -26,6 +26,7 @@ pacman -Su                  \
     ripgrep                 \
     bat                     \
     eza                     \
+    jq
     clang                   \
     uv                      \
     # python                  \
@@ -50,8 +51,10 @@ pacman -Su                  \
     hyprland                \
     waybar                  \
     rofi-wayland            \
-    wl-clipboard
     dunst                   \ # Notification-deamon
+    duf                     \
+    dust                    \
+    wl-clipboard            \
 
 npm install -g  \
     vim-language-server
