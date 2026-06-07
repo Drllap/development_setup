@@ -108,22 +108,44 @@ require("lazy").setup({
 
     -- Treesitter
     {
-      'nvim-treesitter/nvim-treesitter',
-      event = "VeryLazy",
-      build = function()
-        local parser_root = vim.fs.joinpath(vim.fn.stdpath("data"), "ts-parsers")
-        vim.opt.runtimepath:prepend(parser_root)
-        require("nvim-treesitter.configs").setup({ parser_install_dir = parser_root })
-        vim.cmd("TSUpdateSync")
+      "arborist-ts/arborist.nvim",
+      lazy = false,
+      opts = function()
+        -- local parsers = {
+        --   "bash",
+        --   "c",
+        --   "cmake",
+        --   "cpp",
+        --   "dockerfile",
+        --   "go",
+        --   "json",
+        --   "lua",
+        --   "markdown",
+        --   "markdown_inline",
+        --   "proto",
+        --   "python",
+        --   "rust",
+        --   "toml",
+        --   "vim",
+        --   "vimdoc",
+        --   "yaml",
+        --   "zig",
+        -- }
+
+        return {
+          concurrency = 1,
+          prefer_wasm = false,
+          install_popular = false,
+          update_cadence = "manual",
+          ensure_installed = {},
+          -- ignore = {
+          --   "vim",
+          -- },
+          -- disable = {
+          --   indent = parsers,
+          -- },
+        }
       end,
-      config = function()
-        require("palli.treesitter")
-      end,
-    },
-    {
-      'nvim-treesitter/nvim-treesitter-textobjects',
-      event = "VeryLazy",
-      dependencies = 'nvim-treesitter/nvim-treesitter',
     },
     {
       "ibhagwan/fzf-lua",
