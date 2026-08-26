@@ -84,9 +84,10 @@ require("lazy").setup({
       enabled = false,
     },
     {
+      enabled = false,
       'Drllap/visual-studio-integration.vim',
       event   = "VeryLazy",
-      enabled = vim.fn.has("win32") == 1,
+      -- enabled = vim.fn.has("win32") == 1,
     },
 
     -- Completion
@@ -236,6 +237,7 @@ require("lazy").setup({
       opts  = {},
     },
     {
+      enabled = false,
       'voldikss/vim-translator',
       event = "VeryLazy",
       config = function()
@@ -244,6 +246,7 @@ require("lazy").setup({
       end,
     },
     {
+      enabled = false,
       'jackMort/ChatGPT.nvim',
       event = "VeryLazy",
       opts  = {},
@@ -255,6 +258,7 @@ require("lazy").setup({
       },
     },
     {
+      enabled = false,
       'frankroeder/parrot.nvim',
       dependencies = {
         'nvim-lua/plenary.nvim',
