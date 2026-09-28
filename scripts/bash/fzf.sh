@@ -1,9 +1,5 @@
 #!/bin/bash
 
-if [ -f "/home/linuxbrew/.linuxbrew/bin/brew" ] ; then
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi
-
 FZF_CTRL_T_COMMAND=fd
 FZF_ALT_C_COMMAND=""    # because I want my own bindings
 

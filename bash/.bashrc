@@ -8,6 +8,8 @@ esac
 
 DEV_DIR="$(realpath $(dirname $(readlink -f $BASH_SOURCE))/../)"
 
+source $DEV_DIR/scripts/bash/aliases.sh
+
 if [ -f $DEV_DIR/secrets/secret-handlers.sh ] ; then
     source $DEV_DIR/secrets/secret-handlers.sh
 fi
@@ -17,7 +19,6 @@ fi
 if [ -f $DEV_DIR/scripts/bash/conan.sh ] ; then
     source $DEV_DIR/scripts/bash/conan.sh
 fi
-source $DEV_DIR/scripts/bash/aliases.sh
 source $DEV_DIR/scripts/bash/path.sh
 source $DEV_DIR/scripts/bash/fzf.sh
 source $DEV_DIR/scripts/bash/shell-options.sh
