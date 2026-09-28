@@ -1,5 +1,13 @@
 Windows Registry Editor Version 5.00
 
+; Disable Caps Lock by mapping it to nothing
+; Scancode 3A = Caps Lock
+;
+; To disable caps log merge this to the Registry with:
+; reg import ./disable_caps_log.reg
+; It needs to be executed as administrator
+; It requres reboot to take effect
+
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
 "Scancode Map"=hex:00,00,00,00,00,00,00,00,02,00,00,00,00,00,3a,00,00,00,00,00
 
