@@ -54,7 +54,7 @@
   mnemonicPrefix = true
 
 [help]
-  autocorrect = prompt
+  ; autocorrect = prompt
 
 [alias]
 lol = log --oneline --graph --all
