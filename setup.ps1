@@ -60,6 +60,7 @@ scoop install                   `
     putty                       `
     zoxide                      `
     oh-my-posh                  `
+    extras/posh-git             `
     starship                    `
     cmake                       `
     ninja                       `
@@ -119,7 +120,10 @@ Install-Module PSReadLine -Force
 
 # Install-Module -Name PSFzf -Scope CurrentUser          # Wrapper for fzf
 # Install-Module -Name npm-completion -Scope CurrentUser   # Tab autocompletion for nodes npm
-Install-Module -Name posh-git -Scope CurrentUser         # Git tab autocompletion
+#
+# This is now installed with scoop
+# Install-Module -Name posh-git -Scope CurrentUser         # Git tab autocompletion
+
 # Install-Module -Name PowerColorLS -Scope CurrentUser     # Better (colorfull) ls/dir command
 # Install-Module -Name Terminal-Icons -Scope CurrentUser   # Dependency of PowerColorLS
 # Install-Module -Name z -Scope CurrentUser -AllowClobber  # Navigation module for PowerShell, similar to autojump
