@@ -51,3 +51,6 @@ export _ZO_EXCLUDE_DIRS="$HOME:/mnt:/mnt/*"
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 
+
+export CLAUDE_CODE_DISABLE_MOUSE=1
+
