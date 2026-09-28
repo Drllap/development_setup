@@ -1,8 +1,8 @@
 #!/bin/bash
 
 export HISTCONTROL=erasedups:ignoredups:ignorespace
-# export HISTSIZE=5000      # Number of commands in command history
-export HISTFILESIZE=5000    # Number of commands written to the history file
+export HISTSIZE=50000        # Number of commands in command history
+export HISTFILESIZE=50000   # Number of commands written to the history file
 
 function update_history {
   history -n; # Read missing from history file to list
@@ -11,7 +11,7 @@ function update_history {
   history -r; # Read history file to history list
 }
 
-if [[ -v precmd_functions ]]; then
-  precmd_functions+=(update_history)
-fi
+# if [[ -v precmd_functions ]]; then
+#   precmd_functions+=(update_history)
+# fi
 
