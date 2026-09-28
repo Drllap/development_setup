@@ -83,8 +83,8 @@ config.unix_domains = {
 config.wsl_domains = {
   {
     name = "ub",
-    distribution = "Ubuntu-20.04",
-    -- This doesn't work for some reason -> default_cmd = "~/dev"
+    distribution = "Ubuntu",
+    default_cwd = "~/dev/norbit",
   },
 }
 
