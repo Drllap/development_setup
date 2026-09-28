@@ -51,6 +51,9 @@ export _ZO_EXCLUDE_DIRS="$HOME:/mnt:/mnt/*"
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 
+# Must come after 'starship init', it sets PROMPT_COMMAND
+source $DEV_DIR/scripts/bash/wezterm.sh
+
 
 export CLAUDE_CODE_DISABLE_MOUSE=1
 
