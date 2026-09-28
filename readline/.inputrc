@@ -7,6 +7,7 @@ set keymap vi-insert
 "\C-n": next-history
 "\C-p": previous-history
 "\C-l": clear-screen
+"\C-x\C-e": edit-and-execute-command
 
 set keymap vi-command
 "\C-l": clear-screen
