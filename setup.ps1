@@ -151,11 +151,19 @@ npm install -g              `
     yaml-language-server    ` # LSP server for yaml
     @vlabo/cspell-lsp       ` # LSP for spell spell checking using CSpell
 
-pip3 install                `
-    neovim                  `
-    pywin32                 `
-    pyright                 `
-    cmake-language-server   `
-    conan                   `
-    pyreadline  # Needed for tab autocompletion in python shell
+# pip3 install                `
+#     neovim                  `
+#     pywin32                 `
+#     pyright                 `
+#     cmake-language-server   `
+#     conan                   `
+#     pyreadline  # Needed for tab autocompletion in python shell
+
+# Setup python venv for neovim
+uv install python
+uv venv "$HOME/.venvs/neovim"
+. "$HOME/.venvs/neovim/Scripts/activate.ps1"
+uv pip install pynvim Pywin32
+deactivate
+
 

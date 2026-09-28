@@ -53,8 +53,7 @@ let g:netrw_liststyle = 3 " NetRW opens with the listings in tree style by defau
 let g:loaded_node_provider = 0
 let g:loaded_perl_provider = 0
 let g:loaded_ruby_provider = 0
-" let g:loaded_python3_provider = 0
-let g:python3_host_prog = expand("~/.venvs/neovim/bin/python")
+let g:python3_host_prog = expand("~/.venvs/neovim/Scripts/python.exe")
 
 if has("nvim-0.11")
   " Highlights the text that is yanked when in normal mode
