@@ -45,6 +45,9 @@ export DIFFPROG='nvim -d'
 # Enable bash tab autocomplete when installed with brew
 [[ -r "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh" ]] && . "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh"
 
+# Don't add /mnt/ (Windows host) folders to zoxide database.
+# NOTE: separator is the platform path separator -- ':' on Unix, NOT ';'
+export _ZO_EXCLUDE_DIRS="$HOME:/mnt:/mnt/*"
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 
