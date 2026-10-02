@@ -1,20 +1,38 @@
 -- pcall(require,'lsp.PowerShell')
 -- pcall(require,'lsp.cpp')
 
-local original = vim.lsp.config.clangd
-vim.lsp.config('clangd', {
-  cmd = {
-    'clangd',
+local clangd = {}
+
+function clangd.has_clangd_cmd_file()
+  local tab_cwd = vim.fn.getcwd(-1,0);
+  local path = vim.fs.joinpath(tab_cwd, "clangd_cmd");
+  return vim.uv.fs_stat(path) ~= nil
+end
+
+function clangd.cmd()
+
+  local exec = 'clangd'
+  if clangd.has_clangd_cmd_file() then
+    exec = 'clangd_cmd'
+  end
+  return {
+    exec,
     '--background-index',
-    '--background-index-priority=low',
+    '--background-index-priority=normal',
+    -- '--background-index=false',
     '--clang-tidy',
     '--header-insertion=never',
-    '--function-arg-placeholders',
+    '--function-arg-placeholders=1',
     '--log=verbose',
     '--completion-style=detailed',
     '--fallback-style=llvm',
     -- '--log=verbose' ,
-  },
+  }
+end
+
+local original = vim.lsp.config.clangd
+vim.lsp.config('clangd', {
+  cmd = clangd.cmd(),
   on_attach = function(client, bufnr)
     original.on_attach(client, bufnr)
     vim.keymap.set('n', 'ssi', "<cmd>LspClangdShowSymbolInfo<cr>",     { buffer = true, })
