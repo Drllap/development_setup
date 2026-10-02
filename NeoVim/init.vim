@@ -116,6 +116,23 @@ augroup END
 
 lua require('init')
 
+function! s:wez_set_title(title) abort
+  let l:wezterm_app = '/mnt/c/Users/pallp/scoop/apps/wezterm-nightly/current/wezterm.exe'
+  let l:title = a:title
+  if empty(l:title)
+    let l:title = input('Tab title: ', expand('%:t'))
+    redraw
+  endif
+  if empty(l:title)
+    return
+  endif
+  call system(l:wezterm_app . ' cli set-tab-title ' . shellescape(l:title))
+  if v:shell_error
+    echohl ErrorMsg | echom 'wezterm exited ' . v:shell_error | echohl None
+  endif
+endfunction
+command! -nargs=? WezSetTitle call <SID>wez_set_title(<q-args>)
+
 function! ToggleLogging()
   if !&verbose
     execute 'set verbosefile=' .. getcwd() .. '\neovim.log'
