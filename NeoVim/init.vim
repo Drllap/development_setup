@@ -24,6 +24,7 @@ set smartcase  " smartcase only workes if ignorecase is enabled
 set nobackup
 set undodir=~/.vim/undodir " maybe add plugin called undotree
 set undofile
+set directory="." " Use the same directory as the original file
 
 set scrolloff=8 " # lines are always showne above cursor when it is moved up and down
 
