@@ -171,3 +171,6 @@ noremap <leader>T :vertical terminal<cr>
 
 command! CopyMessages call setreg('+', execute('messages'))
 command! CopyFileName call setreg('+', expand('%'))
+
+command! -nargs=0 OBS :tabnew <bar> :tcd ~/Obsidian/
+
