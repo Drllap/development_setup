@@ -162,3 +162,9 @@ augroup TabConfigSwitcher
   autocmd TabEnter * call ResetNvimRC()
 augroup END
 
+command -nargs=0 Codex :vertical terminal codex --model gpt-5.6-terra
+command -nargs=0 Claude :vertical terminal claude
+noremap <leader>X :Codex<cr>
+noremap <leader>C :Claude<cr>
+noremap <leader>T :vertical terminal<cr>
+
