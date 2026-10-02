@@ -168,3 +168,6 @@ noremap <leader>X :Codex<cr>
 noremap <leader>C :Claude<cr>
 noremap <leader>T :vertical terminal<cr>
 
+
+command! CopyMessages call setreg('+', execute('messages'))
+command! CopyFileName call setreg('+', expand('%'))
