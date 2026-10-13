@@ -142,15 +142,15 @@ require("lazy").setup({
           -- ignore = {
           --   "vim",
           -- },
-          -- disable = {
-          --   indent = parsers,
-          -- },
+          disable = {
+            indent = { "cpp", "markdown" },
+          },
         }
       end,
     },
     {
       "ibhagwan/fzf-lua",
-      dependencies = { 'nvim-tree/nvim-web-devicons' },
+      dependencies = { 'kyazdani42/nvim-web-devicons' },
     },
 
     -- Telescope
@@ -287,6 +287,22 @@ require("lazy").setup({
       cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
       ft = { "markdown" },
       build = function() vim.fn["mkdp#util#install"]() end, -- TODO can we remove yarn and npm?
+      enabled = false,
+    },
+
+    {
+      "OXY2DEV/markview.nvim",
+      lazy = false,
+      opts = {
+        markdown = {
+          list_items = {
+            wrap = false,
+          },
+        },
+      },
+
+      -- Completion for `blink.cmp`
+      -- dependencies = { "saghen/blink.cmp" },
     },
 
   },
