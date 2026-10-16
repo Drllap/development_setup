@@ -41,6 +41,10 @@ export LS_COLORS="$(vivid generate gruvbox-dark-hard)"
 export EDITOR="nvim"
 export VISUAL="nvim"
 
+if [[ -n ${WSL_DISTRO_NAME:-} ]]; then
+  export BROWSER="/usr/bin/wslview"
+fi
+
 export DIFFPROG='nvim -d'
 
 # Enable bash tab autocomplete when installed with brew
