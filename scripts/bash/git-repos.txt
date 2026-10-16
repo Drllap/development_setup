@@ -1,0 +1,4 @@
+# Add a list of repos, something like like:
+/home/palli/dev/mine/development_setup/
+/home/palli/dev/work/some-project/
+# then delete both comments

@@ -2,8 +2,8 @@
 
 function wtf {
 
-  repos=( \
-  )
+  local -a repos
+  mapfile -t repos < "$(dirname "${BASH_SOURCE[0]}")/git-repos.txt"
 
   function run_fzf {
     local prefix_to_remove="^/home/palli/dev/"
@@ -75,7 +75,7 @@ function wtf {
         --bind 'enter:become(echo {1})'
   }
 
-  dest=$(run_fzf)
+  local dest=$(run_fzf)
   if [[ -n $dest ]]; then
     builtin cd "$dest";
   else
