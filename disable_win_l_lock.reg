@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+; Disable the Win+L workstation-lock shortcut for the current user.
+; This does not disable automatic locking caused by screen-saver or
+; inactivity policies.
+;
+; To apply this file:
+; reg import .\disable_win_l_lock.reg
+;
+; Sign out and sign back in after importing if the change is not immediate.
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System]
+"DisableLockWorkstation"=dword:00000001
